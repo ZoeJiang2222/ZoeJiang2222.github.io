@@ -19,29 +19,26 @@
   <meta name="author" content="Zoe Jiang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="乙巳年春节回忆录">
+    <meta name="description" content="在ubuntu上安装ns3和ns3gym太折磨人了，一路走下来都没有找到特别完善的教程，踩了不少坑，尤其是ubuntu版本的不同造成了很多阻碍，记录一下来之不易的成功">
 <meta property="og:type" content="article">
-<meta property="og:title" content="年年岁岁花相似">
-<meta property="og:url" content="http://example.com/2025/02/11/%E5%B9%B4%E5%B9%B4%E5%B2%81%E5%B2%81%E8%8A%B1%E7%9B%B8%E4%BC%BC/index.html">
+<meta property="og:title" content="在ubuntu上安装ns3和ns3gym">
+<meta property="og:url" content="http://example.com/2025/02/14/ns3%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="乙巳年春节回忆录">
+<meta property="og:description" content="在ubuntu上安装ns3和ns3gym太折磨人了，一路走下来都没有找到特别完善的教程，踩了不少坑，尤其是ubuntu版本的不同造成了很多阻碍，记录一下来之不易的成功">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/fireworks.jpg">
-<meta property="og:image" content="http://example.com/img/snow.jpg">
-<meta property="og:image" content="http://example.com/img/teapot.jpg">
-<meta property="og:image" content="http://example.com/img/moon.jpg">
-<meta property="og:image" content="http://example.com/img/mua.jpg">
-<meta property="article:published_time" content="2025-02-10T17:00:00.000Z">
-<meta property="article:modified_time" content="2025-02-11T08:22:17.432Z">
+<meta property="og:image" content="http://example.com/img/ns3gym-1.png">
+<meta property="og:image" content="http://example.com/img/ns3gym-2.png">
+<meta property="article:published_time" content="2025-02-14T08:00:00.000Z">
+<meta property="article:modified_time" content="2025-02-14T09:37:28.781Z">
 <meta property="article:author" content="Zoe Jiang">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/fireworks.jpg">
+<meta name="twitter:image" content="http://example.com/img/ns3gym-1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>年年岁岁花相似 - Hexo</title>
+  <title>在ubuntu上安装ns3和ns3gym - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="年年岁岁花相似"></span>
+            <span id="subtitle" data-typed-text="在ubuntu上安装ns3和ns3gym"></span>
           
         </div>
 
@@ -218,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-11 01:00" pubdate>
-          2025年2月11日 凌晨
+        <time datetime="2025-02-14 16:00" pubdate>
+          2025年2月14日 下午
         </time>
       </span>
     
@@ -230,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1k 字
         
       </span>
     
@@ -241,7 +238,7 @@
         
         
         
-          13 分钟
+          9 分钟
         
       </span>
     
@@ -278,63 +275,73 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">年年岁岁花相似</h1>
+            <h1 id="seo-header">在ubuntu上安装ns3和ns3gym</h1>
             
             
               <div class="markdown-body">
                 
                 <meta name="referrer" content="no-referrer">
 
-<p>岁月不居，时节如流<br>乙巳年的春节就这样波澜不惊地过去了</p>
-<p>小时候总是盼望着过年<br>那时觉得每一个年都好长啊<br>从年前就要开始准备几个大笼屉的蒸菜<br>到了二十九和除夕去外公外婆家和爷爷奶奶家轮流团年<br>然后从初一开始踏青、祭祖<br>接下来就是诸位亲戚朋友轮流请客<br>我们一班小孩随着大人的麻将桌辗转在各个农家乐里</p>
-<p>年岁越长<br>越觉得和家人相聚的时光太匆匆<br>明明每天也没有做什么<br>转眼间这个年就算过完了<br>大家又陆陆续续飞回了天南海北的巢穴</p>
-<hr>
-<p>细细想来<br>今年我是1月20号离开的学校<br>在家里准备了一周的会议才算正式开始放假<br>然后就是紧锣密鼓地置办年货、走亲访友、蹭饭吃席</p>
-<br>
+<h2 id="0、安装须知：版本适配问题"><a href="#0、安装须知：版本适配问题" class="headerlink" title="0、安装须知：版本适配问题"></a>0、安装须知：版本适配问题</h2><p>安装ns3真是太折磨人了,经过多次试验，目前可行的适配方案有：<strong>ubuntu20.04+ns3.35</strong> （主要参考<a target="_blank" rel="noopener" href="https://www.minaduki.moe/2023/04/23/focal-ns3-gym/">在Ubuntu 20.04上安装NS3.34和NS3-gym - Minaduki’s Blog</a>）和 <strong>ubuntu22.04+ns3.38</strong>（主要参考<a target="_blank" rel="noopener" href="https://www.nsnam.com/2023/07/installation-of-ns3-in-ubuntu-2204-ns.html">Installation of ns3 in Ubuntu 22.04 | NS-3.38 | Engineering Clinic</a>和<a target="_blank" rel="noopener" href="https://www.minaduki.moe/2024/04/10/focal-ns3-38-gym/">在Ubuntu 20.04上安装NS3.38和NS3-gym - Minaduki’s Blog</a>）</p>
+<p>ns3gym目前只分为适用于ns3.36+的版本和适用于ns3.36以下的版本，这是因为从ns3.36开始，编译命令就由.&#x2F;waf变成.&#x2F;ns3了</p>
+<h2 id="1、创建虚拟环境，并安装依赖"><a href="#1、创建虚拟环境，并安装依赖" class="headerlink" title="1、创建虚拟环境，并安装依赖"></a>1、创建虚拟环境，并安装依赖</h2><p>首先要更新系统软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br></code></pre></td></tr></table></figure>
 
-<p>到了团年夜<br>依然收到了鼓鼓的红包<br>尽管已经二十好几<br>但是因为还在读书，也没有结婚成家<br>还是被大家当作孩子看待<br>甚至连已经结婚的哥哥姐姐都要给我发红包<br>说起来还是有些惭愧<br>以后工作挣钱了再给他们安排上红包吧哈哈哈</p>
-<br>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt upgrade<br></code></pre></td></tr></table></figure>
 
-<p>团年夜是必不可少的限时八卦环节<br>酝酿了一年的趣闻或者家里即将面临的大事<br>都在这一晚开始霸占整个春节档</p>
-<br>
+<p>如果更新失败或者特别慢的话，要考虑换源，并且换源的时候也要根据具体的ubuntu版本搜索。如果镜像仓库源和ubuntu的版本不适配的话，后面的步骤都无法进行</p>
+<p>然后利用anaconda创建虚拟环境（这里我省略了配置anaconda和pytorch的步骤，可以参考这篇文章<a target="_blank" rel="noopener" href="https://blog.csdn.net/zoe2222226666/article/details/139581844?spm=1001.2014.3001.5502">在WSL2下配置Pytorch(Linux+Anaconda+PyTorch-GPU)_wsl2 pytorch-CSDN博客</a>）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n torch python=3.x<br></code></pre></td></tr></table></figure>
 
-<p>今年外公外婆家的议题是哥哥的婚事<br>我不想因为多嘴给哥哥找麻烦<br>也感觉自己还是不太适合听这些<br>免得惹火上身，到时候大家掉转矛头开始催我找对象<br>毕竟我外婆已经在列祖列宗面前为我和妹妹许下了愿望<br>希望我们找个“好朋友”<br>老人家还怪虔诚的<br>每位祖宗面前都重复一遍这个心愿<br>我只能说这种事情还是看缘分吧 </p>
-<br>
+<p>进入虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate torch<br></code></pre></td></tr></table></figure>
 
-<p>今年爷爷奶奶家的议题比较零散<br>因为人太多了<br>只能大人们拼了两张长桌<br>小孩们单独一桌<br>姐姐和弟弟们都开始哐哐炫酒了<br>我因为要给我爸当代驾依然滴酒未沾<br>说实话确实不太喜欢喝酒<br>更喜欢喝旺仔牛奶这种甜甜的东西哈哈哈<br>今年难得小孩们都到齐了<br>和大家放了特别多的烟花<br>看着火树银花霎时间升腾、飞扬、爆炸、散落<br>彷佛过去这一年所有的烦恼和痛苦都随着烟尘消散了</p>
-<p><img src="/img/fireworks.jpg" srcset="/img/loading.gif" lazyload></p>
-<hr>
-<p>过完除夕<br>时间便如同开了倍速</p>
-<br>
+<p>接下来要在虚拟环境中安装依赖，这个其实要根据ubuntu的版本修改某些依赖包的名称，并没有一个完全通用的办法，这里也困住了我很久</p>
+<p>ubuntu20.04目前可行的安装指令（参考<a target="_blank" rel="noopener" href="https://www.minaduki.moe/2023/04/23/focal-ns3-gym/">在Ubuntu 20.04上安装NS3.34和NS3-gym - Minaduki’s Blog</a>）:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y gcc g++ python gcc g++ python3 python3-dev mercurial python3-setuptools git qt5-default gir1.2-goocanvas-2.0 python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 ipython3 openmpi-bin openmpi-common openmpi-doc libopenmpi-dev autoconf cvs bzr unrar gdb valgrind uncrustify doxygen graphviz imagemagick texlive texlive-extra-utils texlive-latex-extra texlive-font-utils texlive-lang-portuguese dvipng latexmk python3-sphinx dia gsl-bin libgslcblas0 libgsl-dev flex bison libfl-dev tcpdump sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev cmake libc6-dev libc6-dev-i386 libclang-dev llvm-dev automake libgtk2.0-0 libgtk2.0-dev vtun lxc libboost-all-dev libboost-filesystem-dev pkg-config sqlite3 cmake libc6-dev libc6-dev-i386 libclang-6.0-dev llvm-6.0-dev automake python3-pip<br><br><span class="hljs-built_in">sudo</span> apt install -y libzmq5 libzmq3-dev libprotobuf-dev protobuf-compiler<br></code></pre></td></tr></table></figure>
 
-<p>初一和家人去了附近的山上看雪<br>我第一次看到雪上面结了一层冰壳<br>走在上面咔哧咔哧<br>这样的“汪汪碎冰冰”真的太治愈了<br>雪真的很伟大<br>就算我的脚底沾上了泥土<br>在雪里蹭蹭就干净了<br>尽管这样做会有些负罪感<br>总觉得玷污了雪的清白<br>但在冬日暖阳下<br>不一会儿<br>这些雪就化为水，潺潺地回归大地了<br>质本洁来还洁去</p>
-<p><img src="/img/snow.jpg" srcset="/img/loading.gif" lazyload></p>
-<br>
+<p>ubuntu22.04目前可行的安装指令（参考<a target="_blank" rel="noopener" href="https://www.nsnam.com/2023/07/installation-of-ns3-in-ubuntu-2204-ns.html">Installation of ns3 in Ubuntu 22.04 | NS-3.38 | Engineering Clinic</a>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install g++ python3 cmake ninja-build git gir1.2-goocanvas-2.0 python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 tcpdump wireshark sqlite sqlite3 libsqlite3-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools openmpi-bin openmpi-common openmpi-doc libopenmpi-dev doxygen graphviz imagemagick python3-sphinx dia imagemagick texlive dvipng latexmk texlive-extra-utils texlive-latex-extra texlive-font-utils libeigen3-dev gsl-bin libgsl-dev libgslcblas0 libxml2 libxml2-dev libgtk-3-dev lxc-utils lxc-templates vtun uml-utilities ebtables bridge-utils libxml2 libxml2-dev libboost-all-dev <br></code></pre></td></tr></table></figure>
 
+<p><strong>要看到每个安装包都不报错才行，不然后面会出现一些奇奇怪怪的问题</strong></p>
+<h2 id="2、安装ns3"><a href="#2、安装ns3" class="headerlink" title="2、安装ns3"></a>2、安装ns3</h2><p>首先要从官方镜像拉取ns3安装包（xx换成需要的ns3版本号）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.nsnam.org/releases/ns-allinone-3.xx.tar.bz2<br></code></pre></td></tr></table></figure>
 
-<p>初二在奶奶家见到了超级多的亲戚<br>被几个弟弟在王者峡谷里带飞<br>连上了5颗星<br>不得不说我对游戏真的很难上瘾<br>玩着玩着就觉得无聊至极<br>不过这也算是春节的另一种总结方式吧</p>
-<br>
+<p>解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -jxvf ns-allinone-3.xx.tar.bz2<br></code></pre></td></tr></table></figure>
 
-<p>初三吃了顿火锅就出发去赴妈妈朋友的约了<br>初四终于见到了几个难得见到的姐姐<br>趁着大人们打麻将<br>我们在20分钟里极限开车赶上了哪吒闹海的现场<br>现在电影院的设备是真香啊<br>我们坐在最后一排享受到的影音效果也相当震撼<br>当然了，正是因为最后一排刚好还剩下4个连着的座位<br>我们才会选择极限赶场<br>这也是上天的好生之德啊<br>冥冥之中想让我们在春节档吃点好的哈哈哈哈</p>
-<hr>
-<p>从初五开始<br>家人们就开始散去了<br>这样盘算下来<br>过年的时间确实很短<br>但正是因为相聚短暂才更显珍贵</p>
-<br>
+<p>然后编译测试，这个部分只需要注意编译命令有区别(<strong>&lt;&#x3D;3.35用.&#x2F;waf，&gt;&#x3D;3.36用.&#x2F;ns3</strong>)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ns-allinone-3.xx<br><span class="hljs-built_in">cd</span> ns-3.xx<br>./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 run hello-simulator<br></code></pre></td></tr></table></figure>
 
-<p>后面的几日<br>我陪妈妈看完了小巷人家<br>这部剧真的很会拍<br>每一个家庭都在时代的浪潮中起起伏伏<br>但是每个人都在沉浮中努力地活出自我<br>后来我还陪妈妈还去二刷了哪吒的闹海现场<br>又为中国电影票房冠军做出了不大不小的贡献哈哈哈<br>还陪嘴硬不去电影院的爸爸重新看了哪吒的出生记录<br>相较而言，第二部在画面上确实精进了太多<br>这都是牛马们熬脱的头发啊</p>
-<br>
+<p>看到输出Hello Simulator就成功了</p>
+<p>PS.有些教程还会在这里用.&#x2F;ns3 run third –vis测试可视化模块，如果是用的本地虚拟机或者子系统应该没有问题，<strong>用远程连接的服务器暂时看不到图形化界面</strong>，只要前面的步骤都是成功的，即使出现了这个问题，也不用担心，远程连接服务器就是在配置图形化界面上比较麻烦，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/zoe2222226666/article/details/137290549?spm=1001.2014.3001.5502">Pycharm+远程连接Linux服务器用matplotlib画图不显示_pycharm连接远程服务器运行画不出图-CSDN博客</a>，这个问题以后有空再研究吧。</p>
+<h2 id="3、安装ns3gym"><a href="#3、安装ns3gym" class="headerlink" title="3、安装ns3gym"></a>3、安装ns3gym</h2><p>其实和安装ns3的流程差不多，先拉取源码，再进行编译等后续操作，只是要注意现在都要在**ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;**这个位置下进行操作</p>
+<p>如果ns3版本&lt;&#x3D;3.35:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib<br>git <span class="hljs-built_in">clone</span> https://github.com/tkn-tub/ns3-gym.git ./opengym<br><span class="hljs-built_in">cd</span> opengym/<br>git checkout app<br></code></pre></td></tr></table></figure>
 
-<p>每次和家人一起看看电视聊聊天地<br>总觉得内心有种奇妙的静谧<br>也许<br>这就是避风港带给我的安全感吧</p>
-<p><img src="/img/teapot.jpg" srcset="/img/loading.gif" lazyload></p>
-<hr>
-<p>年年岁岁花相似<br>岁岁年年人不同</p>
-<br>
+<p>如果ns3版本&gt;&#x3D;3.36:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib<br>git <span class="hljs-built_in">clone</span> https://github.com/tkn-tub/ns3-gym.git ./opengym<br><span class="hljs-built_in">cd</span> opengym/<br>git checkout app-ns-3.36+<br></code></pre></td></tr></table></figure>
 
-<p>正是因为众生皆苦<br>所以才要在春节时团聚<br>回望一下大家日益模糊的面目<br>一起消化掉未尽的情绪和难挨的时光<br>然后整理好各自的行囊<br>重新奔赴刀光剑影的战场</p>
-<p><img src="/img/moon.jpg" srcset="/img/loading.gif" lazyload></p>
-<p><strong>乙巳年的春节过去了</strong><br><strong>我很怀念它</strong></p>
-<hr>
-<p>终于赶在回学校的第一个凌晨写完了这篇春节小结<br>希望大家新的一年巳巳如意、平安喜乐<br>也祝愿我们来年的相聚更精彩</p>
-<p><img src="/img/mua.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>重新编译，这个时候要返回<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 build<br></code></pre></td></tr></table></figure>
+
+<p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下安装ns3gym需要的python模块</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/<br>pip3 install --user ./model/ns3gym<br></code></pre></td></tr></table></figure>
+
+<p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下运行测试</p>
+<p>测试一（仅需一个终端）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/examples/opengym/<br>./simple_test.py<br></code></pre></td></tr></table></figure>
+
+<p>测试二（需要两个终端）：</p>
+<p>一个终端在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下运行c++脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./ns3 run <span class="hljs-string">&quot;opengym&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>另一个终端要找到具体的路径运行.py脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/examples/opengym/<br>./test.py --start=0<br></code></pre></td></tr></table></figure>
+
+<p>就能看到一个简单的运行结果:</p>
+<p><img src="/img/ns3gym-1.png" srcset="/img/loading.gif" lazyload><br><img src="/img/ns3gym-2.png" srcset="/img/loading.gif" lazyload></p>
+<p>大功告成！</p>
 
                 
               </div>
@@ -353,7 +360,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%B1%AA%E6%B1%AA%E6%B1%AA/" class="category-chain-item">-汪汪汪</a>
+  <a href="/categories/code/" class="category-chain-item">-code</a>
   
   
 
@@ -373,8 +380,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>年年岁岁花相似</div>
-      <div>http://example.com/2025/02/11/年年岁岁花相似/</div>
+      <div>在ubuntu上安装ns3和ns3gym</div>
+      <div>http://example.com/2025/02/14/ns3安装/</div>
     </div>
     <div class="license-meta">
       
@@ -386,7 +393,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年2月11日</div>
+          <div>2025年2月14日</div>
         </div>
       
       
@@ -418,18 +425,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/02/14/ns3%E5%AE%89%E8%A3%85/" title="在ubuntu上安装ns3和ns3gym">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">在ubuntu上安装ns3和ns3gym</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/01/12/Happy%20Everyday/" title="Happy Everyday">
-                        <span class="hidden-mobile">Happy Everyday</span>
+                      <a href="/2025/02/11/%E5%B9%B4%E5%B9%B4%E5%B2%81%E5%B2%81%E8%8A%B1%E7%9B%B8%E4%BC%BC/" title="年年岁岁花相似">
+                        <span class="hidden-mobile">年年岁岁花相似</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
