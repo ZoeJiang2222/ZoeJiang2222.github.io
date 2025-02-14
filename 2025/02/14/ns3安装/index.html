@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://example.com/img/ns3gym-1.png">
 <meta property="og:image" content="http://example.com/img/ns3gym-2.png">
 <meta property="article:published_time" content="2025-02-14T08:00:00.000Z">
-<meta property="article:modified_time" content="2025-02-14T09:37:28.781Z">
+<meta property="article:modified_time" content="2025-02-14T10:06:33.131Z">
 <meta property="article:author" content="Zoe Jiang">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/ns3gym-1.png">
@@ -102,7 +102,8 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>ZoeJiang&#39;s Wonderful World</strong>
+      <!-- <strong>ZoeJiang&#39;s Wonderful World</strong> -->
+      <strong class="navbar-title">ZoeJiang&#39;s Wonderful World</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -298,10 +299,12 @@
 
 <p>接下来要在虚拟环境中安装依赖，这个其实要根据ubuntu的版本修改某些依赖包的名称，并没有一个完全通用的办法，这里也困住了我很久</p>
 <p>ubuntu20.04目前可行的安装指令（参考<a target="_blank" rel="noopener" href="https://www.minaduki.moe/2023/04/23/focal-ns3-gym/">在Ubuntu 20.04上安装NS3.34和NS3-gym - Minaduki’s Blog</a>）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y gcc g++ python gcc g++ python3 python3-dev mercurial python3-setuptools git qt5-default gir1.2-goocanvas-2.0 python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 ipython3 openmpi-bin openmpi-common openmpi-doc libopenmpi-dev autoconf cvs bzr unrar gdb valgrind uncrustify doxygen graphviz imagemagick texlive texlive-extra-utils texlive-latex-extra texlive-font-utils texlive-lang-portuguese dvipng latexmk python3-sphinx dia gsl-bin libgslcblas0 libgsl-dev flex bison libfl-dev tcpdump sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev cmake libc6-dev libc6-dev-i386 libclang-dev llvm-dev automake libgtk2.0-0 libgtk2.0-dev vtun lxc libboost-all-dev libboost-filesystem-dev pkg-config sqlite3 cmake libc6-dev libc6-dev-i386 libclang-6.0-dev llvm-6.0-dev automake python3-pip<br><br><span class="hljs-built_in">sudo</span> apt install -y libzmq5 libzmq3-dev libprotobuf-dev protobuf-compiler<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y gcc g++ python gcc g++ python3 python3-dev mercurial <br>python3-setuptools git qt5-default gir1.2-goocanvas-2.0 python3-gi <br>python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 ipython3 <br>openmpi-bin openmpi-common openmpi-doc libopenmpi-dev autoconf cvs bzr unrar<br>gdb valgrind uncrustify doxygen graphviz imagemagick texlive texlive-extra-utils <br>texlive-latex-extra texlive-font-utils texlive-lang-portuguese dvipng latexmk <br>python3-sphinx dia gsl-bin libgslcblas0 libgsl-dev flex bison libfl-dev tcpdump <br>sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev cmake libc6-dev libc6-dev-i386 <br>libclang-dev llvm-dev automake libgtk2.0-0 libgtk2.0-dev vtun lxc libboost-all-dev <br>libboost-filesystem-dev pkg-config sqlite3 cmake libc6-dev libc6-dev-i386 <br>libclang-6.0-dev llvm-6.0-dev automake python3-pip<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y libzmq5 libzmq3-dev libprotobuf-dev protobuf-compiler<br></code></pre></td></tr></table></figure>
 
 <p>ubuntu22.04目前可行的安装指令（参考<a target="_blank" rel="noopener" href="https://www.nsnam.com/2023/07/installation-of-ns3-in-ubuntu-2204-ns.html">Installation of ns3 in Ubuntu 22.04 | NS-3.38 | Engineering Clinic</a>）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install g++ python3 cmake ninja-build git gir1.2-goocanvas-2.0 python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 tcpdump wireshark sqlite sqlite3 libsqlite3-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools openmpi-bin openmpi-common openmpi-doc libopenmpi-dev doxygen graphviz imagemagick python3-sphinx dia imagemagick texlive dvipng latexmk texlive-extra-utils texlive-latex-extra texlive-font-utils libeigen3-dev gsl-bin libgsl-dev libgslcblas0 libxml2 libxml2-dev libgtk-3-dev lxc-utils lxc-templates vtun uml-utilities ebtables bridge-utils libxml2 libxml2-dev libboost-all-dev <br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install g++ python3 cmake ninja-build git gir1.2-goocanvas-2.0 python3-gi <br>python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 tcpdump wireshark sqlite <br>sqlite3 libsqlite3-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools openmpi-bin <br>openmpi-common openmpi-doc libopenmpi-dev doxygen graphviz imagemagick python3-sphinx <br>dia imagemagick texlive dvipng latexmk texlive-extra-utils texlive-latex-extra <br>texlive-font-utils libeigen3-dev gsl-bin libgsl-dev libgslcblas0 libxml2 libxml2-dev <br>libgtk-3-dev lxc-utils lxc-templates vtun uml-utilities ebtables bridge-utils libxml2 <br>libxml2-dev libboost-all-dev <br></code></pre></td></tr></table></figure>
 
 <p><strong>要看到每个安装包都不报错才行，不然后面会出现一些奇奇怪怪的问题</strong></p>
 <h2 id="2、安装ns3"><a href="#2、安装ns3" class="headerlink" title="2、安装ns3"></a>2、安装ns3</h2><p>首先要从官方镜像拉取ns3安装包（xx换成需要的ns3版本号）</p>
@@ -562,6 +565,38 @@
 
   <footer>
     <div class="footer-inner">
+  <div>
+    <span id="timeDate">正在载入天数...</span>
+    <span id="times">载入时分秒...</span>
+    <script>
+    var now = new Date();
+    function createtime(){
+        var grt= new Date("11/18/2024 20:58:14");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if(String(mnum).length ==1 ){
+                  mnum = "0" + mnum;
+        }
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if(String(snum).length ==1 ){
+                  snum = "0" + snum;
+        }
+        document.getElementById("timeDate").innerHTML = "🚀已持续航行&nbsp"+dnum+"&nbsp天";  
+        document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+    }
+    setInterval("createtime()",250);
+    </script>
+  </div>
+  
   
   
     <div class="statistics">
