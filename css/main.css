@@ -359,6 +359,32 @@ sup > a::before,
   color: var(--link-hover-color);
   background-color: rgba(0,0,0,0.1);
 }
+.navbar .navbar-title {
+  outline: none;
+  --c: #20b2aa;
+  text-shadow: 0 0 10px var(--c), 0 0 20px var(--c), 0 0 40px var(--c), 0 0 80px var(--c), 0 0 160px var(--c);
+  animation: animate 5s linear infinite;
+}
+@-moz-keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@-webkit-keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@-o-keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes animate {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
 @media (min-width: 992px) {
   .navbar .dropdown:hover > .dropdown-menu {
     display: block;
@@ -434,32 +460,6 @@ sup > a::before,
 .top-nav-collapse,
 .navbar-col-show {
   background-color: var(--navbar-bg-color);
-}
-.navbar-title {
-  outline: none;
-  --c: #20b2aa;
-  text-shadow: 0 0 10px var(--c), 0 0 20px var(--c), 0 0 40px var(--c), 0 0 80px var(--c), 0 0 160px var(--c);
-  animation: animate 5s linear infinite;
-}
-@-moz-keyframes animate {
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-@-webkit-keyframes animate {
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-@-o-keyframes animate {
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-@keyframes animate {
-  to {
-    filter: hue-rotate(360deg);
-  }
 }
 @media (max-width: 767px) {
   .navbar {
