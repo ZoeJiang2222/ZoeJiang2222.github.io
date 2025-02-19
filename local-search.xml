@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>在Ubuntu上用docker拉取镜像</title>
+    <link href="/2025/02/19/Ubuntu%E4%B8%8A%E7%94%A8docker%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F/"/>
+    <url>/2025/02/19/Ubuntu%E4%B8%8A%E7%94%A8docker%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h3><p>这两篇教程内容差不多，算是最详细的了<br><a href="https://docker-practice.github.io/zh-cn/install/ubuntu.html">Ubuntu · Docker – 从入门到实践</a><br><a href="https://blog.csdn.net/u011278722/article/details/137673353">Ubuntu 22.04下Docker安装（最全指引）_ubuntu22.04 docker 分区-CSDN博客</a></p><h3 id="二、配置国内镜像加速器（2025年2月亲测可用）"><a href="#二、配置国内镜像加速器（2025年2月亲测可用）" class="headerlink" title="二、配置国内镜像加速器（2025年2月亲测可用）"></a>二、配置国内镜像加速器（<strong>2025年2月亲测可用</strong>）</h3><p>这里踩了很多坑，之前网上很多教程里面提供的阿里云等加速器现在都用不了，docker拉取镜像的时候一直报错：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">Error response from daemon: Get “https://registry-1.docker.io/v2/“<br></code></pre></td></tr></table></figure><p>感谢这位博主总结的可用网址<a href="https://www.kelen.cc/dry/docker-hub-mirror">🔥截止目前，国内仍然可用docker镜像加速器汇总（2025年2月） - Kelen</a></p><p>镜像源需要编辑&#x2F;etc&#x2F;docker&#x2F;daemon.json这个文件，如果没有可以新建一个</p><p>相关指令如下：</p><p>编辑文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vim /etc/docker/daemon.json<br></code></pre></td></tr></table></figure><p>文件内容编辑为：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;registry-mirrors&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-string">&quot;https://docker.sunzishaokao.com&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;https://dockerhub.icu&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;https://hub.rat.dev&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;https://docker.wanpeng.top&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>保存并退出文件后，重新激活配置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl daemon-reload<br></code></pre></td></tr></table></figure><p>重启docker</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl restart docker<br></code></pre></td></tr></table></figure><p>测试docker能否拉取镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run hello-world<br></code></pre></td></tr></table></figure><p>如果本地检测不到helloworld这个镜像的话，就会自动从仓库拉取</p><p><img src="/img/docker-installation.png"></p><p>看见以上输出，说明docker已经可以正常工作了！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>-code</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>WSL2踩坑之不要随便改动文件夹权限</title>
     <link href="/2025/02/18/WSL2%E8%B8%A9%E5%9D%91%E4%B9%8B%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E6%94%B9%E5%8A%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90/"/>
     <url>/2025/02/18/WSL2%E8%B8%A9%E5%9D%91%E4%B9%8B%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E6%94%B9%E5%8A%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90/</url>
