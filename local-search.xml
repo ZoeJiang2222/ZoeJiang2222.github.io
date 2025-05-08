@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Blog美化日记</title>
+    <link href="/2025/05/08/Blog%E7%BE%8E%E5%8C%96%C2%B7%E6%B7%BB%E7%A0%96%E5%8A%A0%E7%93%A6%E8%AE%B0/"/>
+    <url>/2025/05/08/Blog%E7%BE%8E%E5%8C%96%C2%B7%E6%B7%BB%E7%A0%96%E5%8A%A0%E7%93%A6%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="Done："><a href="#Done：" class="headerlink" title="Done："></a>Done：</h2><ol><li>留言栏：集成了valine，js文件有问题，重新找到了一份</li><li>访客人数统计：不太记得怎么完成的了，貌似是配置文件的内置功能</li><li>网页运行时间统计：参考<a href="https://blog.kevinchu.top/2023/07/17/hexo-theme-fluid-modify/#5-%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%A0%87%E9%A2%98%E6%B7%BB%E5%8A%A0%E9%9C%93%E8%99%B9%E7%81%AF%E7%89%B9%E6%95%88">Hexo博客Fluid主题魔改记录 - KEVIN’S BLOG</a></li><li>主页标题的霓虹灯特效：参考<a href="https://blog.kevinchu.top/2023/07/17/hexo-theme-fluid-modify/#5-%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%A0%87%E9%A2%98%E6%B7%BB%E5%8A%A0%E9%9C%93%E8%99%B9%E7%81%AF%E7%89%B9%E6%95%88">Hexo博客Fluid主题魔改记录 - KEVIN’S BLOG</a></li><li>动态标签词云：基本思路参考[Hexo Fluid添加tag-cloud插件 - Zhehui’s Blog](<a href="https://zhengzhehui1110.github.io/zhengzhehui.github.io/2021/02/25/Hexo">https://zhengzhehui1110.github.io/zhengzhehui.github.io/2021/02/25/Hexo</a> Fluid添加tag-cloud插件&#x2F;)，为了让字体变清晰卡了很久，最后通过扩展画布+制定字体大小实现了</li><li>页脚养鱼：基本的js、css文件都参照这个链接<a href="https://blog.emb42.com/2024/11/17/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF%E4%BB%A5%E5%8F%8A%E9%A1%B5%E8%84%9A%E7%BE%8E%E5%8C%96/#%E7%89%B9%E6%95%88%E6%BA%90%E7%A0%81%E4%BB%A5%E5%8F%8A%E4%BF%AE%E6%94%B9">为博客添加樱花飘落特效以及页脚美化 - 江上清风</a>；扩展鱼池到全页面花了大功夫，参考<a href="https://cnhuazhu.top/butterfly/2021/02/19/Hexo%E9%AD%94%E6%94%B9/Hexo%E9%A1%B5%E8%84%9A%E5%85%BB%E9%B1%BC%E6%95%88%E6%9E%9C/">Hexo页脚养鱼效果 | 花猪のBlog</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>-汪汪汪 -code</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Bloger</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>无限循环的歌单~</title>
     <link href="/2025/05/08/%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%AD%8C%E5%8D%95/"/>
     <url>/2025/05/08/%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%AD%8C%E5%8D%95/</url>
@@ -38,7 +63,7 @@
     
     <categories>
       
-      <category>-汪汪汪</category>
+      <category>汪汪汪</category>
       
     </categories>
     
@@ -57,7 +82,7 @@
     
     <categories>
       
-      <category>-汪汪汪</category>
+      <category>汪汪汪</category>
       
     </categories>
     
@@ -76,7 +101,7 @@
     
     <categories>
       
-      <category>-汪汪汪</category>
+      <category>汪汪汪</category>
       
     </categories>
     
@@ -168,7 +193,7 @@
     
     <categories>
       
-      <category>-code</category>
+      <category>Code</category>
       
     </categories>
     
@@ -187,7 +212,7 @@
     
     <categories>
       
-      <category>-code</category>
+      <category>Code</category>
       
     </categories>
     
@@ -206,7 +231,7 @@
     
     <categories>
       
-      <category>-code</category>
+      <category>Code</category>
       
     </categories>
     
@@ -225,7 +250,7 @@
     
     <categories>
       
-      <category>-汪汪汪</category>
+      <category>汪汪汪</category>
       
     </categories>
     
@@ -244,7 +269,7 @@
     
     <categories>
       
-      <category>-汪汪汪</category>
+      <category>汪汪汪</category>
       
     </categories>
     
@@ -263,7 +288,7 @@
     
     <categories>
       
-      <category>-汪汪汪</category>
+      <category>汪汪汪</category>
       
     </categories>
     
@@ -326,7 +351,7 @@
     
     <categories>
       
-      <category>-汪汪汪</category>
+      <category>汪汪汪</category>
       
     </categories>
     
