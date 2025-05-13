@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://example.com/img/ns3gym-1.png">
 <meta property="og:image" content="http://example.com/img/ns3gym-2.png">
 <meta property="article:published_time" content="2025-02-14T08:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-08T11:53:57.929Z">
+<meta property="article:modified_time" content="2025-05-13T13:30:15.667Z">
 <meta property="article:author" content="Zoe Jiang">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/ns3gym-1.png">
@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1k 字
+          1.3k 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          9 分钟
+          11 分钟
         
       </span>
     
@@ -337,12 +337,12 @@
 <p>解压</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -jxvf ns-allinone-3.xx.tar.bz2<br></code></pre></td></tr></table></figure>
 
-<p>然后编译测试，这个部分只需要注意编译命令有区别(<strong>&lt;&#x3D;3.35用.&#x2F;waf，&gt;&#x3D;3.36用.&#x2F;ns3</strong>)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ns-allinone-3.xx<br><span class="hljs-built_in">cd</span> ns-3.xx<br>./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 run hello-simulator<br></code></pre></td></tr></table></figure>
+<p>然后编译测试，这个部分只需要注意编译命令有区别(<strong>&lt;&#x3D;3.35用.&#x2F;waf，&gt;&#x3D;3.36用.&#x2F;ns3</strong>)<br>如果一开始用的就不是root用户，最好之后的操作中都不要用sudo，不然会出现一些奇奇怪怪的权限错误，把我坑惨了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ns-allinone-3.xx<br><span class="hljs-built_in">cd</span> ns-3.xx<br>./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 run hello-simulator<br><br>./waf configure --enable-test --enable-examples<br>./waf build<br></code></pre></td></tr></table></figure>
 
 <p>看到输出Hello Simulator就成功了</p>
 <p>PS.有些教程还会在这里用.&#x2F;ns3 run third –vis测试可视化模块，如果是用的本地虚拟机或者子系统应该没有问题，<strong>用远程连接的服务器暂时看不到图形化界面</strong>，只要前面的步骤都是成功的，即使出现了这个问题，也不用担心，远程连接服务器就是在配置图形化界面上比较麻烦，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/zoe2222226666/article/details/137290549?spm=1001.2014.3001.5502">Pycharm+远程连接Linux服务器用matplotlib画图不显示_pycharm连接远程服务器运行画不出图-CSDN博客</a>，这个问题以后有空再研究吧。</p>
-<h2 id="3、安装ns3gym"><a href="#3、安装ns3gym" class="headerlink" title="3、安装ns3gym"></a>3、安装ns3gym</h2><p>其实和安装ns3的流程差不多，先拉取源码，再进行编译等后续操作，只是要注意现在都要在**ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;**这个位置下进行操作</p>
+<h2 id="3、安装ns3gym"><a href="#3、安装ns3gym" class="headerlink" title="3、安装ns3gym"></a>3、安装ns3gym</h2><p>其实和安装ns3的流程差不多，先拉取源码，再进行编译等后续操作，只是要注意现在都要在**ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;**这个位置下进行操作<br>如果clone的时候报错“无法访问”，先检查本地网速，然后把”https”换成”http”试试，这一步很玄学，说不定等一会儿就好了</p>
 <p>如果ns3版本&lt;&#x3D;3.35:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib<br>git <span class="hljs-built_in">clone</span> https://github.com/tkn-tub/ns3-gym.git ./opengym<br><span class="hljs-built_in">cd</span> opengym/<br>git checkout app<br></code></pre></td></tr></table></figure>
 
@@ -355,6 +355,13 @@
 <p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下安装ns3gym需要的python模块</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/<br>pip3 install --user ./model/ns3gym<br></code></pre></td></tr></table></figure>
 
+<p>这一步也有坑，有可能下载不了，检查是否安装pip；<br>用pip下载成功以后，最好查看一下是否成功安装ns3gym:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip show ns3gym<br></code></pre></td></tr></table></figure>
+
+<p>要看到ns3gym已经安装到了当前虚拟环境下才算成功<br>如果没有的话，需要重新检查pip的位置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">which</span> pip<br></code></pre></td></tr></table></figure>
+
+<p>如果发现这里指向的是全局路径下的pip，试试在当前虚拟环境下用 conda install pip 重新安装pip<br>如果还是不行的话，只有建立一个新的虚拟环境，从头来过</p>
 <p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下运行测试</p>
 <p>测试一（仅需一个终端）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/examples/opengym/<br>./simple_test.py<br></code></pre></td></tr></table></figure>
