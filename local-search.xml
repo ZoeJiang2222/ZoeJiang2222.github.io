@@ -20,11 +20,11 @@
     
     <tags>
       
-      <tag>WSL2</tag>
+      <tag>Ubuntu</tag>
       
       <tag>Linux</tag>
       
-      <tag>Ubuntu</tag>
+      <tag>WSL2</tag>
       
       <tag>PyTorch</tag>
       
@@ -223,7 +223,7 @@
   
   
   <entry>
-    <title>在Ubuntu上用docker拉取镜像</title>
+    <title>在Ubuntu上用Docker拉取镜像</title>
     <link href="/2025/02/19/Ubuntu%E4%B8%8A%E7%94%A8docker%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F/"/>
     <url>/2025/02/19/Ubuntu%E4%B8%8A%E7%94%A8docker%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F/</url>
     
@@ -239,11 +239,11 @@
     
     <tags>
       
-      <tag>Linux</tag>
-      
       <tag>Ubuntu</tag>
       
-      <tag>docker</tag>
+      <tag>Linux</tag>
+      
+      <tag>Docker</tag>
       
     </tags>
     
@@ -268,9 +268,9 @@
     
     <tags>
       
-      <tag>WSL2</tag>
-      
       <tag>Linux</tag>
+      
+      <tag>WSL2</tag>
       
     </tags>
     
@@ -295,9 +295,9 @@
     
     <tags>
       
-      <tag>Linux</tag>
-      
       <tag>Ubuntu</tag>
+      
+      <tag>Linux</tag>
       
       <tag>NS3</tag>
       
