@@ -18,6 +18,18 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>ubuntu</tag>
+      
+      <tag>Linux</tag>
+      
+      <tag>WSL2</tag>
+      
+      <tag>PyTorch</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -146,6 +158,12 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>Travel</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -219,6 +237,16 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>ubuntu</tag>
+      
+      <tag>Linux</tag>
+      
+      <tag>docker</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -238,6 +266,14 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>WSL2</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -256,6 +292,18 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>ubuntu</tag>
+      
+      <tag>Linux</tag>
+      
+      <tag>ns3</tag>
+      
+      <tag>ns3gym</tag>
+      
+    </tags>
     
   </entry>
   
