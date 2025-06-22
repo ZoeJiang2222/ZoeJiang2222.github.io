@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>卫星的服务时间计算</title>
+    <link href="/2025/06/22/%E5%8D%AB%E6%98%9F%E7%9A%84%E5%89%A9%E4%BD%99%E6%9C%8D%E5%8A%A1%E6%97%B6%E9%97%B4%E8%AE%A1%E7%AE%97/"/>
+    <url>/2025/06/22/%E5%8D%AB%E6%98%9F%E7%9A%84%E5%89%A9%E4%BD%99%E6%9C%8D%E5%8A%A1%E6%97%B6%E9%97%B4%E8%AE%A1%E7%AE%97/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><blockquote><p>在写论文的时候遇到了这个问题，顺藤摸瓜找到了一本非常好的卫星通信教材，记录一下公式推导的过程</p></blockquote><h5 id="主要根据下面这个图来分析"><a href="#主要根据下面这个图来分析" class="headerlink" title="主要根据下面这个图来分析:"></a>主要根据下面这个图来分析:</h5><p><img src="/img/RST/1.jpg"></p><p><strong>仰角E</strong>：观察点-卫星的连线，与地平线的夹角，取值范围为[-90°, 90°]，-90°时卫星已经位于观察点对应的地球表面异侧点正上方，实际已经不可见；一般都会规定最小仰角</p><p><strong>地心角 $\alpha$:</strong> 取值范围为[0°, 180°]， 0°表示卫星在观察点正上方，180°表示卫星在观察点对应的地球表面异侧点正上方</p><p><strong>地球平均半径 $R_e$</strong></p><p><strong>轨道高度 $h$</strong></p><h5 id="由此可以推导出仰角与地心角的关系-（从O点作观察点-卫星连线的垂线）："><a href="#由此可以推导出仰角与地心角的关系-（从O点作观察点-卫星连线的垂线）：" class="headerlink" title="由此可以推导出仰角与地心角的关系 （从O点作观察点-卫星连线的垂线）："></a>由此可以推导出仰角与地心角的关系 （从O点作观察点-卫星连线的垂线）：</h5><p><img src="/img/RST/2.jpg"></p><p>如果已知的是卫星的经纬度，也可以表示出地心角：<br><img src="/img/RST/3.jpg"></p><h5 id="那么卫星的服务时间就能通过角速度和地心角推导出来："><a href="#那么卫星的服务时间就能通过角速度和地心角推导出来：" class="headerlink" title="那么卫星的服务时间就能通过角速度和地心角推导出来："></a>那么卫星的服务时间就能通过角速度和地心角推导出来：</h5><p>卫星的在轨运动角速度为：</p><p><img src="/img/RST/4.jpg"></p><p>卫星扫过的地心角范围最大为 $2\alpha_{max}$ ，所以可以提供的最大连续服务时间为：</p><p><img src="/img/RST/5.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Acedemic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>satellite</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Overleaf写作攻略-Figures</title>
+    <link href="/2025/06/22/Overleaf%E5%86%99%E4%BD%9C%E6%94%BB%E7%95%A5/"/>
+    <url>/2025/06/22/Overleaf%E5%86%99%E4%BD%9C%E6%94%BB%E7%95%A5/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>有些期刊要求配图都采用.eps格式，但是会出现一些问题：</p><h5 id="1-用visio画图不能直接导出-eps"><a href="#1-用visio画图不能直接导出-eps" class="headerlink" title="1.用visio画图不能直接导出.eps"></a>1.用visio画图不能直接导出.eps</h5><p>看了很多五花八门的教程，后来终于看到有人说windows居然自带转换功能</p><p>首先从visio导出png，这一步如果有分辨率要求，需要自定义分辨率<br>图片大小也可以修改，如果是比较大的图可以直接按原尺寸缩小一半，不然会出现巨大的文件</p><p>然后在保存图片的文件夹打开windows自带的powershell命令行，输入以下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bmeps -c xxx.png xxx.eps<br></code></pre></td></tr></table></figure><p>就能获得新鲜的.eps文件了！</p><h5 id="2-overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”："><a href="#2-overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”：" class="headerlink" title="2. overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”："></a>2. overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”：</h5><p>因为overleaf编译图片的机制是把eps转换成PDF，所以可以巧妙地利用这一点，上传与eps同名的xxx.PDF<br>把PDF名字修改为：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">xxx-eps-converted-to.PDF<br></code></pre></td></tr></table></figure><p>overleaf就可以直接调用编译好的PDF，再也不用担心编译超时了！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Acedemic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Overleaf</tag>
+      
+      <tag>laTex</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>却笑人间举子忙</title>
     <link href="/2025/06/07/%E5%8D%B4%E7%AC%91%E4%BA%BA%E9%97%B4%E4%B8%BE%E5%AD%90%E5%BF%99/"/>
     <url>/2025/06/07/%E5%8D%B4%E7%AC%91%E4%BA%BA%E9%97%B4%E4%B8%BE%E5%AD%90%E5%BF%99/</url>
