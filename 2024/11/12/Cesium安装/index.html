@@ -21,24 +21,27 @@
   
     <meta name="description" content="踩坑记录！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hypatia安装">
-<meta property="og:url" content="http://example.com/2025/08/05/Hypatia%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:title" content="Cesium安装">
+<meta property="og:url" content="http://example.com/2024/11/12/Cesium%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="踩坑记录！">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/Hypatia/1.png">
-<meta property="article:published_time" content="2025-08-05T09:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-05T13:56:01.931Z">
+<meta property="og:image" content="http://example.com/img/Cesium/1.png">
+<meta property="og:image" content="http://example.com/img/Cesium/2.png">
+<meta property="og:image" content="http://example.com/img/Cesium/3.png">
+<meta property="og:image" content="http://example.com/img/Cesium/4.png">
+<meta property="article:published_time" content="2024-11-12T11:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-05T14:06:01.601Z">
 <meta property="article:author" content="Zoe Jiang">
 <meta property="article:tag" content="Satellite">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/Hypatia/1.png">
+<meta name="twitter:image" content="http://example.com/img/Cesium/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hypatia安装 - Hexo</title>
+  <title>Cesium安装 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -220,7 +223,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hypatia安装"></span>
+            <span id="subtitle" data-typed-text="Cesium安装"></span>
           
         </div>
 
@@ -231,8 +234,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-05 17:00" pubdate>
-          2025年8月5日 下午
+        <time datetime="2024-11-12 19:00" pubdate>
+          2024年11月12日 晚上
         </time>
       </span>
     
@@ -243,7 +246,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          103 字
+          304 字
         
       </span>
     
@@ -254,7 +257,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -300,7 +303,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hypatia安装</h1>
+            <h1 id="seo-header">Cesium安装</h1>
             
             
               <div class="markdown-body">
@@ -308,12 +311,29 @@
                 <meta name="referrer" content="no-referrer">
 
 
-<h5 id="参考教程："><a href="#参考教程：" class="headerlink" title="参考教程："></a>参考教程：</h5><p><a target="_blank" rel="noopener" href="https://www.betaflare.com/biancheng/1725504870a1006389.html?btwaf=69732842">Hypatia安装终极记录（巨详细）-软件玩家 - 软件改变生活！</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/JackZhaojt/article/details/128678247">Hypatia安装终极记录（巨详细）-CSDN博客</a></p>
-<h5 id="BUG："><a href="#BUG：" class="headerlink" title="BUG："></a>BUG：</h5><p>使用git命令自动拉取的都是最新的版本，所以怎么搞都没有办法匹配，只能把原来这个版本全部下载解压到basic-sim才能解决</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/snkas/basic-sim/tree/3b32597c183e1039be7f0bede17d36d354696776">https://github.com/snkas/basic-sim/tree/3b32597c183e1039be7f0bede17d36d354696776</a></p>
-<p>我真的。。。眼泪掉下来</p>
-<p><img src="/img/Hypatia/1.png" srcset="/img/loading.gif" lazyload></p>
+
+
+<h5 id="安装Nodejs："><a href="#安装Nodejs：" class="headerlink" title="安装Nodejs："></a>安装Nodejs：</h5><p>这个网上教程很多，就是先下载安装包，再配置环境变量就行<br>安装好以后看一下版本</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-keyword">node</span> <span class="hljs-title">-V</span><br>npm -V<br></code></pre></td></tr></table></figure>
+
+<p><img src="/img/Cesium/1.png" srcset="/img/loading.gif" lazyload> </p>
+<h5 id="安装Cesium："><a href="#安装Cesium：" class="headerlink" title="安装Cesium："></a>安装Cesium：</h5><p>这一步很简单，就是去官网上下载库<a target="_blank" rel="noopener" href="https://cesium.com/downloads/">Downloads – Cesium</a></p>
+<h5 id="补充安装依赖："><a href="#补充安装依赖：" class="headerlink" title="补充安装依赖："></a>补充安装依赖：</h5><p>还需要用npm安装一些依赖</p>
+<p>①npm安装慢换源，注意淘宝的源已经换了，原来的用不了<br> <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44741577/article/details/136813007">npm包下载慢的三种解决方案（附：yarn和pnpm设置镜像源）_npm下载慢-CSDN博客</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 查看当前下载地址<br>npm config get registry<br>// 设置淘宝镜像的地址<br>npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com/<br></code></pre></td></tr></table></figure>
+
+<p>②取消捐献资金提示：直接运行”npm install”会出现一些提示，查了一下是提示fund，可以添加指令”–no-fund”取消提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install request --no-fund<br>npm install yargs --no-fund<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="运行："><a href="#运行：" class="headerlink" title="运行："></a>运行：</h5><p>安装成功后在cesium的目录下运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">node server.js<br></code></pre></td></tr></table></figure>
+
+<p>可以看到终端显示<br><img src="/img/Cesium/2.png" srcset="/img/loading.gif" lazyload></p>
+<p>打开该链接可以看到<br><img src="/img/Cesium/3.png" srcset="/img/loading.gif" lazyload> </p>
+<p>比如说点击“Hello World”可以看到最简单的示例：<br><img src="/img/Cesium/4.png" srcset="/img/loading.gif" lazyload> </p>
+<p><strong>PS.同样的流程在ubuntu系统下到了打开浏览器这一步就出问题了，虽然验证了浏览器是支持WebGL的，但是依然在报错，最后还是回归了windows，也不是什么大问题</strong></p>
 
                 
               </div>
@@ -359,8 +379,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hypatia安装</div>
-      <div>http://example.com/2025/08/05/Hypatia安装/</div>
+      <div>Cesium安装</div>
+      <div>http://example.com/2024/11/12/Cesium安装/</div>
     </div>
     <div class="license-meta">
       
@@ -372,7 +392,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月5日</div>
+          <div>2024年11月12日</div>
         </div>
       
       
@@ -404,12 +424,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/11/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="The game is on">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">The game is on</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/05/Cesium%E5%AE%89%E8%A3%85/" title="Cesium安装">
-                        <span class="hidden-mobile">Cesium安装</span>
+                      <a href="/2024/11/11/Hypatia%E5%AE%89%E8%A3%85/" title="Hypatia安装">
+                        <span class="hidden-mobile">Hypatia安装</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
