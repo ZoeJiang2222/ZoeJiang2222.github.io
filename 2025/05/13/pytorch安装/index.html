@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/head.jpg">
+  <link rel="icon" href="/img/head.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Zoe Jiang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="在Ubuntu上安装PyTorch太坑了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Ubuntu\WSL系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU)">
+<meta property="og:url" content="http://example.com/2025/05/13/pytorch%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在Ubuntu上安装PyTorch太坑了">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-13T12:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-30T04:53:35.510Z">
+<meta property="article:author" content="Zoe Jiang">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="WSL2">
+<meta property="article:tag" content="PyTorch">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>在Ubuntu\WSL系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU) - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <!-- <strong>ZoeJiang&#39;s Wonderful World</strong> -->
+      <strong class="navbar-title">ZoeJiang&#39;s Wonderful World</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="在Ubuntu\WSL系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU)"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-05-13 20:00" pubdate>
+          2025年5月13日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">在Ubuntu\WSL系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU)</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <meta name="referrer" content="no-referrer">
+
+<h2 id="一、NVIDIA显卡的安装"><a href="#一、NVIDIA显卡的安装" class="headerlink" title="一、NVIDIA显卡的安装"></a>一、NVIDIA显卡的安装</h2><p>因为WSL和Windows的显卡驱动不能互通，所以在子系统上需要重新下载驱动<br>先查看Windows的显卡配置，在Windows终端中的指令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvidia-smi<br></code></pre></td></tr></table></figure>
+
+<p>根据这个去NVIDIA官网下载对应的驱动<a target="_blank" rel="noopener" href="https://www.nvidia.com/Download/index.aspx">Official Drivers | NVIDIA</a><br> 更具体的操作参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_45447650/article/details/132058561">Linux安装显卡驱动、annaconda和CUDA（超详细）-CSDN博客</a></p>
+<h2 id="二、Pytorch的下载"><a href="#二、Pytorch的下载" class="headerlink" title="二、Pytorch的下载"></a>二、Pytorch的下载</h2><p>2.1 下载Anaconda3<br>一般采用wget方式直接从Linux拉取较稳定的版本，可以进入官网<a target="_blank" rel="noopener" href="https://www.anaconda.com/download/success">Download Now | Anaconda</a><br>在下载地址点击右键复制链接，替换下方指令中的版本号即可<br>然后在本地安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh<br>bash Anaconda3-2024.10-1-Linux-x86_64.sh<br></code></pre></td></tr></table></figure>
+
+<p>2.2 构建虚拟环境<br> 需要对照pytorch\python的版本对应关系，确定兼容性比较强的Python版本，多次经验教训得出：3.8 yyds!<br>但是现在最新的cuda 12.8要求python&gt;&#x3D;3.9</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n py_gpu python=3.8.5<br></code></pre></td></tr></table></figure>
+
+<p>2.3 下载pytorch</p>
+<p>在这一步之前最好先把pip下载了，不然后面极有可能出错（有一次遇到pip一直指向全局路径，在虚拟环境里根本不起作用，只好全部推翻重来）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda install pip<br><br><span class="hljs-comment">#查看pip位置</span><br><span class="hljs-built_in">which</span> pip<br><br><span class="hljs-comment">#如果是指向当前虚拟环境下的pip,则配置正确</span><br></code></pre></td></tr></table></figure>
+
+<p>最方便的方法就是通过官网的指令下载，一般推荐使用conda下载，根据自己的系统、CUDA版本生成指令，官网链接<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">Start Locally | PyTorch</a><br>默认的官网下载源会比较慢，两步加速（这里只是添加了anaconda的镜像源，完整的Ubuntu仓库镜像源要区分版本来着）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#1.取消默认官网下载</span><br>在生成的下载指令中删除<span class="hljs-string">&quot;-c pytorch&quot;</span><br><br><span class="hljs-comment">#2.添加anaconda国内镜像源</span><br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/<br><br><span class="hljs-comment">#3.添加Ubuntu仓库镜像源</span><br><span class="hljs-comment"># 备份</span><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cp</span> /etc/apt/sources.list /etc/apt/sources.list.back<br><br><span class="hljs-comment"># 编辑 </span><br>vim /etc/apt/sources.list<br><br><span class="hljs-comment"># 替换为阿里云镜像源</span><br>deb https://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br><br>deb https://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br><br>deb https://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br><br>deb https://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br><br></code></pre></td></tr></table></figure>
+
+<p>全部下载完成以后，进入虚拟环境测试：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate py_gpu<br><br><span class="hljs-comment">#看一下pytorch能不能用</span><br><span class="hljs-comment">#注意测试指令中都用的是&quot;torch&quot;</span><br><br>python<br>import torch<br><span class="hljs-comment">#不报错说明torch安装成功</span><br><br>torch.cuda.is_available()<br><br><span class="hljs-comment">#返回 TRUE</span><br><span class="hljs-comment">#说明gpu版本的pytorch可以正常使用</span><br></code></pre></td></tr></table></figure>
+
+<p>PS.这个过程中一定要注意环境的归属<br>1.用户：以前没有注意过，默认用户root，还有一个自己取名的用户，可以配置默认打开的用户，要注意anaconda环境配置在哪个用户下，我就是在这里卡了很久，明明安装了anaconda居然找不到。如果使用的不是root用户，可能会出现修改了代码无法保存的情况，需要给对应的工作目录添加用户权限：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chown</span> -R username /path/to/working/directory<br></code></pre></td></tr></table></figure>
+
+<p>2.虚拟环境：anaconda安装好以后会在用户前面显示，一定要注意隔离环境，在具体的虚拟环境下配置pytorch,查看所有虚拟环境指令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> list<br></code></pre></td></tr></table></figure>
+
+<h2 id="三、在WSL中打开VScode运行代码"><a href="#三、在WSL中打开VScode运行代码" class="headerlink" title="三、在WSL中打开VScode运行代码"></a>三、在WSL中打开VScode运行代码</h2><p>VScode仅需要安装在Windows系统下，安装微软官方推荐的Remote-Development插件就能直接在Windows系统下使用Linux内核运行程序<br>直接在WSL的终端下输入![\displaystyle](在ubuntu系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU)&#x2F;displaystyle.png)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">code .<br></code></pre></td></tr></table></figure>
+
+<p>如果打不开，检查一下路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vim ~/.bashrc<br></code></pre></td></tr></table></figure>
+
+<p>在.bashrc文件最后看一下路径，需要添加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#根据VScode在本地的下载路径,&#x27;mnt&#x27;这里是wsl在windows系统下的挂载目录</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;<span class="hljs-variable">$PATH</span>:/mnt/d/Microsoft\\ VS\\ Code/Code.exe&quot;</span><br><span class="hljs-built_in">alias</span> code=<span class="hljs-string">&#x27;/mnt/d/Microsoft\ VS\ Code/bin/Code&#x27;</span><br>|<br><span class="hljs-comment">#如果anaconda安装了找不到，也有可能是路径问题,根据具体的路径修改</span><br><span class="hljs-built_in">export</span> PATH=/home/u/anaconda3/bin/:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#修改了配置要重启文件</span><br><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure>
+
+<p>最后调整一下解释器，选择虚拟环境下的python，然后打开终端确认一下环境</p>
+<h2 id="四、补充可视化桌面端配置"><a href="#四、补充可视化桌面端配置" class="headerlink" title="四、补充可视化桌面端配置"></a>四、补充可视化桌面端配置</h2><p>4.1 WSL:  xlaunch+xfce4<br>因为WSL默认安装的是终端，需要自己配置桌面，尝试了几种方法以后，终于使用xfce4可以看到可视化桌面了<br>具体步骤参考<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv33557374/?spm_id_from=333.999.0.0">WSL2+Ubuntu22.04+图形化界面安装 - 哔哩哔哩</a><br>关键的启动代码如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#在 Ubuntu 终端中设置 DISPLAY 环境变量：</span><br><span class="hljs-built_in">export</span> DISPLAY=$(awk <span class="hljs-string">&#x27;/nameserver / &#123;print$2; exit&#125;&#x27;</span> /etc/resolv.conf 2&gt;/dev/null):0<br><br><span class="hljs-comment">#使用sudo 启动 Xfce 会话：</span><br><span class="hljs-built_in">sudo</span> startxfce4 <br></code></pre></td></tr></table></figure>
+
+<p>但是仍然有点问题，发现xfce4一段时间没有任何操作以后会卡死，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/noto_xj/article/details/129929555">WSL2 Ubuntu + Xfce4 一段时间 Xfce4 卡死不动_ubuntu无法启动xfce4-CSDN博客</a><br>通过卸载锁屏应用解决问题</p>
+<p>4.2 服务器: xdrp+gnome</p>
+<p>因为服务器一般已经安装好gnome图形化界面了，所以主要通过xrdp在windows端实现远程访问</p>
+<p>主要参考<a target="_blank" rel="noopener" href="https://www.zzvips.com/article/90420.html">详解如何在Ubuntu 20.04上安装Xrdp服务器(远程桌面)_Ubuntu_服务器之家</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#下载xrdp后会自动运行</span><br><span class="hljs-built_in">sudo</span> apt install xrdp<br><br><span class="hljs-comment">#添加用户群组</span><br><span class="hljs-built_in">sudo</span> adduser xrdp ssl-cert<br><br><span class="hljs-comment">#重启xrdp</span><br><span class="hljs-built_in">sudo</span> systemctl restart xrdp<br><br><span class="hljs-comment">#允许访问</span><br><span class="hljs-built_in">sudo</span> ufw allow 3389<br></code></pre></td></tr></table></figure>
+
+<p>在windows端打开远程桌面连接程序<br>法一：在 Windows 搜索栏输入“remote”<br>法二：win+r键+mstsc</p>
+<p>可能还有黑屏的情况，参考<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/519648451">完美方案——解决XRDP连接黑屏，以及桌面优化！ - 知乎</a>可以解决<br>但是相比xfce4明显启动慢很多</p>
+<p>撒花！</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+        <a href="/tags/WSL2/" class="print-no-link">#WSL2</a>
+      
+        <a href="/tags/PyTorch/" class="print-no-link">#PyTorch</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>在Ubuntu\WSL系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU)</div>
+      <div>http://example.com/2025/05/13/pytorch安装/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Zoe Jiang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年5月13日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/06/01/%E4%B9%9D%E5%AF%A8%E8%93%9D%E8%B0%83/" title="九寨蓝调">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">九寨蓝调</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/05/08/Blog%E7%BE%8E%E5%8C%96%E6%97%A5%E8%AE%B0/" title="Blog美化日记">
+                        <span class="hidden-mobile">Blog美化日记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('/js/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appid":"CDSOj7LzHeZi1izZyaT8HKRU-gzGzoHsz","appkey":"CDJNIcrirycCihsGKlbF8cg0","placeholder":"就说你想说的~","path":"window.location.pathname","avatar":"robohash","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true,"appId":"CDSOj7LzHeZi1izZyaT8HKRU-gzGzoHsz","appKey":"CDJNIcrirycCihsGKlbF8cg0"},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  <div>
+    <span id="timeDate">正在载入天数...</span>
+    <span id="times">载入时分秒...</span>
+    <script>
+    var now = new Date();
+    function createtime(){
+        var grt= new Date("11/18/2024 20:58:14");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if(String(mnum).length ==1 ){
+                  mnum = "0" + mnum;
+        }
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if(String(snum).length ==1 ){
+                  snum = "0" + snum;
+        }
+        document.getElementById("timeDate").innerHTML = "🚀已持续航行&nbsp"+dnum+"&nbsp天";  
+        document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒🌏";
+    }
+    setInterval("createtime()",250);
+    </script>
+  </div>
+  
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/fishes.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

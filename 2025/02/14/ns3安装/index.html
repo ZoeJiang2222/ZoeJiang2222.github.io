@@ -1,0 +1,848 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/head.jpg">
+  <link rel="icon" href="/img/head.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Zoe Jiang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="在Ubuntu上安装ns3和ns3gym太折磨人了，一路走下来都没有找到特别完善的教程，踩了不少坑，尤其是Ubuntu版本的不同造成了很多阻碍，记录一下来之不易的成功">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Ubuntu上安装NS3和ns3gym">
+<meta property="og:url" content="http://example.com/2025/02/14/ns3%E5%AE%89%E8%A3%85/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在Ubuntu上安装ns3和ns3gym太折磨人了，一路走下来都没有找到特别完善的教程，踩了不少坑，尤其是Ubuntu版本的不同造成了很多阻碍，记录一下来之不易的成功">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/ns3gym-1.png">
+<meta property="og:image" content="http://example.com/img/ns3gym-2.png">
+<meta property="article:published_time" content="2025-02-14T08:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-30T04:53:35.499Z">
+<meta property="article:author" content="Zoe Jiang">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="NS3">
+<meta property="article:tag" content="ns3gym">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/ns3gym-1.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>在Ubuntu上安装NS3和ns3gym - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <!-- <strong>ZoeJiang&#39;s Wonderful World</strong> -->
+      <strong class="navbar-title">ZoeJiang&#39;s Wonderful World</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="在Ubuntu上安装NS3和ns3gym"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-14 16:00" pubdate>
+          2025年2月14日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">在Ubuntu上安装NS3和ns3gym</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <meta name="referrer" content="no-referrer">
+
+<h2 id="0、安装须知：版本适配问题"><a href="#0、安装须知：版本适配问题" class="headerlink" title="0、安装须知：版本适配问题"></a>0、安装须知：版本适配问题</h2><p>安装ns3真是太折磨人了,经过多次试验，目前可行的适配方案有：<strong>Ubuntu20.04+ns3.35</strong> （主要参考<a target="_blank" rel="noopener" href="https://www.minaduki.moe/2023/04/23/focal-ns3-gym/">在Ubuntu 20.04上安装NS3.34和NS3-gym - Minaduki’s Blog</a>）和 <strong>Ubuntu22.04+ns3.38</strong>（主要参考<a target="_blank" rel="noopener" href="https://www.nsnam.com/2023/07/installation-of-ns3-in-ubuntu-2204-ns.html">Installation of ns3 in Ubuntu 22.04 | NS-3.38 | Engineering Clinic</a>和<a target="_blank" rel="noopener" href="https://www.minaduki.moe/2024/04/10/focal-ns3-38-gym/">在Ubuntu 20.04上安装NS3.38和NS3-gym - Minaduki’s Blog</a>）</p>
+<p>ns3gym目前只分为适用于ns3.36+的版本和适用于ns3.36以下的版本，这是因为从ns3.36开始，编译命令就由.&#x2F;waf变成.&#x2F;ns3了</p>
+<h2 id="1、创建虚拟环境，并安装依赖"><a href="#1、创建虚拟环境，并安装依赖" class="headerlink" title="1、创建虚拟环境，并安装依赖"></a>1、创建虚拟环境，并安装依赖</h2><p>首先要更新系统软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt upgrade<br></code></pre></td></tr></table></figure>
+
+<p>如果更新失败或者特别慢的话，要考虑换源，并且换源的时候也要根据具体的Ubuntu版本搜索。如果镜像仓库源和Ubuntu的版本不适配的话，后面的步骤都无法进行</p>
+<p>然后利用anaconda创建虚拟环境（这里我省略了配置anaconda和pytorch的步骤，可以参考这篇文章<a target="_blank" rel="noopener" href="https://blog.csdn.net/zoe2222226666/article/details/139581844?spm=1001.2014.3001.5502">在WSL2下配置Pytorch(Linux+Anaconda+PyTorch-GPU)_wsl2 pytorch-CSDN博客</a>）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n torch python=3.x<br></code></pre></td></tr></table></figure>
+
+<p>进入虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate torch<br></code></pre></td></tr></table></figure>
+
+<p>接下来要在虚拟环境中安装依赖，这个其实要根据Ubuntu的版本修改某些依赖包的名称，并没有一个完全通用的办法，这里也困住了我很久</p>
+<p>Ubuntu20.04目前可行的安装指令（参考<a target="_blank" rel="noopener" href="https://www.minaduki.moe/2023/04/23/focal-ns3-gym/">在Ubuntu 20.04上安装NS3.34和NS3-gym - Minaduki’s Blog</a>）:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y gcc g++ python gcc g++ python3 python3-dev mercurial <br>python3-setuptools git qt5-default gir1.2-goocanvas-2.0 python3-gi <br>python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 ipython3 <br>openmpi-bin openmpi-common openmpi-doc libopenmpi-dev autoconf cvs bzr unrar<br>gdb valgrind uncrustify doxygen graphviz imagemagick texlive texlive-extra-utils <br>texlive-latex-extra texlive-font-utils texlive-lang-portuguese dvipng latexmk <br>python3-sphinx dia gsl-bin libgslcblas0 libgsl-dev flex bison libfl-dev tcpdump <br>sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev cmake libc6-dev libc6-dev-i386 <br>libclang-dev llvm-dev automake libgtk2.0-0 libgtk2.0-dev vtun lxc libboost-all-dev <br>libboost-filesystem-dev pkg-config sqlite3 cmake libc6-dev libc6-dev-i386 <br>libclang-6.0-dev llvm-6.0-dev automake python3-pip<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y libzmq5 libzmq3-dev libprotobuf-dev protobuf-compiler<br></code></pre></td></tr></table></figure>
+
+<p>Ubuntu22.04目前可行的安装指令（参考<a target="_blank" rel="noopener" href="https://www.nsnam.com/2023/07/installation-of-ns3-in-ubuntu-2204-ns.html">Installation of ns3 in Ubuntu 22.04 | NS-3.38 | Engineering Clinic</a>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install g++ python3 cmake ninja-build git gir1.2-goocanvas-2.0 python3-gi <br>python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 tcpdump wireshark sqlite <br>sqlite3 libsqlite3-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools openmpi-bin <br>openmpi-common openmpi-doc libopenmpi-dev doxygen graphviz imagemagick python3-sphinx <br>dia imagemagick texlive dvipng latexmk texlive-extra-utils texlive-latex-extra <br>texlive-font-utils libeigen3-dev gsl-bin libgsl-dev libgslcblas0 libxml2 libxml2-dev <br>libgtk-3-dev lxc-utils lxc-templates vtun uml-utilities ebtables bridge-utils libxml2 <br>libxml2-dev libboost-all-dev <br></code></pre></td></tr></table></figure>
+
+<p><strong>要看到每个安装包都不报错才行，不然后面会出现一些奇奇怪怪的问题</strong></p>
+<h2 id="2、安装ns3"><a href="#2、安装ns3" class="headerlink" title="2、安装ns3"></a>2、安装ns3</h2><p>首先要从官方镜像拉取ns3安装包（xx换成需要的ns3版本号）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.nsnam.org/releases/ns-allinone-3.xx.tar.bz2<br></code></pre></td></tr></table></figure>
+
+<p>解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -jxvf ns-allinone-3.xx.tar.bz2<br></code></pre></td></tr></table></figure>
+
+<p>然后编译测试，这个部分只需要注意编译命令有区别(<strong>&lt;&#x3D;3.35用.&#x2F;waf，&gt;&#x3D;3.36用.&#x2F;ns3</strong>)<br>如果一开始用的就不是root用户，最好之后的操作中都不要用sudo，不然会出现一些奇奇怪怪的权限错误，把我坑惨了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ns-allinone-3.xx<br><span class="hljs-built_in">cd</span> ns-3.xx<br>./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 run hello-simulator<br><br>./waf configure --enable-test --enable-examples<br>./waf build<br></code></pre></td></tr></table></figure>
+
+<p>看到输出Hello Simulator就成功了</p>
+<p>PS.有些教程还会在这里用.&#x2F;ns3 run third –vis测试可视化模块，如果是用的本地虚拟机或者子系统应该没有问题，<strong>用远程连接的服务器暂时看不到图形化界面</strong>，只要前面的步骤都是成功的，即使出现了这个问题，也不用担心，远程连接服务器就是在配置图形化界面上比较麻烦，参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/zoe2222226666/article/details/137290549?spm=1001.2014.3001.5502">Pycharm+远程连接Linux服务器用matplotlib画图不显示_pycharm连接远程服务器运行画不出图-CSDN博客</a>，这个问题以后有空再研究吧。</p>
+<h2 id="3、安装ns3gym"><a href="#3、安装ns3gym" class="headerlink" title="3、安装ns3gym"></a>3、安装ns3gym</h2><p>其实和安装ns3的流程差不多，先拉取源码，再进行编译等后续操作，只是要注意现在都要在**ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;**这个位置下进行操作<br>如果clone的时候报错“无法访问”，先检查本地网速，然后把”https”换成”http”试试，这一步很玄学，说不定等一会儿就好了</p>
+<p>如果ns3版本&lt;&#x3D;3.35:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib<br>git <span class="hljs-built_in">clone</span> https://github.com/tkn-tub/ns3-gym.git ./opengym<br><span class="hljs-built_in">cd</span> opengym/<br>git checkout app<br></code></pre></td></tr></table></figure>
+
+<p>如果ns3版本&gt;&#x3D;3.36:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib<br>git <span class="hljs-built_in">clone</span> https://github.com/tkn-tub/ns3-gym.git ./opengym<br><span class="hljs-built_in">cd</span> opengym/<br>git checkout app-ns-3.36+<br></code></pre></td></tr></table></figure>
+
+<p>重新编译，这个时候要返回<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 build<br></code></pre></td></tr></table></figure>
+
+<p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下安装ns3gym需要的python模块</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/<br>pip3 install --user ./model/ns3gym<br></code></pre></td></tr></table></figure>
+
+<p>这一步也有坑，有可能下载不了，检查是否安装pip；<br>用pip下载成功以后，最好查看一下是否成功安装ns3gym:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip show ns3gym<br></code></pre></td></tr></table></figure>
+
+<p>要看到ns3gym已经安装到了当前虚拟环境下才算成功<br>如果没有的话，需要重新检查pip的位置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">which</span> pip<br></code></pre></td></tr></table></figure>
+
+<p>如果发现这里指向的是全局路径下的pip，试试在当前虚拟环境下用 conda install pip 重新安装pip<br>如果还是不行的话，只有建立一个新的虚拟环境，从头来过</p>
+<p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下运行测试</p>
+<p>测试一（仅需一个终端）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/examples/opengym/<br>./simple_test.py<br></code></pre></td></tr></table></figure>
+
+<p>测试二（需要两个终端）：</p>
+<p>一个终端在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下运行c++脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./ns3 run <span class="hljs-string">&quot;opengym&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>另一个终端要找到具体的路径运行.py脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/examples/opengym/<br>./test.py --start=0<br></code></pre></td></tr></table></figure>
+
+<p>就能看到一个简单的运行结果:</p>
+<p><img src="/img/ns3gym-1.png" srcset="/img/loading.gif" lazyload><br><img src="/img/ns3gym-2.png" srcset="/img/loading.gif" lazyload></p>
+<p>大功告成！</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+        <a href="/tags/NS3/" class="print-no-link">#NS3</a>
+      
+        <a href="/tags/ns3gym/" class="print-no-link">#ns3gym</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>在Ubuntu上安装NS3和ns3gym</div>
+      <div>http://example.com/2025/02/14/ns3安装/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Zoe Jiang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月14日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/02/18/WSL2%E8%B8%A9%E5%9D%91%E4%B9%8B%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E6%94%B9%E5%8A%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90/" title="WSL2踩坑之不要随便改动文件夹权限">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">WSL2踩坑之不要随便改动文件夹权限</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/02/11/%E5%B9%B4%E5%B9%B4%E5%B2%81%E5%B2%81%E8%8A%B1%E7%9B%B8%E4%BC%BC/" title="年年岁岁花相似">
+                        <span class="hidden-mobile">年年岁岁花相似</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('/js/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appid":"CDSOj7LzHeZi1izZyaT8HKRU-gzGzoHsz","appkey":"CDJNIcrirycCihsGKlbF8cg0","placeholder":"就说你想说的~","path":"window.location.pathname","avatar":"robohash","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true,"appId":"CDSOj7LzHeZi1izZyaT8HKRU-gzGzoHsz","appKey":"CDJNIcrirycCihsGKlbF8cg0"},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  <div>
+    <span id="timeDate">正在载入天数...</span>
+    <span id="times">载入时分秒...</span>
+    <script>
+    var now = new Date();
+    function createtime(){
+        var grt= new Date("11/18/2024 20:58:14");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if(String(mnum).length ==1 ){
+                  mnum = "0" + mnum;
+        }
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if(String(snum).length ==1 ){
+                  snum = "0" + snum;
+        }
+        document.getElementById("timeDate").innerHTML = "🚀已持续航行&nbsp"+dnum+"&nbsp天";  
+        document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒🌏";
+    }
+    setInterval("createtime()",250);
+    </script>
+  </div>
+  
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/fishes.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

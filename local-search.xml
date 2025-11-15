@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Overleaf写作攻略-Figures(2)</title>
+    <link href="/2025/11/15/latex%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8/"/>
+    <url>/2025/11/15/latex%E4%B8%AD%E7%9A%84%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><ol><li><p>引用子图没有括号？<br>参考<a href="https://zhuanlan.zhihu.com/p/511144628">(2 封私信 &#x2F; 26 条消息) LATEX IEEEtran 子图引用 - 知乎</a></p><p>在引用包的地方补充设置：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\usepackage</span>[...,subrefformat=parens]&#123;subfig&#125; <br></code></pre></td></tr></table></figure><p>引用图片的命令修改为：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\subref</span>*&#123;fig1:a&#125;<br></code></pre></td></tr></table></figure><p>最终显示就会变成 1(a)</p></li><li><p>引用图片或者公式无法跳转？</p></li></ol><p>在引用包的地方添加：</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs latex"><span class="hljs-keyword">\usepackage</span>&#123;hyperref&#125;<br><span class="hljs-keyword">\hypersetup</span>&#123;hypertex=true, colorlinks=true, linkcolor=blue, anchorcolor=blue, citecolor=blue&#125;<br></code></pre></td></tr></table></figure><p>这样文章里面引用的地方都设置成了超链接，点击就能跳转<img src="/done.png" alt="done"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Acedemic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Overleaf</tag>
+      
+      <tag>LaTex</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Resfeber &amp; Sillage</title>
+    <link href="/2025/10/26/Resfeber&amp;Sillage/"/>
+    <url>/2025/10/26/Resfeber&amp;Sillage/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>今年第二次去参加学术会议了<br>学术会议在某种程度上也算是一种<strong>summer camp</strong><br>一群人浩浩荡荡地聚集<br>度过一段短暂而奇妙的时光<br>然后回到各自的生活浪潮里去</p><p>旅行前的心情是一种焦虑和兴奋交织的窒息感<br>在瑞典语里<br>它叫做<br>Resfeber</p><p>真正地走入会场<br>见到形形色色的同行<br>又觉得主动social好像没有那么难</p><p>这次遇到了一个很好很好的女孩子M<br>有多好呢？<br>一见如故<br>偶然间交谈才发现我们居然要参加同一场论坛<br>甚至连酒店都是同一个<br>缘分真是妙不可言<br>和她在聊天中相伴的那些时刻真的非常美好<br>从天南海北聊到学校生活<br>让我在寒冷的雾都如沐春风</p><p>这段时间不知道为什么心情总是很down<br>总是要到凌晨3点才能伴着夜色入睡<br>也许是因为这段时间总是在经历告别<br>也许是因为我越来越觉得孤独难抑<br>比如远赴欧洲的师姐<br>比如匆匆一见的M<br>这些美好的人在我的生命里出现又离开<br>分别时的拥抱<br>像船桨划过水面留下的涟漪<br>留下无形的香迹<br>在法语里<br>它叫做<br>Sillage</p><p>不知不觉王者荣耀也走到了十周年<br>我是从大二还是大三才开始玩这个游戏<br>身边的人换了千千万<br>只有这个游戏还在我身边<br>打游戏的技术也越来越好<br>今年主玩的三个英雄都进入全区前100了<br>相比单机游戏<br>王者这样的游戏带来的热闹感始终无与伦比<br>不知道这个游戏还能存活多久<br>曾经我以为QQ飞车会一直陪伴我<br>但是没过几年好友圈全是灰色头像<br>每一局都变成了人机对战<br>就祝小王长长久久、越来越好！<br>不许再给我匹配到坑货队友了！</p><p><strong>世间嶙峋</strong><br><strong>稍纵即逝</strong><br><strong>相伴片刻</strong><br><strong>已是良缘</strong></p><p>我相信缘分天定<br>也相信所有的相遇都是久别重逢<br><strong>祝大家</strong><br><strong>不管身处何方</strong><br><strong>都能收获爱与快乐</strong></p><p>PS. 附上一些在重庆不期而遇的moment<br>好喜欢北仓这样奇奇怪怪的文创街区~</p><p><img src="/img/CQ/1.jpg"><br><img src="/img/CQ/2.jpg"><br><img src="/img/CQ/3.jpg"><br><img src="/img/CQ/4.jpg"><br><img src="/img/CQ/5.jpg"><br><img src="/img/CQ/6.jpg"><br><img src="/img/CQ/7.jpg"><br><img src="/img/CQ/8.jpg"><br><img src="/img/CQ/9.jpg"><br><img src="/img/CQ/10.jpg"><br><img src="/img/CQ/11.jpg"><br><img src="/img/CQ/12.jpg"><br><img src="/img/CQ/13.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>于无声处</title>
+    <link href="/2025/10/08/%E4%BA%8E%E6%97%A0%E5%A3%B0%E5%A4%84/"/>
+    <url>/2025/10/08/%E4%BA%8E%E6%97%A0%E5%A3%B0%E5%A4%84/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>学校和家是我现阶段的生活有且仅有的两个锚点<br>一个用来盛放理想主义<br>一个用来盛放现实主义<br>两边隔着天堑<br>那些短暂的假期成了一艘艘穿梭于理想和现实的轮渡<br>而我站在甲板上 在光阴的太息里战战兢兢</p><p>在学校里我总是会怀念家人给予我的几近完美的温暖与爱意<br>却忽略了这个世界上并没有十全十美的家庭<br>她们都是有着七情六欲的人<br>会争执、会怨怼、会比较、会执念、会偏爱、会受伤<br>在生活的鸡毛蒜皮里一点一点消磨对彼此的情意<br>然后让我在一些微妙的时刻发现她们倏忽间的老去</p><p>我越来越觉得自己身上集成了长辈们的特质<br>比如说执拗自负<br>比如说敏感多心<br>比如说边界感<br>这些东西是向外的铠甲 也是对内的尖刺<br>得不到的始终放不下执念<br>得到的又不懂放心上珍惜<br>大家都过得委屈又拧巴<br>不知道这是不是东亚家庭的通病<br>也不知道是不是我太容易被细节刺痛<br>反正爱就是这样<br>让我们两败俱伤</p><p>我清晰地感受到<br>随着时间的流逝<br>人和人之间的隔阂和习惯一样在血肉里扎根<br>与至亲相伴的是至疏<br>而所有人都对此感到麻木</p><p>我曾经尝试着写下一些CP的故事<br>无论经历了怎样的拉扯<br>最后总归要让有情人终得眷属<br>却发现到了功德圆满的大结局时<br>此后的日子是循环往复的索然无味<br>而这是我们绝大多数人的一生</p><p>无意间发现哥哥姐姐们和我一样<br>全都没有设置朋友圈仅半年可见<br>或者这也是一种冥冥之中的默契<br>尽管我一年只发不到5条朋友圈<br>我们会和长辈们不同吗？<br>至少现在<br>那些生长的脉络全部清晰可见</p><p><strong>日子就这样</strong><br><strong>在浩茫的心事里</strong><br><strong>在无声的惊雷里</strong><br><strong>一天天过去</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ns3gym中的multi-agent官方示例</title>
+    <link href="/2025/09/30/ns3gym%E4%B8%AD%E7%9A%84multi-agent/"/>
+    <url>/2025/09/30/ns3gym%E4%B8%AD%E7%9A%84multi-agent/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h4 id="一、运行"><a href="#一、运行" class="headerlink" title="一、运行"></a>一、运行</h4><p>把contrib&#x2F;opengym&#x2F;examples文件夹下的multi-agent文件夹复制到scratch目录下<br>不复制也可以，但是输入路径比较麻烦<br>所以我都是统一把需要运行的脚本复制到scratch下</p><p>直接运行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 终端一</span><br><span class="hljs-built_in">sudo</span> ./waf --run multi-agent<br><br><span class="hljs-comment"># 终端二</span><br><span class="hljs-built_in">cd</span> scratch/multi-agent<br>PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python ./agent1.py --start=0<br><br><span class="hljs-comment"># 终端三</span><br><span class="hljs-built_in">cd</span> scratch/multi-agent<br>PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python ./agent2.py --start=0<br></code></pre></td></tr></table></figure><p>这里会报错：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">In file included from ../scratch/multi-agent/mygym.cc:21:<br>../scratch/multi-agent/mygym.h:35:26: error: ‘Time’ has not been declared<br>   35 |   MyGymEnv (uint32_t <span class="hljs-built_in">id</span>, Time stepTime);<br>      |                          ^~~~<br>../scratch/multi-agent/mygym.h:51:3: error: ‘Time’ does not name a <span class="hljs-built_in">type</span>; did you mean ‘<span class="hljs-keyword">time</span>’?<br>   51 |   Time m_interval;<br>      |   ^~~~<br>      |   <span class="hljs-keyword">time</span><br>../scratch/multi-agent/mygym.cc: In constructor ‘ns3::MyGymEnv::MyGymEnv()’:<br>../scratch/multi-agent/mygym.cc:39:3: error: ‘m_interval’ was not declared <span class="hljs-keyword">in</span> this scope; did you mean ‘internal’?<br>   39 |   m_interval = Seconds(0.1);<br>      |   ^~~~~~~~~~<br>      |   internal<br>     <br></code></pre></td></tr></table></figure><p>经过一番查询，是mygym.h里面少了头文件，补充上就可以正常运行了：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#include &quot;ns3/core-module.h&quot;</span><br></code></pre></td></tr></table></figure><p>运行结果可以在每个终端看到不同的内容：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># sim.cc的运行终端，即环境：</span><br>AgendId: 1 MyGetActionSpace:  DictSpace: <br>---box: BoxSpace Low: 0 High: 10 Shape: (5,) Dtype: uint32_t<br>---discrete: DiscreteSpace N: 5<br><br>Simulation process <span class="hljs-built_in">id</span>: 3244537 (parent (waf shell) <span class="hljs-built_in">id</span>: 3244274)<br>Waiting <span class="hljs-keyword">for</span> Python process to connect on port: tcp://localhost:5555<br>Please start proper Python Gym Agent<br>AgendId: 1 MyGetObservation: Tuple([8, 6, 5, 4, 4], 8)<br>---[8, 6, 5, 4, 4]<br>---8<br>AgendId: 1 MyGetGameOver: 0<br>AgendId: 1 MyGetExtraInfo: testInfo|123<br>AgendId: 1 MyExecuteActions: Dict(box=[0, 2, 4, 0, 3], discrete=4)<br>---[0, 2, 4, 0, 3]<br>---4<br>AgendId: 2 MyGetObservationSpace:  DictSpace: <br>---box: BoxSpace Low: 0 High: 10 Shape: (5,) Dtype: uint32_t<br>---discrete: DiscreteSpace N: 5<br><br>AgendId: 2 MyGetActionSpace:  DictSpace: <br>---box: BoxSpace Low: 0 High: 10 Shape: (5,) Dtype: uint32_t<br>---discrete: DiscreteSpace N: 5<br><br><span class="hljs-comment"># agent1</span><br>Step:  0<br>---obs:  ([8, 6, 5, 4, 4], 8)<br>---action:  OrderedDict([(<span class="hljs-string">&#x27;box&#x27;</span>, array([0, 2, 4, 0, 3], dtype=uint64)), (<span class="hljs-string">&#x27;discrete&#x27;</span>, 4)])<br><br><span class="hljs-comment"># agent2</span><br>Step:  0<br>---obs:  ([9, 5, 4, 0, 4], 10)<br>---action:  OrderedDict([(<span class="hljs-string">&#x27;box&#x27;</span>, array([3, 7, 1, 9, 4], dtype=uint64)), (<span class="hljs-string">&#x27;discrete&#x27;</span>, 4)])<br></code></pre></td></tr></table></figure><h4 id="二、multi-agent的交互逻辑"><a href="#二、multi-agent的交互逻辑" class="headerlink" title="二、multi-agent的交互逻辑"></a>二、multi-agent的交互逻辑</h4><p>官方给的示例非常简单，不涉及神经网络的训练<br>所以很方便观察多个agent与环境之间的交互</p><h5 id="sim-cc"><a href="#sim-cc" class="headerlink" title="sim.cc"></a>sim.cc</h5><p>agents是共享一个环境，所以只需要进行一次环境的初始化，然后分别对agents的接口进行初始化，不同的agent的接口号不一样：  </p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// OpenGym Env for agent 1</span><br><span class="hljs-type">uint32_t</span> agentId = <span class="hljs-number">1</span>;<br>openGymPort = <span class="hljs-number">5555</span>;<br>Ptr&lt;OpenGymInterface&gt; openGymInterface1 = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymInterface&gt; (openGymPort);<br>Ptr&lt;MyGymEnv&gt; myGymEnv1 = <span class="hljs-built_in">CreateObject</span>&lt;MyGymEnv&gt; (agentId, <span class="hljs-built_in">Seconds</span>(envStepTime));<br>myGymEnv1-&gt;<span class="hljs-built_in">SetOpenGymInterface</span>(openGymInterface1);<br><br><span class="hljs-comment">// OpenGym Env for agent 2</span><br>agentId = <span class="hljs-number">2</span>;<br>openGymPort = <span class="hljs-number">5556</span>;<br>Ptr&lt;OpenGymInterface&gt; openGymInterface2 = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymInterface&gt; (openGymPort);<br>Ptr&lt;MyGymEnv&gt; myGymEnv2 = <span class="hljs-built_in">CreateObject</span>&lt;MyGymEnv&gt; (agentId, <span class="hljs-built_in">Seconds</span>(envStepTime));<br>myGymEnv2-&gt;<span class="hljs-built_in">SetOpenGymInterface</span>(openGymInterface2);<br></code></pre></td></tr></table></figure><h5 id="mygym-cc"><a href="#mygym-cc" class="headerlink" title="mygym.cc"></a>mygym.cc</h5><p>这里针对不同agent用m_agentId进行了区分，相关代码直接搜索这个关键词就可以看到与其他单智能体示例不同的部分：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 环境接口初始化</span><br>MyGymEnv::<span class="hljs-built_in">MyGymEnv</span> (<span class="hljs-type">uint32_t</span> id, Time stepTime)<br>&#123;<br>  <span class="hljs-built_in">NS_LOG_FUNCTION</span> (<span class="hljs-keyword">this</span>);<br>  m_agentId = id;<br>  m_interval = stepTime;<br><br>  Simulator::<span class="hljs-built_in">Schedule</span> (<span class="hljs-built_in">Seconds</span>(<span class="hljs-number">0.0</span>), &amp;MyGymEnv::ScheduleNextStateRead, <span class="hljs-keyword">this</span>);<br>&#125;<br><br><span class="hljs-comment">// 定义状态空间、动作空间、结束条件</span><br><span class="hljs-comment">// 没有什么改变，这里省略</span><br><br><span class="hljs-comment">//获取状态。状态由一个数组和一个数字组成，都是随机生成的</span><br><span class="hljs-function">Ptr&lt;OpenGymDataContainer&gt;</span><br><span class="hljs-function"><span class="hljs-title">MyGymEnv::GetObservation</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-type">uint32_t</span> nodeNum = <span class="hljs-number">5</span>;<br>  <span class="hljs-type">uint32_t</span> low = <span class="hljs-number">0.0</span>;<br>  <span class="hljs-type">uint32_t</span> high = <span class="hljs-number">10.0</span>;<br>  Ptr&lt;UniformRandomVariable&gt; rngInt = <span class="hljs-built_in">CreateObject</span>&lt;UniformRandomVariable&gt; ();<br><br>  std::vector&lt;<span class="hljs-type">uint32_t</span>&gt; shape = &#123;nodeNum,&#125;;<br>  Ptr&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt; box = CreateObject&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt;(shape);<br><br>  <span class="hljs-comment">// generate random data</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-type">uint32_t</span> i = <span class="hljs-number">0</span>; i&lt;nodeNum; i++)&#123;<br>    <span class="hljs-type">uint32_t</span> value = rngInt-&gt;<span class="hljs-built_in">GetInteger</span>(low, high);<br>    box-&gt;<span class="hljs-built_in">AddValue</span>(value);<br>  &#125;<br><br>  Ptr&lt;OpenGymDiscreteContainer&gt; discrete = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymDiscreteContainer&gt;(nodeNum);<br>  <span class="hljs-type">uint32_t</span> value = rngInt-&gt;<span class="hljs-built_in">GetInteger</span>(low, high);<br>  discrete-&gt;<span class="hljs-built_in">SetValue</span>(value);<br><br>  Ptr&lt;OpenGymTupleContainer&gt; data = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymTupleContainer&gt; ();<br>  data-&gt;<span class="hljs-built_in">Add</span>(box);<br>  data-&gt;<span class="hljs-built_in">Add</span>(discrete);<br><br>  <span class="hljs-comment">// Print data from tuple</span><br>  Ptr&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt; mbox = DynamicCast&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt;(data-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-number">0</span>));<br>  Ptr&lt;OpenGymDiscreteContainer&gt; mdiscrete = <span class="hljs-built_in">DynamicCast</span>&lt;OpenGymDiscreteContainer&gt;(data-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-number">1</span>));<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;AgendId: &quot;</span>&lt;&lt; m_agentId &lt;&lt; <span class="hljs-string">&quot; MyGetObservation: &quot;</span> &lt;&lt; data);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; mbox);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; mdiscrete);<br><br>  <span class="hljs-keyword">return</span> data;<br>&#125;<br><br><span class="hljs-comment">//执行动作，这里的动作已经由agent产生了，所以这里只是起到一个解析的作用</span><br><span class="hljs-comment">//假设动作的类型是不一样的，全部包裹在OpenGymDataContainer里面，要解析成原来的box、discrete形式</span><br><span class="hljs-function"><span class="hljs-type">bool</span></span><br><span class="hljs-function"><span class="hljs-title">MyGymEnv::ExecuteActions</span><span class="hljs-params">(Ptr&lt;OpenGymDataContainer&gt; action)</span></span><br><span class="hljs-function"></span>&#123;<br>  Ptr&lt;OpenGymDictContainer&gt; dict = <span class="hljs-built_in">DynamicCast</span>&lt;OpenGymDictContainer&gt;(action);<br>  Ptr&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt; box = DynamicCast&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt;(dict-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-string">&quot;box&quot;</span>));<br>  Ptr&lt;OpenGymDiscreteContainer&gt; discrete = <span class="hljs-built_in">DynamicCast</span>&lt;OpenGymDiscreteContainer&gt;(dict-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-string">&quot;discrete&quot;</span>));<br><br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;AgendId: &quot;</span>&lt;&lt; m_agentId &lt;&lt; <span class="hljs-string">&quot; MyExecuteActions: &quot;</span> &lt;&lt; action);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; box);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; discrete);<br>  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure><h5 id="mygym-h"><a href="#mygym-h" class="headerlink" title="mygym.h"></a>mygym.h</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 跟随mygym.cc改变，主要是增加了agent的id</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">MyGymEnv</span> (<span class="hljs-type">uint32_t</span> id, Time stepTime);<br><br><span class="hljs-keyword">private</span>:<br>  <span class="hljs-type">uint32_t</span> m_agentId;<br></code></pre></td></tr></table></figure><h5 id="agent1-py-agent2-py"><a href="#agent1-py-agent2-py" class="headerlink" title="agent1.py\agent2.py"></a>agent1.py\agent2.py</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">try</span>:<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        obs = env.reset()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Step: &quot;</span>, stepIdx)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---obs: &quot;</span>, obs)<br><br>        <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>            stepIdx += <span class="hljs-number">1</span><br>            <span class="hljs-comment"># 这里的动作生成很简单，只是在给定的action_space里面随机采样</span><br>            action = env.action_space.sample()<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---action: &quot;</span>, action)<br><br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Step: &quot;</span>, stepIdx)<br>            obs, reward, done, info = env.step(action)<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---obs, reward, done, info: &quot;</span>, obs, reward, done, info)<br><br><br>            <span class="hljs-comment"># 设置了一个Input，需要在相应的终端上输入回车键才继续</span><br>            <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;press enter....&quot;</span>)<br><br>            <span class="hljs-keyword">if</span> done:<br>                <span class="hljs-keyword">break</span><br><br>        currIt += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> currIt == iterationNum:<br>            <span class="hljs-keyword">break</span><br>     <br></code></pre></td></tr></table></figure><h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>在这个示例里面，两个智能体之间没有交互，而且它们与环境的交互始终具有顺序依赖性</p><p>比如说agent1交互以后，提示必须输入回车键，才能让agent2与环境进行交互</p><p>如果注释掉input(“press enter….”)这一行，它们与环境的交互就是同时进行的，只是在终端打印出来的信息还是agent1在前</p><p>但是实际的多智能体要复杂很多，尤其是共享环境这一块，状态、动作、奖励都会相互影响</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>Linux</tag>
+      
+      <tag>NS3</tag>
+      
+      <tag>ns3gym</tag>
+      
+      <tag>multi-agent</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>上海风华</title>
+    <link href="/2025/08/17/%E4%B8%8A%E6%B5%B7%E9%A3%8E%E5%8D%8E/"/>
+    <url>/2025/08/17/%E4%B8%8A%E6%B5%B7%E9%A3%8E%E5%8D%8E/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>为了参加学术会议在最火热的8月来到了上海<br>虽然大多数时间都住在上海的郊区<br>只有最后一天去了市中心city walk<br>但也算领略了上海独有的一番风华</p><h2 id="风流与云散"><a href="#风流与云散" class="headerlink" title="风流与云散"></a>风流与云散</h2><p>上海的风比我想象中的更大<br>时常连伞也撑不住<br>空气里酝酿着的水汽<br>也一点不逊色于成都</p><p>上海的云大不相同<br>云朵常常是低垂的且轮廓异常清晰<br>给人一种触手可及的错觉|<br>但又在风的助力下<br>流动得异常迅速<br>转眼间就飘散无影了<br>这也算是魔都的一种magic吧</p><p><img src="/img/SH/1.jpg"></p><p><img src="/img/SH/2.jpg"></p><p><img src="/img/SH/3.jpg"></p><p><img src="/img/SH/4.jpg"></p><h2 id="广厦与巷弄"><a href="#广厦与巷弄" class="headerlink" title="广厦与巷弄"></a>广厦与巷弄</h2><p>上海的建筑保留了诸多的西洋风格<br>穿梭在十里洋场中<br>常常让我觉得是不是到了某部年代剧之中<br>在动荡的时局里沉沉浮浮</p><p><img src="/img/SH/5.jpg"></p><p><img src="/img/SH/6.jpg"></p><p><img src="/img/SH/7.jpg"></p><p>从前只在影视剧里看到过上海的弄堂<br>没想到现实中看起来是如此的逼仄</p><p><img src="/img/SH/8.jpg"></p><h2 id="舌尖与心头"><a href="#舌尖与心头" class="headerlink" title="舌尖与心头"></a>舌尖与心头</h2><p>上海的美食种类繁多到令人眼花缭乱<br>不管是本帮菜、小吃、奶茶<br>还是西餐、日料<br>样样都没有踩雷</p><p>只是可惜这里的调味偏甜<br>顿顿吃难免会觉得腻味了</p><p><img src="/img/SH/9.jpg"></p><p><img src="/img/SH/10.jpg"></p><p><img src="/img/SH/11.jpg"></p><p><img src="/img/SH/12.jpg"></p><p>上海的文艺活动也是相当丰富<br>处处都是展览和话剧<br>观众之中也不乏一些上了年纪的爷爷奶奶<br>怪不得别的霸总文学里男主都是搞实业或者金融的<br>只有郭敬明的《小时代》里霸总是杂志社主编<br>实在过于上海了</p><p><img src="/img/SH/13.jpg"></p><p><img src="/img/SH/14.jpg"></p><p><img src="/img/SH/15.jpg"></p><p><img src="/img/SH/16.jpg"></p><p><img src="/img/SH/17.jpg"></p><p><img src="/img/SH/18.jpg"></p><p><img src="/img/SH/19.jpg"></p><p><img src="/img/SH/20.jpg"></p><hr><p>上海之行就此落下帷幕<br>在上海生活总会觉得有些虚幻<br>这里的街道总是沉睡得太早<br>只闻得到各大奢侈品牌精心调制的香水味<br>难以见到散落的人间烟火气</p><p>但正因为如此<br>有一些虚无的小资的脱离现实的难以言喻的东西<br>只有在这里才能找到繁衍的沃土</p><p>这里似乎是包容了所有的文化<br>但又似乎拿捏着原始的腔调<br>正如1929年起就扎根在外滩附近的永安弄</p><p>虽然有些遗憾这次没能更深入地体验上海的更多面<br>但旅行最重要的还是开怀拥抱不期而遇的惊喜</p><p><strong>祝愿风华绝代的上海永不落幕</strong></p><p><img src="/img/SH/21.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Travel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在此岸，在他乡</title>
+    <link href="/2025/08/02/%E5%9C%A8%E6%AD%A4%E5%B2%B8%EF%BC%8C%E5%9C%A8%E4%BB%96%E4%B9%A1/"/>
+    <url>/2025/08/02/%E5%9C%A8%E6%AD%A4%E5%B2%B8%EF%BC%8C%E5%9C%A8%E4%BB%96%E4%B9%A1/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>为期两周的暑假就这样平平无奇地结束了<br>旅行没有想象中的好玩<br>回家也没有想象中的快乐<br>没有期望就不会失望</p><p>我越来越感觉到<br>自己正处在一种尴尬期<br>吃饭还只能坐小孩桌<br>年龄已经不允许我不听、不想、不说</p><p>如果是小时候<br>自由地玩一整天手机<br>会让我无比幸福<br>但是现在<br>我只会觉得无聊透顶、浪费时间</p><p>可能是幸福的阈值随着年龄的增长提高了吧<br>我越来越希望每一分钟的体验都是有价值的<br>能让我从中获取知识或者始终保持好奇的<br>但是限制灵魂的因素实在太多了<br>也有可能是心里总有事情<br>已经没有办法真正地、放肆地快乐了</p><p>我也越发感觉到和父母可以聊的话题越来越少<br>我已经走上了一条她们全然未知的道路<br>我的疑虑她们没法替我解决<br>她们的认知我也没有办法改变<br>无力感像潮汐一样间歇性地涌来</p><p>我从11岁就离开家去外地求学<br>每隔几年就因为升学又换一个地方<br>寒暑假回家待3、4个星期<br>这样的经历让我觉得在哪个城市都没有归属感<br>在一个地方待久了也很感到厌倦<br>也许我很像一只无脚鸟<br>永远不会有停下的时候</p><p><strong>不知不觉又开始了新的故事</strong><br><strong>无论在此岸还是在他乡</strong><br><strong>既然选择了远方</strong><br><strong>便只顾风雨兼程</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>至少，我们还有中华文化</title>
+    <link href="/2025/06/26/%E8%87%B3%E5%B0%91%EF%BC%8C%E6%88%91%E4%BB%AC%E8%BF%98%E6%9C%89%E4%B8%AD%E5%8D%8E%E6%96%87%E5%8C%96/"/>
+    <url>/2025/06/26/%E8%87%B3%E5%B0%91%EF%BC%8C%E6%88%91%E4%BB%AC%E8%BF%98%E6%9C%89%E4%B8%AD%E5%8D%8E%E6%96%87%E5%8C%96/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"> <blockquote><p>Last Dance</p></blockquote><p>一学期下来，我把这门课留给我的东西统统定格在了零碎的记忆里。</p><p>我记得有一次写了一篇有关追星和脱粉的札记，不久之后，小组一起排练节目时，另一个同学突然问我，“你是怎么处理脱粉的心态的啊”，一问才知道，她那段时间也正处在脱粉一个明星的边缘，突然看到了我写下的文字，很有共鸣，所以很想和我聊聊天。</p><p>认真想想，上大学之前我几乎没纯粹地为自己写作过，写作或是为了给寄予厚望的爸妈一个交代，或是为了给要求严苛的阅卷老师一个交代，格式固定，内容有限，我只能将小小的自己和大大的想法隐匿其中。上大学后，则更是沦为文字的搬运工，几乎没再动过笔认真地享受写作。</p><p>所以那时我觉得写札记这件事简直玄妙，因为那些流转在字里行间的真心竟能在无声处得到回应。C407是一片无依之地，但在这片疆域上的每个人都能互相感知，然后相拥取暖，在黑暗中交付各自人生的片刻。</p><p>还有一个周末我第二次考科目二又挂了，连熬了好几天的比赛也没能有好的结果，甚至极有可能拖累很有实力的两位队友没有办法进入国家级的决赛，我感觉我的整个世界就像漂浮在海面上的一座冰山，从一道裂缝的出现开始，从一个角落的融化开始，在一次又一次的呼吸里彻底塌陷了，而我只来得及将既往归结为“我的存在就是个错误”。直到周一上中华文化这门课的时候，萦绕着我的始终是那种感官闭塞、灵魂游离的无力。一道上了重重铁锁的门横亘在我和现实世界之间，彻底将我流放。</p><p>真巧，伍老师那节课讲到了情绪调节和人生的意义，而我在台下边听边哭，只因为那些无处安放的情绪好像突然得到了一份谅解和安慰。那时我无比感谢如潮的黑暗，它会像被子一样帮我吞没所有眼泪，也会让灿烂的清晨照样从屋顶上徐徐升起。更感谢愿意用广袤的黑暗包容我们的老师。</p><p>其实老师直至最后，也没有告诉我们人生究竟有什么意义。</p><p>我想这个问题本身既没有意义，也没有答案。</p><p>因为所有的问题归结到最后，只剩一句话，“这是体制问题”。譬如我们这学期常常谈论的，在我们人生中已经发生的“内卷”和未来极有可能发生的“鸡娃”，都是体制问题催生的产物。</p><p>我一直认为“内卷”其实是努力的一种错误发展。努力本身并不痛苦甚至会让人在精神上感到无比充实（这一点在期末周尤其明显），真正让我们痛苦的是我们志不在此，我们不知道还能做什么，是被挟“卷”着接近一个并不明晰的中心。“鸡娃”则是阶级意识的一种错误发展，要么是为了巩固现有的阶级，要么是为了有朝一日实现阶级跨越，抑或是两者兼有，尽管大家都推崇共产主义，尽管共产主义从被提出的那天起就在强调消灭阶级主义。</p><p>从本质上来看，所有人都不过是为了给自己、给家人更加美好的生活而努力奋斗，无可指摘，所以大家都只能齐齐去指摘这个社会的体制，所以大家亦步亦趋，自我压抑。</p><p>我们生而为人，终其一生，无非都是要摆脱他人的期待，找到真正的自己。</p><p>万幸，至少，我们还有中华文化，可以感知他人，可以疗愈自我。</p><p>至少，我们得以再度窥见世界的一个侧面，一息尚存。</p><p>何其有幸能和大家共度人生的片刻，祝福我们往后都能真切地活着，这就已经再好不过。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>夜晚、烂尾楼、题目</title>
+    <link href="/2025/06/26/%E5%A4%9C%E6%99%9A%E3%80%81%E7%83%82%E5%B0%BE%E6%A5%BC%E3%80%81%E9%A2%98%E7%9B%AE/"/>
+    <url>/2025/06/26/%E5%A4%9C%E6%99%9A%E3%80%81%E7%83%82%E5%B0%BE%E6%A5%BC%E3%80%81%E9%A2%98%E7%9B%AE/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>距离2021年高考只有4天了。</p><p>我原以为会一辈子铭记在心，每一秒都念念不忘的2019年的高考到如今却只剩蒙太奇式的镜头了。</p><p>其一是高考刚结束的那个无处安放的夜晚。我们回到教室后索性把教室里所有带有我们印记的东西都拿来拍卖了，奖状、合照、班旗甚至连门口的班号都被我们揭下来了。摇晃的啤酒沫，喧闹的竞价，间或夹杂着粤语歌和其他小调，我们都企图用一群人的沸反盈天去掩饰每个人的迷茫不知去向。</p><p>然而后来直至半夜三点，整栋寝室楼的灯光依旧长明。小小寝室里8个人攥着许久未见的手机纷纷在小床上痛哭，也许是为了考试里的一道错题，也许是为了连日不佳的状态，也许是为了一段日暮途穷的感情。那晚夜色清凉如水，轻轻地压在床沿，让我们每个人都渐渐喘不过气来。因为无论什么样的表现，什么样的成绩，一旦为它冠上人生前十几年寒窗苦读的努力的前缀，再用它定义人生后几十年的云泥之别，都变得微不足道了。</p><p>其二是一栋和我们在同一片天空下苟延残喘的烂尾楼。高二下期的时候我最喜欢的语文老师要回家生二胎了，她看完我们给她写的留言后，带着泪笑着对我们说：“看见窗外那栋楼了吗？我在这短短两年里，甚至你们所有的老师们做的也不过是为你们打下了这样一个框架的基础，筋骨已经有了，剩下的血肉就要靠你们自己去铸造了。我还是那句话，尽人事，听天命。”</p><p>后来我无数次站在晚风里看着那栋和我一样几乎被万家灯火吞噬的楼，那栋烂尾楼。</p><p>真抱歉，我让我的语文在高考中也成为了一栋烂尾楼。</p><p>其三，是高考的那道作文题。那天早上，我们所有人都在背之前从人民日报或者领导人新年致辞等地方摘抄下来的那些根正苗红的句子，可是我现在一句也不记得了，因为我一拿到语文试卷就去看了作文题目。</p><p>那是一道让我在南方的艳阳里却感觉大雪纷飞的漫画题，画的是教室里的一个老师和若干名学生，那位老师说，“你们再看看书，我再看看你们”。画中人情意满满，画外我两眼空空。</p><p>现在在大学里蹉跎了两年的我，把书籍当作昨日世界的微光的我，只想告诉画里画外的人，都别看了，去各自新的人生吧。</p><p>还会有千千万万的人在6月走上这座独木桥，随后跃入人海，各奔东西，星灭光离。左不过是云飞雨绝，落叶去柯，若干年后看到大家又齐齐为高考考生加油时蓦地想起，哦，高考啊，我只记得一个夜晚、一栋烂尾楼和一道题目啦。</p><hr><p>记录一下我高中时期最喜欢的一首诗歌：<br>                                           昔思君</p><pre><code class="hljs">                                    【魏晋】傅玄                       昔君与我兮形影潜结，今君与我兮云飞雨绝！                       昔君与我兮音响相和，今君与我兮落叶去柯！                       昔君与我兮金石无亏，今君与我兮星灭光离！</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>追星星的人</title>
+    <link href="/2025/06/26/%E8%BF%BD%E6%98%9F%E6%98%9F%E7%9A%84%E4%BA%BA/"/>
+    <url>/2025/06/26/%E8%BF%BD%E6%98%9F%E6%98%9F%E7%9A%84%E4%BA%BA/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><blockquote><p>爱你的每个瞬间<br>像飞驰而过的地铁</p></blockquote><p>黑夜中将近一整晚的吟唱让我想到的只有四个字：尊重热爱，而关于热爱，我能想到的更多的是关于那个以爱为名、口碑两极的群体——粉丝。</p><p>作为一名曾经的粉丝，我对这个群体的感受非常复杂，以至于我为了自我排解去选修了文新学院的一门课叫做媒介批评。在经历了无数的批评与自我批评后，我终于决定，在互联网冲浪时远离粉圈的爱恨情仇，做一个快乐的局外人。</p><p>从客观的角度来说，粉丝的确是群体情绪极化的产物，他们通过自我标榜的对某个人物或者某件物品的热爱而自发地集聚，从而拥有不可小觑的舆论力量和情绪感染力。简而言之，“乌合之众”。</p><p>从主观的角度来说，我觉得他们更像“装在套子里的人”。这个套子既是物理意义上无法跨越的时间或者空间的阻隔，也是抽象意义上他们对自我意识的禁锢。</p><p>因为与其说他们在追星，不如说他们在追寻自己实体化的欲望。这么多年我看到过无数的粉圈经典语录，要么是“全世界都要害我们家xx，哥哥只有我们了”这一类的自我感动，要么是“拜托，那可是顶流唉”“别来碰瓷阿拉大明星，xxx快跑”这一类的自我吹嘘。谁不想追星之旅是掬水月在手，但也难免会遇到一坨烂泥，扶也扶不起，洗也洗不净。所以粉丝们总是以爱之名选择性失明。而这可能有悖于伦理和义务教育的一切，仅仅源于热爱，宛如《一个陌生女人的来信》中所言之爱，“我的一生一直是属于你的，我始终爱着的你，而你对我的一生却依然一无所知”。讽刺的是，因为真挚甚至不奢求回报的热爱，粉丝成了资本竭力收割的羊毛，成了劣迹家庭卖惨洗白的免费工具人。发乎情，不止乎礼，无理而妙。</p><p>真正的星星在我们的光年外，被粉丝追逐的“星星”都被摆在橱窗里。</p><p>我依然尊重那些真挚的热爱，只是我决定，在星星坠落前，虎口脱险。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>年轻人，你为什么不睡觉</title>
+    <link href="/2025/06/26/%E5%B9%B4%E8%BD%BB%E4%BA%BA%EF%BC%8C%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%9D%A1%E8%A7%89/"/>
+    <url>/2025/06/26/%E5%B9%B4%E8%BD%BB%E4%BA%BA%EF%BC%8C%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%9D%A1%E8%A7%89/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"> <p>在奥兰，人们不得不相爱却又浑然不觉；在中国，年轻人不得不奋斗却又死水微澜。</p><p>通常这些微小的波澜出没在深夜，向虚妄中飞驰而过的地铁投递睡眠。</p><p>有人问，年轻人，你为什么不睡觉？</p><p>1919年的年轻人会在日记里零零散散地写下：“君问终南山，心知白云外。”华夏之大已然安放不下一张安稳的床榻，无声之处亦听得惊雷阵阵…社会犹如一条船，吾辈要么准备掌舵渡人，要么准备下海渡己..总之，要去列强箭矢无法抵达的地方，只有这个世界的尽头才是另一个世界的开始。</p><p>他们惶乱却不怯弱，像冰融的春水，一流就流向激昂的家国大义。</p><p>有人问，年轻人，你为什么不睡觉？</p><p>2021年的年轻人一部分会刁钻地反问：在古文中，“睡”和“觉”是两个词，“睡”是小寐，“觉”是睡醒，你想问的是哪个？</p><p>2021年的年轻人还有绝大部分会告诉你，在睡了在睡了别骂了别骂了再熬夜我就是狗，随后钻进被子里偷偷窥探QQ空间里的爱恨情仇，再刷一刷朋友圈里的歌舞升平，最后无比赞同地转发微博“熬夜不过是不甘心一天就这样平平无奇地过去，白天已经有喧嚣包围着了，总要留下一些独处的时间吧”，继续深夜网抑云。</p><p>在深夜，他们对现时丧失信心、处处抬杠，又敌视过去、厌倦未来，被数据淹没，却饥渴于信息，活似受人世间法律或仇恨制裁、过着铁窗生活的人，正如无数个笼罩着樱花凋谢后的潮气的春夜。</p><p>在早晨，一个又一个灿烂的上学日从熄灭的手机屏幕上徐徐升起，他们又匆忙地挥舞着天真的旌旗和世界握手言和。</p><p>他们在颓圮的篱墙与快乐的咸鱼之间反复横跳，就像盛夏季节里盛在白瓷碗里的一碗碗冰镇梅子汤，碎冰碰壁叮当响。</p><p>如果有人问我，年轻人，你为什么不睡觉？</p><p>因为我在写这篇札记。</p><p>散落的月光穿过那些逝去的年华和眼前的时光，洒满桌前,披在同一片土地上截然不同的年轻人身上。因为他们的存在，无论哪般天地，总有光来寻觅，伟大的戏剧终将继续。</p><p>我会发一条仅个人可见的微博：今晚月色很美，明天又是个好天气。五四青年节快乐：）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>当我们谈论“值得”的时候，我们在谈论些什么</title>
+    <link href="/2025/06/26/%E5%BD%93%E6%88%91%E4%BB%AC%E8%B0%88%E8%AE%BA%E2%80%9C%E5%80%BC%E5%BE%97%E2%80%9D%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E8%B0%88%E8%AE%BA%E4%BA%9B%E4%BB%80%E4%B9%88/"/>
+    <url>/2025/06/26/%E5%BD%93%E6%88%91%E4%BB%AC%E8%B0%88%E8%AE%BA%E2%80%9C%E5%80%BC%E5%BE%97%E2%80%9D%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E8%B0%88%E8%AE%BA%E4%BA%9B%E4%BB%80%E4%B9%88/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"> <p>我一向认为，评价一件事、一段时光、一些情感究竟“值得”与否是一场理性和感性的博弈。</p><p>什么时候你会问“值不值得”呢？是当你犹豫的时候，当你面临左灯右行的欲望的时候；是当你感觉不到纯粹的快乐的时候，当你追忆那些被你亲手谋杀的似水年华的时候；是当你随着年岁增长学会使用话术遮掩小心思的时候，当你远离尘嚣堕入五里雾中的时候。</p><p>在无数个这样的时刻，理性告诉你“选择当下最立竿见影的东西，做你该做的事”，感性却告诉你“纵享此刻吧，不是什么时候你都可以像鸟一样飞向你的山”，它们往往只是匆匆打了个照面，随后果断地背道而驰，潦烈的风顷刻间将你的心撕得稀巴烂。</p><p>于是，“值得”成为了我们需要用一生去回答的问题。</p><p>梁文道在《悦己》中说道：“读一些无用的书，做一些无用的事，花一些无用的时间，都是为了在一切已知之外，保留一个超越自己的机会，人生中一些很了不起的变化，就是来自这种时刻。”所以我把那些我无法界定是不是真的值得但却乐此不疲的“无用”小事统称为生活的“仪式感”。比如，高三的每个周日下午，我们会有一场长达两个半小时的理科综合模拟考试，同学们考完试都去吃饭的时候，我会一个人给教室里仅有的六盆花浇水、修剪枝叶，甚至于将那些终日被高三学生的抱怨与沉默浸染得“尘满面鬓如霜”的叶子擦拭得鲜翠欲滴，没有章法，全凭心情和一时的审美。“总要让它们也和我们一样崭新又夺目地迎接新的一周吧。”这便是我在经历一场场步步惊心的战斗后渺小而卑微的仪式感所在。后来，临近高三毕业的时候，驻足看花的人从我们班延展到了整个楼层。再后来，这些花儿由于长势过于喜人，去了几位女老师的家里继续当阳光的搬运工。</p><p>我的同学和老师们因此一度认为我深谙于养花之道。可是，我根本不是郭橐驼那样懂得顺应植物自然灵性的人，只是没人知道在那之前，我从未养活任何植物超过一周，包括但不限于薄荷和含羞草。我想了很久，大概是我那些执拗而不知源头的仪式感成全了那些泥土的春天吧。它们要等的可能并不是我，但是我来了，好像也不错。</p><p>伍老师的课对于我来说也是这样。我也许并不会强记住黑暗中辽远亲和的一字一句，但或许在某个时刻，譬如看到最先出现在市场上贩卖的春天，“浴乎沂，风乎舞雩，咏而归”，这样的美好字句会突然出现在我的脑海里让我会心一笑。那么，那些在黑暗中流淌着的时而汹涌时而沉静的时光便是值得的。</p><p>对于现阶段的我而言，对于“值得”这个命题，我能给出的答案不过如此。人生就像一瓶巴黎欧莱雅，每个人都值得拥有，但迟早会有挤不出来的一天。所以也许很多东西并不需要纠结到底值不值得，做了自会有答案，毕竟那位狷介的杨绛先生曾说过“年轻人，你的问题在于，书读得不多而想得太多。”</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>诗三百，一言以蔽之</title>
+    <link href="/2025/06/26/%E8%AF%97%E4%B8%89%E7%99%BE%EF%BC%8C%E4%B8%80%E8%A8%80%E4%BB%A5%E8%94%BD%E4%B9%8B/"/>
+    <url>/2025/06/26/%E8%AF%97%E4%B8%89%E7%99%BE%EF%BC%8C%E4%B8%80%E8%A8%80%E4%BB%A5%E8%94%BD%E4%B9%8B/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><blockquote><p>本科在泥川抢到了一门非常有意思的中华文化课<br>每周都会与来自五湖四海的同学<br>在黑暗里屏退声息<br>静静地听着伍老师谈天说地<br>课后也可以自由地写一些札记<br>有一次伍老师分享了一位同学的札记<br>隐约记得，其中有一句是<br>“我们在黑暗中触摸无垠的星空”</p><p>文字对我来说始终是高悬的日月<br>永远明亮而有温度<br>遂记录下当时写的几篇札记<br>谨以此纪念那些在我生命里闪耀过的sparks</p></blockquote><p>刚刚看到“木石前盟”这个主题，我体内的八卦之魂熊熊燃烧，以为会听到很多三生三世缠绵悱恻死去活来的爱情故事或是有关转世和缘分的偈语，结果，伍老师意料之中地不走寻常路，她没有讲述那些隐秘而玄妙的爱殇，而是告诉我们：诗三百反复吟诵却不曾直言的“爱”是一种势不可挡的自然力量。</p><p>我不禁想探究“爱”的起源和归宿。</p><p>把这个字拆开来看，“爱”字是指“看”到某个人就会很高“兴”，想要挖一个洞“穴”把这个朋“友”保护起来，既包含了原始的情感冲动，又为与爱有关的家庭、婚姻赋予了社会意义。众妙之门，玄而又玄。</p><p>那么，“爱”终将归于何处呢？若是像宝玉和黛玉一般心意相通却因种种外因内因不得厮守，恐怕余生两眼空空，但求魂归一处；若是“合二姓以嘉姻”，难免不会印证“婚姻是爱情的坟墓”，沦为“至亲至疏夫妻”。</p><p>或许爱不知其所起，一往而情深，亦不知其所终。正如去关灯的人阴差阳错断了电。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>卫星的服务时间计算</title>
+    <link href="/2025/06/22/%E5%8D%AB%E6%98%9F%E7%9A%84%E5%89%A9%E4%BD%99%E6%9C%8D%E5%8A%A1%E6%97%B6%E9%97%B4%E8%AE%A1%E7%AE%97/"/>
+    <url>/2025/06/22/%E5%8D%AB%E6%98%9F%E7%9A%84%E5%89%A9%E4%BD%99%E6%9C%8D%E5%8A%A1%E6%97%B6%E9%97%B4%E8%AE%A1%E7%AE%97/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><blockquote><p>在写论文的时候遇到了这个问题，顺藤摸瓜找到了一本非常好的卫星通信教材，记录一下公式推导的过程</p></blockquote><h5 id="主要根据下面这个图来分析"><a href="#主要根据下面这个图来分析" class="headerlink" title="主要根据下面这个图来分析:"></a>主要根据下面这个图来分析:</h5><p><img src="/img/RST/1.png"></p><p><strong>仰角E</strong>：观察点-卫星的连线，与地平线的夹角，取值范围为[-90°, 90°]，-90°时卫星已经位于观察点对应的地球表面异侧点正上方，实际已经不可见；一般都会规定最小仰角</p><p><strong>地心角 $\alpha$:</strong> 取值范围为[0°, 180°]， 0°表示卫星在观察点正上方，180°表示卫星在观察点对应的地球表面异侧点正上方</p><p><strong>地球平均半径 $R_e$</strong></p><p><strong>轨道高度 $h$</strong></p><h5 id="由此可以推导出仰角与地心角的关系-（从O点作观察点-卫星连线的垂线）："><a href="#由此可以推导出仰角与地心角的关系-（从O点作观察点-卫星连线的垂线）：" class="headerlink" title="由此可以推导出仰角与地心角的关系 （从O点作观察点-卫星连线的垂线）："></a>由此可以推导出仰角与地心角的关系 （从O点作观察点-卫星连线的垂线）：</h5><p><img src="/img/RST/2.png"></p><p>如果已知的是卫星的经纬度，也可以表示出地心角：<br><img src="/img/RST/3.png"></p><h5 id="那么卫星的服务时间就能通过角速度和地心角推导出来："><a href="#那么卫星的服务时间就能通过角速度和地心角推导出来：" class="headerlink" title="那么卫星的服务时间就能通过角速度和地心角推导出来："></a>那么卫星的服务时间就能通过角速度和地心角推导出来：</h5><p>卫星的在轨运动角速度为：</p><p><img src="/img/RST/4.png"></p><p>卫星扫过的地心角范围最大为 $2\alpha_{max}$ ，所以可以提供的最大连续服务时间为：</p><p><img src="/img/RST/5.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Acedemic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Satellite</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Overleaf写作攻略-Figures</title>
+    <link href="/2025/06/22/Overleaf%E5%86%99%E4%BD%9C%E6%94%BB%E7%95%A5/"/>
+    <url>/2025/06/22/Overleaf%E5%86%99%E4%BD%9C%E6%94%BB%E7%95%A5/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>有些期刊要求配图都采用.eps格式，但是会出现一些问题：</p><h5 id="1-用visio画图不能直接导出-eps"><a href="#1-用visio画图不能直接导出-eps" class="headerlink" title="1.用visio画图不能直接导出.eps"></a>1.用visio画图不能直接导出.eps</h5><p>看了很多五花八门的教程，后来终于看到有人说windows居然自带转换功能</p><p>首先从visio导出png，这一步如果有分辨率要求，需要自定义分辨率<br>图片大小也可以修改，如果是比较大的图可以直接按原尺寸缩小一半，不然会出现巨大的文件</p><p>然后在保存图片的文件夹打开windows自带的powershell命令行，输入以下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bmeps -c xxx.png xxx.eps<br></code></pre></td></tr></table></figure><p>就能获得新鲜的.eps文件了！</p><h5 id="2-overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”："><a href="#2-overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”：" class="headerlink" title="2. overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”："></a>2. overleaf编译eps非常耗时，没放几张图就会报错“超过免费编译时限”：</h5><p>因为overleaf编译图片的机制是把eps转换成PDF，所以可以巧妙地利用这一点，上传与eps同名的xxx.PDF<br>把PDF名字修改为：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">xxx-eps-converted-to.PDF<br></code></pre></td></tr></table></figure><p>overleaf就可以直接调用编译好的PDF，再也不用担心编译超时了！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Acedemic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Overleaf</tag>
+      
+      <tag>LaTex</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>却笑人间举子忙</title>
+    <link href="/2025/06/07/%E5%8D%B4%E7%AC%91%E4%BA%BA%E9%97%B4%E4%B8%BE%E5%AD%90%E5%BF%99/"/>
+    <url>/2025/06/07/%E5%8D%B4%E7%AC%91%E4%BA%BA%E9%97%B4%E4%B8%BE%E5%AD%90%E5%BF%99/</url>
+    
+    <content type="html"><![CDATA[<p>又是一年高考季<br>距离我经历的2019年高考已经过去了6年<br>那座我曾经以为难以逾越的高山<br>如今已成了被磨平棱角的山丘</p><p>高考本来应该是对过去17年人生的一种总结<br>但对我来说<br>始终充满着遗憾</p><p>我清晰地记得<br>高考完那天<br>我们宿舍的同学们都在痛哭<br>有太多的不甘心、不如意<br>或许<br>不管什么样的结尾<br>都无法满足我们内心沉重的期待</p><p>我到现在也不知道我的高考分数在学校里面的排名<br>但我觉得应该是我高中三年排名最末的一次吧<br>一切的一切 都要源于那道语文作文题<br>“你们再看看书，我再看看你们”<br>天杀的，到底谁出的这么离谱的作文题<br>我分析了那么多道历年作文材料题<br>我准备了那么多精辟的议题、玄妙的言论<br>最后你让我整点抒情的。。。<br>我还记得我写的作文题目是<br>《莫失莫忘，且行且珍惜》<br>内容完全不记得了<br>因为我已经宕机了<br>每次我看不上自己写的东西的时候<br>就会选择性地消除记忆<br>这怎么不算是一种自我保护机制呢</p><p>让我无法释怀的究竟是什么呢？<br>是我明明最擅长的就是语文<br>是我偏偏最喜欢的就是写作<br>是我明明在理科班，但是可以在3000人里拿下语文单科年级第一<br>是我靠文学看到了天地最后却被一场考试关上了世界的门<br>“成也萧何，败也萧何”</p><p>考完语文走出考场的时候<br>我不敢告诉偷偷等待在门口的爸妈究竟发生了什么<br>只能和着妈妈精心准备的饭菜咽下一切，努力调整心态</p><p>不幸的是<br>下午场的数学还是被影响到了<br>幸运的是<br>第二天的英语、理综还算正常发挥</p><p>我特别害怕做人做事开头精彩，但结局潦草<br>就像我高中的语文老师因为怀了二胎要回家休养前留给我们的寄语<br>她指着窗外的烂尾楼，告诉我们<br><strong>“尽人事，听天命”</strong><br>她已经给我们打好了基础<br>接下来的施工要靠我们自己，不要成为烂尾楼<br>我特别感谢高中时期遇到的老师和同学们<br>她们有着千姿百态的脾气秉性，也有着如出一辙的美好温良<br>她们让我明白教育真的是在用灵魂撼动灵魂<br>让我在潜移默化中明白了很多做人做事的道理<br>可惜我没办法原谅自己<br>没办法面对她们<br>更没办法怪罪他人<br>要怪就怪我运气不好、心态不稳定吧</p><p>高考完填报志愿的时候<br>我发现我对什么专业都不感兴趣<br>对世界上一切的东西都能清晰地看到明暗两面<br>能理解、能包容，但没办法妄下论断<br>直到现在也是<br>“看山不是山，看水不是水”<br>最后阴差阳错地走上了现在的专业道路<br>尽可能地在工作中保持理性，在生活中保持感性<br>不至于在某方面完全耗尽自己<br>这也算是一种天意吧</p><p>我也曾幻想过<br>如果我当时能发挥得再好一点<br>是不是就可以去到梦中情校了<br>是不是就可以成为更好的自己了<br>是不是就可以拥有截然不同的人生了<br>然后呢？<br>我们总是在美化没有去到的那条路<br>可是没有人可以同时拥有一切<br>现在的一切或许就是最好的安排</p><p>时至今日<br>在很多模糊的记忆里<br>这场考试依旧像一根刺，偶尔会戳到我最敏感的神经<br>那些蔓延的疼痛常常会让我想起<br>高三的很多个夜晚<br>我躺在宿舍的床上难以入睡<br>总能听到血液缓慢流经身体各处的声音<br>而我<br>心跳如擂鼓</p><p>六年后的6月7日<br>我并没有直上青云，笑看人间<br>那些我曾经读过的书、走过的路、遇见的人<br>已然化作丝丝风雨，润物无声<br>而我依然还在路上</p><p><strong>鹏北海</strong><br><strong>凤朝阳</strong><br><strong>又携书剑路茫茫</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>无限循环的片单~</title>
+    <link href="/2025/06/04/%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E7%89%87%E5%8D%95/"/>
+    <url>/2025/06/04/%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E7%89%87%E5%8D%95/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p><strong>ENFJ严选，排名不分先后，按时间顺序不定期更新中。。。</strong></p><h2 id="电视剧"><a href="#电视剧" class="headerlink" title="电视剧"></a>电视剧</h2><p>俗女养成记<br>影后</p><p>重启人生<br>深夜食堂<br>非自然死亡<br>胜者即是正义</p><p>伦敦生活<br>后翼弃兵<br>神探夏洛克<br>致命女人</p><h2 id="电影"><a href="#电影" class="headerlink" title="电影"></a>电影</h2><p>宇宙探索编辑部<br>好东西<br>无名之辈<br>扬名立万<br>血观音</p><p>疯狂动物城<br>头脑特工队<br>寻梦环游记</p><h2 id="纪录片"><a href="#纪录片" class="headerlink" title="纪录片"></a>纪录片</h2><p>约翰·威尔逊的十万个怎么做<br>女人</p><p>人生第一次<br>人生第二次<br>生门<br>但是还有书籍<br>如果国宝会说话<br>四个春天<br>人生海海<br>舌尖上的中国</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>电影</tag>
+      
+      <tag>电视剧</tag>
+      
+      <tag>纪录片</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>九寨蓝调</title>
+    <link href="/2025/06/01/%E4%B9%9D%E5%AF%A8%E8%93%9D%E8%B0%83/"/>
+    <url>/2025/06/01/%E4%B9%9D%E5%AF%A8%E8%93%9D%E8%B0%83/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>在天气变幻莫测的六月初<br>九寨沟处处浸染了五颜六色的蓝</p><h2 id="青蓝冰水"><a href="#青蓝冰水" class="headerlink" title="青蓝冰水"></a>青蓝冰水</h2><p><img src="/img/JZ/9-1.jpg"></p><p><img src="/img/JZ/9-2.jpg"></p><p>枯水期黄龙的唯一景点：五彩池<br>在盛夏看见了近似海盐冰淇淋的冬景<br>不虚此行</p><h2 id="蓝绿交织"><a href="#蓝绿交织" class="headerlink" title="蓝绿交织"></a>蓝绿交织</h2><p><img src="/img/JZ/9-3.jpg"></p><p>青影如黛，琉璃叠翠<br>碧柯照水，白雨跳珠</p><h2 id="一碧万顷"><a href="#一碧万顷" class="headerlink" title="一碧万顷"></a>一碧万顷</h2><p><img src="/img/JZ/9-4.jpg"></p><p><img src="/img/JZ/9-5.jpg"></p><p>恰逢雨连天<br>青玉案上泛起微澜<br>涌向无人之境</p><h2 id="蓝色星球"><a href="#蓝色星球" class="headerlink" title="蓝色星球"></a>蓝色星球</h2><p><img src="/img/JZ/9-6.jpg"></p><p><img src="/img/JZ/9-7.jpg"></p><p>偶遇老演员鸭鸭<br>第一次知道原来鸭子要漂在水面上也要一直摆动jiojio~<br>受不了惹，怎么所有生物为了生存都得卷啊。。。</p><hr><p>旅途中总有一些不期而遇的惊喜<br>比如高铁上刚好可以和我们对调座位的母子<br>比如走不动了找我们打探风景的游人<br>比如专门找我退还多付钱款的店主<br>比如好心带我们参观县城打发时间的出租车司机<br>比如陪伴了整个旅途的海底捞众生相纪录片<br><strong>是人为也是天意</strong></p><br><p>身处自然之中<br>再浩茫的心事都显得微不足道<br>水要怎样流淌<br>草要怎么生长<br>无声之处别有洞天<br>我不需要知道答案</p><br><p><strong>随性、自由、坦荡</strong><br><strong>万物渺小而伟大</strong></p><p><img src="/img/JZ/9-8.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Travel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在Ubuntu&#92;WSL系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU)</title>
+    <link href="/2025/05/13/pytorch%E5%AE%89%E8%A3%85/"/>
+    <url>/2025/05/13/pytorch%E5%AE%89%E8%A3%85/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="一、NVIDIA显卡的安装"><a href="#一、NVIDIA显卡的安装" class="headerlink" title="一、NVIDIA显卡的安装"></a>一、NVIDIA显卡的安装</h2><p>因为WSL和Windows的显卡驱动不能互通，所以在子系统上需要重新下载驱动<br>先查看Windows的显卡配置，在Windows终端中的指令为：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">nvidia-smi<br></code></pre></td></tr></table></figure><p>根据这个去NVIDIA官网下载对应的驱动<a href="https://www.nvidia.com/Download/index.aspx">Official Drivers | NVIDIA</a><br> 更具体的操作参考<a href="https://blog.csdn.net/m0_45447650/article/details/132058561">Linux安装显卡驱动、annaconda和CUDA（超详细）-CSDN博客</a></p><h2 id="二、Pytorch的下载"><a href="#二、Pytorch的下载" class="headerlink" title="二、Pytorch的下载"></a>二、Pytorch的下载</h2><p>2.1 下载Anaconda3<br>一般采用wget方式直接从Linux拉取较稳定的版本，可以进入官网<a href="https://www.anaconda.com/download/success">Download Now | Anaconda</a><br>在下载地址点击右键复制链接，替换下方指令中的版本号即可<br>然后在本地安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh<br>bash Anaconda3-2024.10-1-Linux-x86_64.sh<br></code></pre></td></tr></table></figure><p>2.2 构建虚拟环境<br> 需要对照pytorch\python的版本对应关系，确定兼容性比较强的Python版本，多次经验教训得出：3.8 yyds!<br>但是现在最新的cuda 12.8要求python&gt;&#x3D;3.9</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n py_gpu python=3.8.5<br></code></pre></td></tr></table></figure><p>2.3 下载pytorch</p><p>在这一步之前最好先把pip下载了，不然后面极有可能出错（有一次遇到pip一直指向全局路径，在虚拟环境里根本不起作用，只好全部推翻重来）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda install pip<br><br><span class="hljs-comment">#查看pip位置</span><br><span class="hljs-built_in">which</span> pip<br><br><span class="hljs-comment">#如果是指向当前虚拟环境下的pip,则配置正确</span><br></code></pre></td></tr></table></figure><p>最方便的方法就是通过官网的指令下载，一般推荐使用conda下载，根据自己的系统、CUDA版本生成指令，官网链接<a href="https://pytorch.org/get-started/locally/">Start Locally | PyTorch</a><br>默认的官网下载源会比较慢，两步加速（这里只是添加了anaconda的镜像源，完整的Ubuntu仓库镜像源要区分版本来着）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#1.取消默认官网下载</span><br>在生成的下载指令中删除<span class="hljs-string">&quot;-c pytorch&quot;</span><br><br><span class="hljs-comment">#2.添加anaconda国内镜像源</span><br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/<br>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/<br><br><span class="hljs-comment">#3.添加Ubuntu仓库镜像源</span><br><span class="hljs-comment"># 备份</span><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cp</span> /etc/apt/sources.list /etc/apt/sources.list.back<br><br><span class="hljs-comment"># 编辑 </span><br>vim /etc/apt/sources.list<br><br><span class="hljs-comment"># 替换为阿里云镜像源</span><br>deb https://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse<br><br>deb https://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse<br><br>deb https://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse<br><br>deb https://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br>deb-src https://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<br><br></code></pre></td></tr></table></figure><p>全部下载完成以后，进入虚拟环境测试：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate py_gpu<br><br><span class="hljs-comment">#看一下pytorch能不能用</span><br><span class="hljs-comment">#注意测试指令中都用的是&quot;torch&quot;</span><br><br>python<br>import torch<br><span class="hljs-comment">#不报错说明torch安装成功</span><br><br>torch.cuda.is_available()<br><br><span class="hljs-comment">#返回 TRUE</span><br><span class="hljs-comment">#说明gpu版本的pytorch可以正常使用</span><br></code></pre></td></tr></table></figure><p>PS.这个过程中一定要注意环境的归属<br>1.用户：以前没有注意过，默认用户root，还有一个自己取名的用户，可以配置默认打开的用户，要注意anaconda环境配置在哪个用户下，我就是在这里卡了很久，明明安装了anaconda居然找不到。如果使用的不是root用户，可能会出现修改了代码无法保存的情况，需要给对应的工作目录添加用户权限：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chown</span> -R username /path/to/working/directory<br></code></pre></td></tr></table></figure><p>2.虚拟环境：anaconda安装好以后会在用户前面显示，一定要注意隔离环境，在具体的虚拟环境下配置pytorch,查看所有虚拟环境指令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> list<br></code></pre></td></tr></table></figure><h2 id="三、在WSL中打开VScode运行代码"><a href="#三、在WSL中打开VScode运行代码" class="headerlink" title="三、在WSL中打开VScode运行代码"></a>三、在WSL中打开VScode运行代码</h2><p>VScode仅需要安装在Windows系统下，安装微软官方推荐的Remote-Development插件就能直接在Windows系统下使用Linux内核运行程序<br>直接在WSL的终端下输入![\displaystyle](在ubuntu系统上配置PyTorch (Linux+Anaconda+PyTorch-GPU)&#x2F;displaystyle.png)：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">code .<br></code></pre></td></tr></table></figure><p>如果打不开，检查一下路径</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vim ~/.bashrc<br></code></pre></td></tr></table></figure><p>在.bashrc文件最后看一下路径，需要添加：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#根据VScode在本地的下载路径,&#x27;mnt&#x27;这里是wsl在windows系统下的挂载目录</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;<span class="hljs-variable">$PATH</span>:/mnt/d/Microsoft\\ VS\\ Code/Code.exe&quot;</span><br><span class="hljs-built_in">alias</span> code=<span class="hljs-string">&#x27;/mnt/d/Microsoft\ VS\ Code/bin/Code&#x27;</span><br>|<br><span class="hljs-comment">#如果anaconda安装了找不到，也有可能是路径问题,根据具体的路径修改</span><br><span class="hljs-built_in">export</span> PATH=/home/u/anaconda3/bin/:<span class="hljs-variable">$PATH</span><br><br><span class="hljs-comment">#修改了配置要重启文件</span><br><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure><p>最后调整一下解释器，选择虚拟环境下的python，然后打开终端确认一下环境</p><h2 id="四、补充可视化桌面端配置"><a href="#四、补充可视化桌面端配置" class="headerlink" title="四、补充可视化桌面端配置"></a>四、补充可视化桌面端配置</h2><p>4.1 WSL:  xlaunch+xfce4<br>因为WSL默认安装的是终端，需要自己配置桌面，尝试了几种方法以后，终于使用xfce4可以看到可视化桌面了<br>具体步骤参考<a href="https://www.bilibili.com/read/cv33557374/?spm_id_from=333.999.0.0">WSL2+Ubuntu22.04+图形化界面安装 - 哔哩哔哩</a><br>关键的启动代码如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#在 Ubuntu 终端中设置 DISPLAY 环境变量：</span><br><span class="hljs-built_in">export</span> DISPLAY=$(awk <span class="hljs-string">&#x27;/nameserver / &#123;print$2; exit&#125;&#x27;</span> /etc/resolv.conf 2&gt;/dev/null):0<br><br><span class="hljs-comment">#使用sudo 启动 Xfce 会话：</span><br><span class="hljs-built_in">sudo</span> startxfce4 <br></code></pre></td></tr></table></figure><p>但是仍然有点问题，发现xfce4一段时间没有任何操作以后会卡死，参考<a href="https://blog.csdn.net/noto_xj/article/details/129929555">WSL2 Ubuntu + Xfce4 一段时间 Xfce4 卡死不动_ubuntu无法启动xfce4-CSDN博客</a><br>通过卸载锁屏应用解决问题</p><p>4.2 服务器: xdrp+gnome</p><p>因为服务器一般已经安装好gnome图形化界面了，所以主要通过xrdp在windows端实现远程访问</p><p>主要参考<a href="https://www.zzvips.com/article/90420.html">详解如何在Ubuntu 20.04上安装Xrdp服务器(远程桌面)_Ubuntu_服务器之家</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#下载xrdp后会自动运行</span><br><span class="hljs-built_in">sudo</span> apt install xrdp<br><br><span class="hljs-comment">#添加用户群组</span><br><span class="hljs-built_in">sudo</span> adduser xrdp ssl-cert<br><br><span class="hljs-comment">#重启xrdp</span><br><span class="hljs-built_in">sudo</span> systemctl restart xrdp<br><br><span class="hljs-comment">#允许访问</span><br><span class="hljs-built_in">sudo</span> ufw allow 3389<br></code></pre></td></tr></table></figure><p>在windows端打开远程桌面连接程序<br>法一：在 Windows 搜索栏输入“remote”<br>法二：win+r键+mstsc</p><p>可能还有黑屏的情况，参考<a href="https://zhuanlan.zhihu.com/p/519648451">完美方案——解决XRDP连接黑屏，以及桌面优化！ - 知乎</a>可以解决<br>但是相比xfce4明显启动慢很多</p><p>撒花！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>Linux</tag>
+      
+      <tag>WSL2</tag>
+      
+      <tag>PyTorch</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Blog美化日记</title>
+    <link href="/2025/05/08/Blog%E7%BE%8E%E5%8C%96%E6%97%A5%E8%AE%B0/"/>
+    <url>/2025/05/08/Blog%E7%BE%8E%E5%8C%96%E6%97%A5%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="Done："><a href="#Done：" class="headerlink" title="Done："></a>Done：</h2><ol><li>留言栏：集成了valine，js文件有问题，重新找到了一份</li><li>访客人数统计：不太记得怎么完成的了，貌似是配置文件的内置功能</li><li>网页运行时间统计：参考<a href="https://blog.kevinchu.top/2023/07/17/hexo-theme-fluid-modify/#5-%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%A0%87%E9%A2%98%E6%B7%BB%E5%8A%A0%E9%9C%93%E8%99%B9%E7%81%AF%E7%89%B9%E6%95%88">Hexo博客Fluid主题魔改记录 - KEVIN’S BLOG</a></li><li>主页标题的霓虹灯特效：参考<a href="https://blog.kevinchu.top/2023/07/17/hexo-theme-fluid-modify/#5-%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%A0%87%E9%A2%98%E6%B7%BB%E5%8A%A0%E9%9C%93%E8%99%B9%E7%81%AF%E7%89%B9%E6%95%88">Hexo博客Fluid主题魔改记录 - KEVIN’S BLOG</a></li><li>动态标签词云：基本思路参考[Hexo Fluid添加tag-cloud插件 - Zhehui’s Blog](<a href="https://zhengzhehui1110.github.io/zhengzhehui.github.io/2021/02/25/Hexo">https://zhengzhehui1110.github.io/zhengzhehui.github.io/2021/02/25/Hexo</a> Fluid添加tag-cloud插件&#x2F;)，为了让字体变清晰卡了很久，最后通过扩展画布+制定字体大小实现了</li><li>页脚养鱼：基本的js、css文件都参照这个链接<a href="https://blog.emb42.com/2024/11/17/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%A8%B1%E8%8A%B1%E9%A3%98%E8%90%BD%E5%8A%A8%E6%80%81%E8%83%8C%E6%99%AF%E4%BB%A5%E5%8F%8A%E9%A1%B5%E8%84%9A%E7%BE%8E%E5%8C%96/#%E7%89%B9%E6%95%88%E6%BA%90%E7%A0%81%E4%BB%A5%E5%8F%8A%E4%BF%AE%E6%94%B9">为博客添加樱花飘落特效以及页脚美化 - 江上清风</a>；扩展鱼池到全页面花了大功夫，参考<a href="https://cnhuazhu.top/butterfly/2021/02/19/Hexo%E9%AD%94%E6%94%B9/Hexo%E9%A1%B5%E8%84%9A%E5%85%BB%E9%B1%BC%E6%95%88%E6%9E%9C/">Hexo页脚养鱼效果 | 花猪のBlog</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Bloger</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>无限循环的歌单~</title>
+    <link href="/2025/05/08/%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%AD%8C%E5%8D%95/"/>
+    <url>/2025/05/08/%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF%E7%9A%84%E6%AD%8C%E5%8D%95/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p><strong>ENFJ严选，排名不分先后，按时间顺序不定期更新中。。。</strong></p><p>鲜花(live) - 回春丹 <a href="https://music.163.com/song?id=2088079571&uct2=U2FsdGVkX1/5E0PeNwyN02eyhQ+7vLmGMiZ8Pdv7HXY=">https://music.163.com/song?id=2088079571&amp;uct2=U2FsdGVkX1/5E0PeNwyN02eyhQ+7vLmGMiZ8Pdv7HXY=</a></p><p>枯木逢春 - 沈学风&#x2F;诺米 <a href="https://music.163.com/song?id=2138763214&uct2=U2FsdGVkX19BDM0GpayliO/3TZ9Mbgkoaj54dFj2uMw=">https://music.163.com/song?id=2138763214&amp;uct2=U2FsdGVkX19BDM0GpayliO/3TZ9Mbgkoaj54dFj2uMw=</a></p><p>大山(live) - 王睿卓 <a href="https://music.163.com/song?id=2660579988&uct2=U2FsdGVkX1+/q4QP7vh3KXsKks9LgbyVnBm4xOl8p3k=">https://music.163.com/song?id=2660579988&amp;uct2=U2FsdGVkX1+/q4QP7vh3KXsKks9LgbyVnBm4xOl8p3k=</a></p><p>我用什么把你留住(live) - 福禄寿FloruitShow <a href="https://music.163.com/song?id=1481100356&uct2=U2FsdGVkX1/geQBDF9aZDgIAnzPFA7cr9l7YbSrTS/U=">https://music.163.com/song?id=1481100356&amp;uct2=U2FsdGVkX1/geQBDF9aZDgIAnzPFA7cr9l7YbSrTS/U=</a></p><p>鼓楼 - 赵雷 <a href="https://music.163.com/song?id=447926067&uct2=U2FsdGVkX1+ABifOCpMYQOXbzOs5OHFwcsNTlgg7xaY=">https://music.163.com/song?id=447926067&amp;uct2=U2FsdGVkX1+ABifOCpMYQOXbzOs5OHFwcsNTlgg7xaY=</a></p><p>从未见过的海 - 告五人 <a href="https://music.163.com/song?id=2644183063&uct2=U2FsdGVkX19MTu2XAR7HmQLxzSp1xgzKB36/KAJGmVo=">https://music.163.com/song?id=2644183063&amp;uct2=U2FsdGVkX19MTu2XAR7HmQLxzSp1xgzKB36/KAJGmVo=</a></p><p>You’ll See - Tizzy Bac <a href="https://music.163.com/song?id=382108&uct2=U2FsdGVkX19m6WDct1oFfqeXzQQCnIQq9bxPgPft+wg=">https://music.163.com/song?id=382108&amp;uct2=U2FsdGVkX19m6WDct1oFfqeXzQQCnIQq9bxPgPft+wg=</a></p><p>最好的安排 - 谢天笑 <a href="https://music.163.com/song?id=1838500336&uct2=U2FsdGVkX18zG5KsnILLdvK44yru//BIgeCc9ELVjo0=">https://music.163.com/song?id=1838500336&amp;uct2=U2FsdGVkX18zG5KsnILLdvK44yru//BIgeCc9ELVjo0=</a></p><p>Everywhere We Go - 陈冠希&#x2F;MC仁&#x2F;厨房仔&#x2F;应采儿  <a href="https://music.163.com/song?id=65739&uct2=U2FsdGVkX1+KTGOPAMNMoutVKyeovv2U8EccFGtVXvs=">https://music.163.com/song?id=65739&amp;uct2=U2FsdGVkX1+KTGOPAMNMoutVKyeovv2U8EccFGtVXvs=</a></p><p>愈合 - 告五人 <a href="https://music.163.com/song?id=2723322996&uct2=U2FsdGVkX1//ZklFqh5L0BMSfcuaY7bKXkCWUEaLnX4=">https://music.163.com/song?id=2723322996&amp;uct2=U2FsdGVkX1//ZklFqh5L0BMSfcuaY7bKXkCWUEaLnX4=</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>音乐</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我用什么把你们留住</title>
+    <link href="/2025/04/21/%E6%88%91%E7%94%A8%E4%BB%80%E4%B9%88%E6%8A%8A%E4%BD%A0%E4%BB%AC%E7%95%99%E4%BD%8F/"/>
+    <url>/2025/04/21/%E6%88%91%E7%94%A8%E4%BB%80%E4%B9%88%E6%8A%8A%E4%BD%A0%E4%BB%AC%E7%95%99%E4%BD%8F/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><blockquote><p>所有的结局都已写好<br>所有的泪水也都已启程<br>在那个古老的不再回来的夏日<br>我们就这样<br>各自散去</p></blockquote><p>骤然升腾的4月<br>我和朋友们的命运就这样<br>在短暂的交织后开始出现了分离的线头</p><p>虽然还只是在找暑期实习<br>但我知道<br>时间的速度是相对的<br>分别只会越来越快<br>命运最终会将我们拉扯到截然不同的画布里<br>涂抹上色彩各异的神情和模糊不清的面目</p><p>等我的朋友们都踏入社会了<br>按部就班地立业、成家、生子<br>我可能还在论文堆里挣扎</p><p>也许我是那个跑马拉松的人<br>短程里看不到收获<br>只能看到沿途一茬又一茬到站下车的人<br>而我也无法定义距离终点到底还有多久<br>陪伴我的只有层层叠叠的怅惘</p><p>有时候我会觉得这一生太过漫长了<br>不知道这一生还要经历多少聚散离合<br>这也是我从小就非常抗拒当老师的原因<br>成年累月地这样和一群又一群的人相聚相知又相离<br>实在太过残忍</p><p>有时候我又会觉得时间过得太快了<br>我总觉得还没有好好地和朋友们一起探索这个世界<br>我很珍惜每一次和大家一起吃的饭唠的嗑<br>希望余下的时间里也能继续多多陪伴吧</p><p>我生活在象牙塔里太久了<br>也过于自我、过于出世、过于理想主义了<br>我彷佛和真实的生活是脱节的<br>我不懂柴米油盐酱醋茶<br>不明白身边的花草名为何物<br>不知道夏日里的树叶为何发黄<br>我也不知道<br>该用什么把你们留住<br>或许我本来也留不住任何人任何事</p><p>前两天和妈妈通电话<br>妈妈问我五一和哥哥姐姐们一起回家晚上想吃什么<br>我突然觉得无比幸福<br>正是那些小小的相聚时刻让人生充满了盼头</p><p><strong>人之于世</strong><br><strong>来去聚散</strong><br><strong>皆如流云</strong><br><strong>漂泊无踪</strong></p><p><strong>希望大家不管在哪里都可以一切顺利！</strong><br><strong>希望我们不管走到哪里都可以常相聚！</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我被一阵风困在这里</title>
+    <link href="/2025/04/12/%E6%88%91%E8%A2%AB%E4%B8%80%E9%98%B5%E9%A3%8E%E5%9B%B0%E5%9C%A8%E8%BF%99%E9%87%8C/"/>
+    <url>/2025/04/12/%E6%88%91%E8%A2%AB%E4%B8%80%E9%98%B5%E9%A3%8E%E5%9B%B0%E5%9C%A8%E8%BF%99%E9%87%8C/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>最近成都天气变化太大了<br>不知道是哪一阵风过于凛冽了<br>一下子中招变鼻涕狗了。。。</p><p>这几天昏昏沉沉的<br>恍惚间感觉发生了很多事</p><p>一夜之间<br>关税战层层加码<br>现在已经对具体的加征数字无感了<br>反正都已经脱离现实了<br>最后受苦的还是广大消费者<br>物价会越来越贵<br>工作会越来越难找</p><p>小时候一直听到“同住地球村”的概念<br>现在的世界却是一点点分崩离析<br>欧盟解体、贸易逆全球化……<br>一切越来越魔幻了</p><p>一直期待的《淮水竹亭》也要延期<br>果然不能对王一栩和爱奇艺的草台班子抱有太大的期待</p><p>事缓则圆<br>还是要学会放下执念<br>用一颗平常心对待一切</p><p><strong>恍惚间</strong><br><strong>被风吹过的夏天已经来临</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>忧郁的21次方</title>
+    <link href="/2025/04/01/%E5%BF%A7%E9%83%81%E7%9A%8421%E6%AC%A1%E6%96%B9/"/>
+    <url>/2025/04/01/%E5%BF%A7%E9%83%81%E7%9A%8421%E6%AC%A1%E6%96%B9/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>&emsp;&emsp;王二狗生病了。也不是什么大病，抑郁症。</p><p>&emsp;&emsp;王二狗从小在村里的泥巴里摸爬滚打，每天哧溜着两条长龙从东家门前过往西家屋上窜，家里能给他的最好的是黑漆桌上白瓷碗底的一块干馍。说来奇怪，小时候的穷日子没给他留下童年阴影，反倒是在大城市成年后让他得了这么个怪病，被送进了这家精神医院。</p><p>&emsp;&emsp;阳光懒懒地趴在医生肩上，抬眸斜睨着二狗。二狗无奈地说:“我真没得什么抑郁症。我就是老喜欢在楼顶45度角仰望天空的时候想起村里那个蓝得干干净净的天空，想再闻闻带土味的空气，结果一口雾霾给呛着了，一个踉跄人就往下栽……”医生张大眼瞪他:“有自杀倾向就算了，还非得让雾霾给你背锅。你对得起每1mol六点零二乘以十的23次方的直径小于等于二点五微米的微粒吗……”二狗来不及躲闪，肉眼可见的唾沫如箭雨矢星般直直地射向他的面门，就算武林高手没有筋脉俱断，也是感官尽废。二狗子强压着心中怒火，表面上五分赞同五分仰慕实际上一百二十分吐槽地深情凝望着医生，并不时作出疑惑、点头、恍然大悟三连动作以表认真。二狗天真地以为给点阳光寒冰豌豆就能融化成人畜无害的坚果，谁知道竟然逆天地成了玉米加农炮:“啊……你这个症状啊……就是在乡村与城市之间厮磨之后撕扯，撕扯之后又厮磨这样子的周而复始之中……啊是吧……新型抑郁症……看你这状况还能治，打今儿起你就在这儿安心疗养吧。”于是乎，活泼老僵尸王二狗稀里糊涂地获得了官方认证:第21位抑郁症病人。</p><p>&emsp;&emsp;王二狗永远忘不了他见到前二十号病人的那天下午。护士带着他轻缓地蜿蜒在走廊的阳光里，他脚边的影子和明灭的光线纠缠不息，有时也会顺着墙壁的脉络缓慢而蓬勃地攀爬，最后在曲折的拐角里七零八落、体无完肤。不知穿梭了多久，王二狗终于见到了传说中的病友。</p><p>&emsp;&emsp;那是20双眼睛，从灵魂深处的窟窿里生发，与洪涛奔涌的热血逆流，冲破弱不禁风的皮囊，那些眼神映入眸，刻进心。浑浊与透亮并存，沧桑和无邪双生。世上最容易生病的是人，世上最会治病的也是人，在自灭与自愈之间讲故事的是这些抑郁症病人。目光交汇的时候，他看到了另一个维度的他们，面目模糊，姿态奇异。他们在悬崖上狂欢，在深渊旁嬉闹，而王二狗是姗姗来迟的21号。</p><p>&emsp;&emsp;“微微仰头，似乎凝望着天空，这尊代表原始社会仰韶文化的人头壶……”低沉醇厚的声音暂停了他脑海里的狂欢，电视屏幕上出现了一个造型拙笨而奇特的人头壶。明明只是个表情迷醉的壶，却让人觉得它欲言又止、欲哭未哭，似乎盛满了一些近在咫尺而无法触碰的东西。难道几千年前的人们就已经开始思考人生这种玄学了吗？二狗暗自想到，相较于思考人生，他更喜欢去荒山挖人参。他默默地搬了个凳子坐在众人边缘，规矩地坐好，努力表现出和众人如出一辙的专注。安静的空气让他恍然想起，很多年前，他也会这样，嗯……好像还有一只狗，在人群外缘吃力地踮起脚尖望着村长日益稀疏的发量，不缺席、不迟到，总晚归。</p><p>&emsp;&emsp;疗养院的日子渐渐磨去了王二狗初来乍到的新奇，倒切割出了久别重逢的亲切。世上所有的相遇都是久别重逢。这话，二狗从前只在缭绕文艺青年的烟雾里嗅到过，现在却是觉得这话真真实实地长在心里的一亩三分地上。这里每个人都有抑郁症，每个人的抑郁因子都不同，但每个沼泽都曾让他沦陷过。也许他就是这群人的累积效应。</p><p>&emsp;&emsp;“喂，21号，最近大家要搞一个活动，要不要一起来玩啊！”20号不客气地戳了戳王二狗的肩，眨了眨眼调皮地对他说。20号是个姑娘，是个脾气比身材更火爆的姑娘。据她自述，她的忧郁产自天然纯色和人工绝色。二狗难受地看着她微颤的欧式大双眼皮，光线直直地穿过她高挺的鼻翼。人类所谓的艺术无非是个谎言，以美的名义毁灭美。一想到不施粉黛的小山村会被工业化浓妆艳抹、垫鼻割眼，王二狗就恶心地想作呕。可是有些东西，一旦吸进去了，就会死死地黏附在身体里，很难再吐干净了。</p><p>&emsp;&emsp;或许是因为恶心而神智不清，王二狗稀里糊涂地上了20号的贼船。明明是抑郁症，他们的日常却过得像妄想症和多动症的结合体。他们的活动很是讲究，时间、内容都是变数，唯一的定数是除了二狗以外的所有人。</p><p>&emsp;&emsp;“老夫我查了天气预报，掐指一算，今晚是个黄道吉日，适合大家探索宇宙的真理……”16号掐着手指徐徐说道，手上的iwatch闪耀着星辰的分布图。听20号说16号这辈子就裁在迷信和科学里了。不听老祖宗的经验，吃亏在眼前；不信科学家的学说，吃土也不远。上百度查黄历，学星系算天机，矛盾的16号从此走向了抑郁。但他的话一直都是活动的重要指向。</p><p>&emsp;&emsp;不过这次似乎玩大了。之前他们不过是在各自的病房装死以争夺奥斯卡小金人（最终3号老戏骨实至名归），医院里的医生、护士就已经暗搓搓地自备了降压药。他们还一起设计了密室逃脱，最后还是18号天才少年带领大家成功通关。这次，大家一致同意在院里玩捉迷藏，除了王二狗。</p><p>&emsp;&emsp;“我的乖二狗，你晓不晓得我们等你等了多久哇……”3号戏精奶奶一把将二狗抱进怀里，涕泪俱下。“老戏骨”早年是戏院台柱子，后来转战电视剧也是个名角。奈何美人迟暮，珠玉消陨，观众不再喜欢皱纹的风情万种了，可她早已人戏不分，在虚拟和现实之间进退维谷，自此抑郁。这会儿估计是哪个苦情女主附体了吧。“二狗乖啊，蒙上眼睛，数250个数才可以来找我们哦!要是旁人问起，你就告诉他们我们来玩捉迷藏，不要来打扰我们……千万不要忘记大明湖畔的夏雨荷……“说着，拿出手帕拭泪，似与情郎生离死别。王二狗只觉得头皮发麻，无奈地答应了他们。</p><p>&emsp;&emsp;夜色如墨，众人一齐到了院子里。“来来来，你就在这棵树这儿，闭上眼睛，数250个数……”很多双手一齐推着他把他推到树前，大家絮絮叨叨地叮嘱道。王二狗乖乖蒙住眼睛，“我开始数了哦！”回应他的是杂乱而急促的脚步声。抚摸着树干上纵横的纹路, 嗅着树干潮湿而独特的味道，无数次童年的捉迷藏在他脑海里回放，那时候他也总被要求去找别的小伙伴。大芳不喜欢弄脏衣服，所以总躲在邻家屋里；小巴最狡猾，躲到堆煤的死角里，脏兮兮的脸和煤融为一体…等等，每次他最先找到的都是一只躲在树背后草丛子里的狗……不知不觉，已经数到了100，“101、102……”那只狗后来去哪儿了呢？王二狗绞尽脑汁，记忆的存档始终在读取中。他一点点回忆在村里和爷爷奶奶相依为命的日子。白云流转在辽阔的天幕里，时间很快到了王二狗进城的这一天，城里的爸妈说是已经在城里安顿好了，要把他接去上学。汽车的轰鸣吞噬着沿途的山路，飞扬的主土将伫立在村口的身影模糊。王二狗觉得眼睛酸涩，不知怎的啪塔一声眼泪落在了手背上。泪水晶莹，里面有爷爷的一条深邃的皱纹，奶奶的一绺干枯的白发，狗的一双晶亮的眼睛。他们就像村庄里的守望者，守在祖辈前仆后继的土地上，望着儿孙绝尘而去的背影。他们会不会也有抑郁症呢?二狗忧虑地想着，数到了200。</p><p>&emsp;&emsp;“你一个人在这儿干吗呢!”查房的护士来了，诧异地问。王二狗没有睁眼看她，神秘地说:“我们在玩捉迷藏，等我把人都找齐了你再来查房。”</p><p>&emsp;&emsp;这里的工作人员向来尊重病人，并且十分信任带有纯正的乡土气息的王二狗，护士温柔地说道“那你一定要加由哦!”也消失在了夜色里。终于数到了250，“我要开始找人咯!”他舔了舔干燥的嘴唇，眼里闪烁着许久未见的光芒。</p><p>&emsp;&emsp;借着路灯黯淡的光，王二狗跑到树下胡乱摸了摸，只触摸到草上爬行的甲壳。“我真傻，他们又不可能像狗一样趴在这里……”王二狗懊恼地想，跑向众人的房间。他满怀希望的握住把手，用力一拧，门后的世界却是无一例外的空旷。像是春山来临时海平面上冰山融化，无以复如的绝望让他的心一点点坍塌，，轰的一声，荡然无存。</p><p>&emsp;&emsp;尖利的警报声突兀地响起，“全体工作人员注意，抑郁症病人正在准备翻墙出院，请迅速到门口拦截，一定要确保他们的人身安全……”王二狗只觉得脚步有些虚浮，茫然地走到了与那些人初次见面的地方。</p><p>&emsp;&emsp;没错，他被利用了。那些人早就准备预谋好了逃跑。装死是为了探清疗养院的应急防护机制……玩密室逃脱是为了寻找逃跑的路线……而拉他参与进来，是替他们拖延时间。他似乎能想到，那些腐烂的躯壳用尽全身所有的力气，带着喜洋洋的神色，奋力地跃过了悬崖，到达了对岸的人烟。而他，被用来垫脚的他，是被拉扯着横在两边，还是已坠入深渊呢？欧式大双眼皮不会再回应他了。</p><p>&emsp;&emsp;他无助地抬头，又看到了屏幕上的人头壶。他坐在中央唯一的凳子上，微微抬头。人们背上了各自珍重的吉他和画，把雄雄燃烧的篝火留给了他。“这个容器制造奇特，水满则从眼部溢出，宛如小人流泪，似乎代表原始先民最初孕育的痛楚……”王二狗伸长了脖子，和那人头壶迷蒙的双眼四目相对，随后一齐仰望着千年之隔的夜空，一股温热的液体顺着脸颊流下。</p><p>&emsp;&emsp;已经是21世纪了，时代的忧郁还是没有放过我们每一个人。不是不逃，只是时机未到。二狗想到。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>北京白描</title>
+    <link href="/2025/03/30/%E5%8C%97%E4%BA%AC%E7%99%BD%E6%8F%8F/"/>
+    <url>/2025/03/30/%E5%8C%97%E4%BA%AC%E7%99%BD%E6%8F%8F/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="Day1-橙红日光"><a href="#Day1-橙红日光" class="headerlink" title="Day1 橙红日光"></a>Day1 橙红日光</h2><p><strong>雍和宫+国子监+南锣鼓巷+什刹海+鼓楼</strong></p><p>在北京纵横交错的胡同里citywalk的第一天<br>也是开始暴走的第一天</p><p>从南方来到这里<br>才知道春天的绿意在北方是如此的奢侈<br>那些枯寂的交错的黑色枝桠<br>在蓝天白云红日灰瓦下<br>勾勒出一个轮廓分明的北京城<br>我脑海里只有一个词：白描</p><p><img src="/img/BJ/1.jpg"></p><p>在这样的景象里穿梭<br>压根不会感到疲累<br>只会期待下一个转角<br>看到更生动的京城</p><p><img src="/img/BJ/2.jpg"></p><p>一进入雍和宫<br>内心就有一种深切的触动<br>我起初无法言明这种悲寂从何而来<br>后来我陆续看到一些信徒搀扶着生病的家人<br>艰难地挪向一座座大殿<br>突然间潸然泪下，内心顿悟<br>实是众生皆苦<br>这世间有太多种磨难了<br>身体的、心灵的<br>如何才能渡尽众生呢？<br>除了生死，其余都是小事<br>既然是事，就有事在人为<br>先尽人事，再听天命<br>我也在想<br>如果求医问药都到了首都还是无计可施<br>该是有多绝望呢<br>就愿那些虔诚的愿望可以渐渐看到一丝光亮</p><p><img src="/img/BJ/3.jpg"></p><h2 id="Day-2-正红宫墙"><a href="#Day-2-正红宫墙" class="headerlink" title="Day 2 正红宫墙"></a>Day 2 正红宫墙</h2><p><strong>故宫+景山公园+牛街</strong></p><p>如果说前一天是在脑海里初初勾勒出了北京质朴亲和的样貌<br>这一天则是为北京印象涂抹上了皇家威严的颜色</p><p>在来北京之前<br>回忆起多年前造访过的北京<br>除了被哥哥在北京上学的日常生活深深震撼以外<br>就是对故宫的印象最为深刻<br>那时我还是个一个劲儿挤进人堆里只为更清晰地听到导游的解说<br>其实解说的内容我都完全不记得了<br>只记得那些被红色安全线阻隔在我面前的宫殿物什<br>在和煦的日光下闪耀着莹润的光辉<br>那时我一想到这些物件已经留存成百上千年<br>就觉得妙不可言<br>这也是我后来迷上《哑舍》这本书的原因<br>我相信<br>万物有灵<br>这些尘封的器物必然在缄默中积攒下了万语千言<br>不知它们又是怎样看待今天的我们呢？</p><p><img src="/img/BJ/4.jpg"></p><p>可惜这次遇上了北京的十级大风<br>宫殿全都闭门不开<br>真的狠狠明白了什么叫“高处不胜寒”<br>站在曾经的城市最高点<br>再重量级的人物也会被风吹得瑟瑟发抖<br>何况那些脆弱的物品呢<br>希望它们能够长久地留存下去</p><p>在故宫的每个转角都会被宫廷的规整井然和无尽巧思深深震撼<br>同时也不由得感叹真是劳民伤财啊<br>皇家威严的气象背后<br>是不得留名、苦心竭力、后继无人的工匠<br>是一辈子生活在苛杂赋税里，只能仰望紫禁城的平民百姓<br>是寒窗苦读只为走上仕途一举改命的莘莘学子<br>很多名字都被埋藏在了历史里<br>当时光的洪流浩浩汤汤地来临<br>我们这一代人又能留下什么呢？</p><p><img src="/img/BJ/5.jpg"></p><h2 id="Day-3-鲜红五星"><a href="#Day-3-鲜红五星" class="headerlink" title="Day 3 鲜红五星"></a>Day 3 鲜红五星</h2><p><strong>升旗观礼+国博</strong></p><p>这是热血澎湃的一天<br>每次出去旅行我都做好了当特种兵的准备<br>时刻准备着为了美景、美食付出脚力、心力、财力<br>想来我已经看过了云南凌晨的日照金山、厦门傍晚的日落沙滩<br>这一次我奔赴了一场随着朝阳一同照耀中华大地的升旗仪式</p><p>北京每天都会升起一面崭新的旗帜<br>当我身处拥挤的观礼人潮中<br>更加体会到人民群众那些朴实无华、真挚深切的爱国之情<br>有通宵排队在广场上吹了一夜凉风的大学生<br>有用孱弱身躯奋力托举着年幼女儿的母亲<br>有带着一双年迈父母默默来此等候的年轻人<br>大家等着天色一点点明朗<br>天安门城楼的灯光逐渐被日光取代<br>在高昂的旋律里齐声颂唱着国歌<br>国旗升到顶时人群里爆发出海浪一般的欢呼</p><p>也许每个人都重复着平平无奇的生活<br>但我确信<br>当这些人聚集在一起时<br>有着无穷的力量守卫国家、振兴中华<br>这就是人民</p><p><img src="/img/BJ/6.jpg"></p><p>升旗结束以后<br>一回头就看到了屹立着的人民英雄纪念碑<br>我想这是为了让那些抛头颅、洒热血、一腔肝胆照昆仑的英灵们<br>从此可以天天看到鲜红的五星随着朝阳一同升旗，时刻照耀着中国</p><p><img src="/img/BJ/7.jpg"></p><p>在北京的最后一个行程<br>我终于来到了国博<br>我们国家真是有太多的宝藏了<br>仅仅是负一楼的古代中国展<br>就让人叹为观止</p><p><img src="/img/BJ/8.jpg"></p><p><img src="/img/BJ/9.jpg"></p><p>在那些生产力低下、物资极度匮乏的年代<br>人们凭着仅有的智慧依然创造出了浪漫而实用的生活<br>而现代世界的我们却时常感到萎靡、庸碌、人生无意义<br>从某种程度上来看<br>这是否也算经济发展的一种副作用呢？</p><p><img src="/img/BJ/10.jpg"></p><p>后来又去看了古代玉器展<br>不知道为什么<br>比起金银珠宝<br>我从小就更偏爱玉石器物<br>也许是通透的色泽<br>也许是冰凉的手感<br>也许是精细的雕琢<br>也许是真实存在过的把玩痕迹<br>也许是因为“有匪君子，如切如磋，如琢如磨”</p><p>尽管玻璃阻挡了现代人络绎不绝的气息<br>我想这些沉睡的玉器也会因为大家好奇、专注、虔诚的目光感受到一丝和煦吧</p><p><img src="/img/BJ/11.jpg"></p><hr><p>北京之旅就此落下帷幕<br>因缘际会让我在2025年的3月来到这里又离开</p><p>北京比我记忆中的又要苍老许多<br>那些厚重的历史压在一座城市上<br>却不让我认为它沉闷压抑<br>只是脑海里时常浮现一个词：<br><strong>蔚然大观</strong></p><p><strong>祝愿人民的北京永不褪色</strong></p><p><img src="/img/BJ/0.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Travel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>图神经网络学习资源</title>
+    <link href="/2025/02/27/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
+    <url>/2025/02/27/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Videos"><a href="#Videos" class="headerlink" title="Videos"></a>Videos</h2><ol><li><p>斯坦福224W 图机器学习 <a href="https://web.stanford.edu/class/cs224w/">https://web.stanford.edu/class/cs224w/</a></p></li><li><p>李宏毅 台大 <a href="https://blog.csdn.net/qq_39923466/article/details/120038106">https://blog.csdn.net/qq_39923466/article/details/120038106</a></p></li><li><p>来自DeepMind团队 <a href="https://www.youtube.com/watch?v=uF53xsT7mjc">https://www.youtube.com/watch?v=uF53xsT7mjc</a></p></li></ol><h2 id="Articles"><a href="#Articles" class="headerlink" title="Articles"></a>Articles</h2><h4 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h4><ol><li>Wu, Zonghan, et al. “A comprehensive survey on graph neural networks,” IEEE transactions on neural networks and learning systems, vol. 32, no. 1, pp. 4-24, 2022.</li><li>Suárez-Varela, José, et al. “Graph neural networks for communication networks: Context, use cases and opportunities,” IEEE network, vol. 37, no. 3, pp. 146-153, 2022.</li></ol><h4 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h4><ol><li>李沐讲过的一篇博客，不得不说distill的页面交互是真炫啊<a href="https://distill.pub/2021/gnn-intro/">https://distill.pub/2021/gnn-intro/</a> </li><li>也来自Distill    <a href="https://distill.pub/2021/understanding-gnns/">Understanding Convolutions on Graphs</a></li><li>葡萄书<a href="https://datawhalechina.github.io/grape-book/#/docs/01%E4%BB%8B%E7%BB%8D/01%E4%BB%8B%E7%BB%8D">https://datawhalechina.github.io/grape-book/#/docs/01%E4%BB%8B%E7%BB%8D/01%E4%BB%8B%E7%BB%8D</a></li><li>手写公式万岁！ <a href="https://rish-16.github.io/posts/gnn-math/">Math Behind Graph Neural Networks - Rishabh Anand</a></li><li><a href="https://tkipf.github.io/graph-convolutional-networks/">https://tkipf.github.io/graph-convolutional-networks/</a></li><li><a href="https://bbs.huaweicloud.com/blogs/281949">干饭人，干饭魂，搞懂图神经网络稳饭盆-云社区-华为云</a></li></ol><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><ol><li>Pytorch Geometric<a href="https://pytorch-geometric.readthedocs.io/en/latest/get_started/colabs.html">https://pytorch-geometric.readthedocs.io/en/latest/get_started/colabs.html</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>图神经网络</tag>
+      
+      <tag>GNN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于TSNE实现数据降维可视化的理解</title>
+    <link href="/2025/02/27/%E5%85%B3%E4%BA%8ETSNE%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <url>/2025/02/27/%E5%85%B3%E4%BA%8ETSNE%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%90%86%E8%A7%A3/</url>
+    
+    <content type="html"><![CDATA[<p><strong>TSNE</strong>：最直观的理解就是计算高维空间的特征相似度概率（高斯分布）然后投影到低维空间（t分布），并保证这种相似度得以保留（KL散度），其实也是Embedding的一种</p><p>下面是可视化的代码:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">visualize</span>(<span class="hljs-params">h, color,title</span>):<br><br>  z = TSNE(n_components=<span class="hljs-number">2</span>).fit_transform(h.detach().cpu().numpy())<br><br>  plt.figure(figsize=(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>))<br><br>  plt.xticks([])<br><br>  plt.yticks([])<br><br>  plt.scatter(z[:, <span class="hljs-number">0</span>], z[:, <span class="hljs-number">1</span>], s=<span class="hljs-number">70</span>, c=color, cmap=<span class="hljs-string">&quot;Set2&quot;</span>)<br><br>  plt.title(title)<br><br>  plt.show()<br></code></pre></td></tr></table></figure><p><strong>降维后的节点坐标用二维数组z表示，颜色用c表示（其实在节点分类问题里面对应的是节点标签）</strong></p><p>实际调用可视化函数的代码块为：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">out = model(data.x, data.edge_index)<br><br>visualize(out, color=data.y)<br></code></pre></td></tr></table></figure><br><p>这里解释一下传递的参数：</p><p><strong>out：</strong>模型输出的结果，这里其实输出的是一个嵌入向量</p><p><strong>data.y：</strong>数据集的真实标签</p><p><img src="/img/out.png"></p><p>所以相当于是经过不同的模型会对特征做不同的处理</p><p>比如说经过一个没有训练的GCN，那特征相当于是随机化处理了一下，没有什么明显的相似度，所以降维以后数据点还是乱的</p><p><img src="/img/original.png"></p><p>如果经过一个训练好的GCN，那么特征就会结合拓扑结构重新实现嵌入，相似度明显提升，这时候再去做降维，那么就能看到节点位置发生了改变，会形成明显的簇</p><p><img src="/img/gcn.png"></p><p><strong>总结：TSNE图中，颜色代表真实的节点标签，节点的位置关系表示了特征的相似程度，所以相同颜色的节点越靠近、不同颜色的节点界限越清晰，说明特征嵌入越有效、分类结果会更准确！</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>图神经网络</tag>
+      
+      <tag>GNN</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在Ubuntu上用Docker拉取镜像</title>
+    <link href="/2025/02/19/Ubuntu%E4%B8%8A%E7%94%A8docker%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F/"/>
+    <url>/2025/02/19/Ubuntu%E4%B8%8A%E7%94%A8docker%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F/</url>
+    
+    <content type="html"><![CDATA[<h3 id="一、安装依赖"><a href="#一、安装依赖" class="headerlink" title="一、安装依赖"></a>一、安装依赖</h3><p>这两篇教程内容差不多，算是最详细的了<br><a href="https://docker-practice.github.io/zh-cn/install/ubuntu.html">Ubuntu · Docker – 从入门到实践</a><br><a href="https://blog.csdn.net/u011278722/article/details/137673353">Ubuntu 22.04下Docker安装（最全指引）_ubuntu22.04 docker 分区-CSDN博客</a></p><h3 id="二、配置国内镜像加速器（2025年2月亲测可用）"><a href="#二、配置国内镜像加速器（2025年2月亲测可用）" class="headerlink" title="二、配置国内镜像加速器（2025年2月亲测可用）"></a>二、配置国内镜像加速器（<strong>2025年2月亲测可用</strong>）</h3><p>这里踩了很多坑，之前网上很多教程里面提供的阿里云等加速器现在都用不了，docker拉取镜像的时候一直报错：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">Error response from daemon: Get “https://registry-1.docker.io/v2/“<br></code></pre></td></tr></table></figure><p>感谢这位博主总结的可用网址<a href="https://www.kelen.cc/dry/docker-hub-mirror">🔥截止目前，国内仍然可用docker镜像加速器汇总（2025年2月） - Kelen</a></p><p>镜像源需要编辑&#x2F;etc&#x2F;docker&#x2F;daemon.json这个文件，如果没有可以新建一个</p><p>相关指令如下：</p><p>编辑文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vim /etc/docker/daemon.json<br></code></pre></td></tr></table></figure><p>文件内容编辑为：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;registry-mirrors&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-string">&quot;https://docker.sunzishaokao.com&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;https://dockerhub.icu&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;https://hub.rat.dev&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-string">&quot;https://docker.wanpeng.top&quot;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>保存并退出文件后，重新激活配置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl daemon-reload<br></code></pre></td></tr></table></figure><p>重启docker</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> systemctl restart docker<br></code></pre></td></tr></table></figure><p>测试Docker能否拉取镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">docker run hello-world<br></code></pre></td></tr></table></figure><p>如果本地检测不到helloworld这个镜像的话，就会自动从仓库拉取</p><p><img src="/img/docker-installation.png"></p><p>看见以上输出，说明docker已经可以正常工作了！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>Linux</tag>
+      
+      <tag>Docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>WSL2踩坑之不要随便改动文件夹权限</title>
+    <link href="/2025/02/18/WSL2%E8%B8%A9%E5%9D%91%E4%B9%8B%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E6%94%B9%E5%8A%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90/"/>
+    <url>/2025/02/18/WSL2%E8%B8%A9%E5%9D%91%E4%B9%8B%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E6%94%B9%E5%8A%A8%E6%96%87%E4%BB%B6%E5%A4%B9%E6%9D%83%E9%99%90/</url>
+    
+    <content type="html"><![CDATA[<p>因为遇到一份源码要写入 &#x2F;etc&#x2F;xxx文件夹，普通用户权限不够，所以直接把整个etc文件夹的权限变成任意用户可读写<br>结果再也打开Ubuntu终端了，一直闪退<br>用vscode连接的时候发现报错：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">`<span class="hljs-built_in">sudo</span>: /etc/sudoers is world writable`<br>`<span class="hljs-built_in">sudo</span>: no valid sudoers sources found, quitting`<br>`<span class="hljs-built_in">sudo</span>: unable to initialize policy plugin`<br></code></pre></td></tr></table></figure><p>查了一下，sudoers这个文件夹就在&#x2F;etc目录下，所以应该就是因为我乱改了整个etc文件夹的权限造成的</p><p>但是现在已经打不开wsl了，只能从windows命令行登录：</p><p>1.用管理员模式打开windows终端</p><p>2.切换成root模式打开wsl</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wsl -u root<br></code></pre></td></tr></table></figure><p>现在终于可以看到wsl正常启动的标志了</p><p>3.因为我配置了图形化界面，可以直接操作文件夹权限，也可以在终端输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> 440 /etc/sudoers <br><span class="hljs-built_in">chmod</span> 775 /etc/sudoers.d <br><span class="hljs-built_in">chmod</span> 440 /etc/sudoers.d/README<br></code></pre></td></tr></table></figure><p>现在应该完全恢复正常了，vscode也可以连接了</p><p>虚惊一场，以后再也不随便改文件夹权限了</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>WSL2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>在Ubuntu上安装NS3和ns3gym</title>
+    <link href="/2025/02/14/ns3%E5%AE%89%E8%A3%85/"/>
+    <url>/2025/02/14/ns3%E5%AE%89%E8%A3%85/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="0、安装须知：版本适配问题"><a href="#0、安装须知：版本适配问题" class="headerlink" title="0、安装须知：版本适配问题"></a>0、安装须知：版本适配问题</h2><p>安装ns3真是太折磨人了,经过多次试验，目前可行的适配方案有：<strong>Ubuntu20.04+ns3.35</strong> （主要参考<a href="https://www.minaduki.moe/2023/04/23/focal-ns3-gym/">在Ubuntu 20.04上安装NS3.34和NS3-gym - Minaduki’s Blog</a>）和 <strong>Ubuntu22.04+ns3.38</strong>（主要参考<a href="https://www.nsnam.com/2023/07/installation-of-ns3-in-ubuntu-2204-ns.html">Installation of ns3 in Ubuntu 22.04 | NS-3.38 | Engineering Clinic</a>和<a href="https://www.minaduki.moe/2024/04/10/focal-ns3-38-gym/">在Ubuntu 20.04上安装NS3.38和NS3-gym - Minaduki’s Blog</a>）</p><p>ns3gym目前只分为适用于ns3.36+的版本和适用于ns3.36以下的版本，这是因为从ns3.36开始，编译命令就由.&#x2F;waf变成.&#x2F;ns3了</p><h2 id="1、创建虚拟环境，并安装依赖"><a href="#1、创建虚拟环境，并安装依赖" class="headerlink" title="1、创建虚拟环境，并安装依赖"></a>1、创建虚拟环境，并安装依赖</h2><p>首先要更新系统软件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt upgrade<br></code></pre></td></tr></table></figure><p>如果更新失败或者特别慢的话，要考虑换源，并且换源的时候也要根据具体的Ubuntu版本搜索。如果镜像仓库源和Ubuntu的版本不适配的话，后面的步骤都无法进行</p><p>然后利用anaconda创建虚拟环境（这里我省略了配置anaconda和pytorch的步骤，可以参考这篇文章<a href="https://blog.csdn.net/zoe2222226666/article/details/139581844?spm=1001.2014.3001.5502">在WSL2下配置Pytorch(Linux+Anaconda+PyTorch-GPU)_wsl2 pytorch-CSDN博客</a>）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda create -n torch python=3.x<br></code></pre></td></tr></table></figure><p>进入虚拟环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda activate torch<br></code></pre></td></tr></table></figure><p>接下来要在虚拟环境中安装依赖，这个其实要根据Ubuntu的版本修改某些依赖包的名称，并没有一个完全通用的办法，这里也困住了我很久</p><p>Ubuntu20.04目前可行的安装指令（参考<a href="https://www.minaduki.moe/2023/04/23/focal-ns3-gym/">在Ubuntu 20.04上安装NS3.34和NS3-gym - Minaduki’s Blog</a>）:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y gcc g++ python gcc g++ python3 python3-dev mercurial <br>python3-setuptools git qt5-default gir1.2-goocanvas-2.0 python3-gi <br>python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 ipython3 <br>openmpi-bin openmpi-common openmpi-doc libopenmpi-dev autoconf cvs bzr unrar<br>gdb valgrind uncrustify doxygen graphviz imagemagick texlive texlive-extra-utils <br>texlive-latex-extra texlive-font-utils texlive-lang-portuguese dvipng latexmk <br>python3-sphinx dia gsl-bin libgslcblas0 libgsl-dev flex bison libfl-dev tcpdump <br>sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev cmake libc6-dev libc6-dev-i386 <br>libclang-dev llvm-dev automake libgtk2.0-0 libgtk2.0-dev vtun lxc libboost-all-dev <br>libboost-filesystem-dev pkg-config sqlite3 cmake libc6-dev libc6-dev-i386 <br>libclang-6.0-dev llvm-6.0-dev automake python3-pip<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install -y libzmq5 libzmq3-dev libprotobuf-dev protobuf-compiler<br></code></pre></td></tr></table></figure><p>Ubuntu22.04目前可行的安装指令（参考<a href="https://www.nsnam.com/2023/07/installation-of-ns3-in-ubuntu-2204-ns.html">Installation of ns3 in Ubuntu 22.04 | NS-3.38 | Engineering Clinic</a>）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt install g++ python3 cmake ninja-build git gir1.2-goocanvas-2.0 python3-gi <br>python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython3 tcpdump wireshark sqlite <br>sqlite3 libsqlite3-dev qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools openmpi-bin <br>openmpi-common openmpi-doc libopenmpi-dev doxygen graphviz imagemagick python3-sphinx <br>dia imagemagick texlive dvipng latexmk texlive-extra-utils texlive-latex-extra <br>texlive-font-utils libeigen3-dev gsl-bin libgsl-dev libgslcblas0 libxml2 libxml2-dev <br>libgtk-3-dev lxc-utils lxc-templates vtun uml-utilities ebtables bridge-utils libxml2 <br>libxml2-dev libboost-all-dev <br></code></pre></td></tr></table></figure><p><strong>要看到每个安装包都不报错才行，不然后面会出现一些奇奇怪怪的问题</strong></p><h2 id="2、安装ns3"><a href="#2、安装ns3" class="headerlink" title="2、安装ns3"></a>2、安装ns3</h2><p>首先要从官方镜像拉取ns3安装包（xx换成需要的ns3版本号）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.nsnam.org/releases/ns-allinone-3.xx.tar.bz2<br></code></pre></td></tr></table></figure><p>解压</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -jxvf ns-allinone-3.xx.tar.bz2<br></code></pre></td></tr></table></figure><p>然后编译测试，这个部分只需要注意编译命令有区别(<strong>&lt;&#x3D;3.35用.&#x2F;waf，&gt;&#x3D;3.36用.&#x2F;ns3</strong>)<br>如果一开始用的就不是root用户，最好之后的操作中都不要用sudo，不然会出现一些奇奇怪怪的权限错误，把我坑惨了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ns-allinone-3.xx<br><span class="hljs-built_in">cd</span> ns-3.xx<br>./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 run hello-simulator<br><br>./waf configure --enable-test --enable-examples<br>./waf build<br></code></pre></td></tr></table></figure><p>看到输出Hello Simulator就成功了</p><p>PS.有些教程还会在这里用.&#x2F;ns3 run third –vis测试可视化模块，如果是用的本地虚拟机或者子系统应该没有问题，<strong>用远程连接的服务器暂时看不到图形化界面</strong>，只要前面的步骤都是成功的，即使出现了这个问题，也不用担心，远程连接服务器就是在配置图形化界面上比较麻烦，参考<a href="https://blog.csdn.net/zoe2222226666/article/details/137290549?spm=1001.2014.3001.5502">Pycharm+远程连接Linux服务器用matplotlib画图不显示_pycharm连接远程服务器运行画不出图-CSDN博客</a>，这个问题以后有空再研究吧。</p><h2 id="3、安装ns3gym"><a href="#3、安装ns3gym" class="headerlink" title="3、安装ns3gym"></a>3、安装ns3gym</h2><p>其实和安装ns3的流程差不多，先拉取源码，再进行编译等后续操作，只是要注意现在都要在**ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;**这个位置下进行操作<br>如果clone的时候报错“无法访问”，先检查本地网速，然后把”https”换成”http”试试，这一步很玄学，说不定等一会儿就好了</p><p>如果ns3版本&lt;&#x3D;3.35:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib<br>git <span class="hljs-built_in">clone</span> https://github.com/tkn-tub/ns3-gym.git ./opengym<br><span class="hljs-built_in">cd</span> opengym/<br>git checkout app<br></code></pre></td></tr></table></figure><p>如果ns3版本&gt;&#x3D;3.36:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib<br>git <span class="hljs-built_in">clone</span> https://github.com/tkn-tub/ns3-gym.git ./opengym<br><span class="hljs-built_in">cd</span> opengym/<br>git checkout app-ns-3.36+<br></code></pre></td></tr></table></figure><p>重新编译，这个时候要返回<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">./ns3 configure --enable-python-bindings --enable-test --enable-examples<br>./ns3 build<br></code></pre></td></tr></table></figure><p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下安装ns3gym需要的python模块</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/<br>pip3 install --user ./model/ns3gym<br></code></pre></td></tr></table></figure><p>这一步也有坑，有可能下载不了，检查是否安装pip；<br>用pip下载成功以后，最好查看一下是否成功安装ns3gym:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip show ns3gym<br></code></pre></td></tr></table></figure><p>要看到ns3gym已经安装到了当前虚拟环境下才算成功<br>如果没有的话，需要重新检查pip的位置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">which</span> pip<br></code></pre></td></tr></table></figure><p>如果发现这里指向的是全局路径下的pip，试试在当前虚拟环境下用 conda install pip 重新安装pip<br>如果还是不行的话，只有建立一个新的虚拟环境，从头来过</p><p>继续在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下运行测试</p><p>测试一（仅需一个终端）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/examples/opengym/<br>./simple_test.py<br></code></pre></td></tr></table></figure><p>测试二（需要两个终端）：</p><p>一个终端在<strong>ns-allinone-3.xx&#x2F;ns-3.xx&#x2F;</strong> 路径下运行c++脚本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./ns3 run <span class="hljs-string">&quot;opengym&quot;</span><br></code></pre></td></tr></table></figure><p>另一个终端要找到具体的路径运行.py脚本：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> contrib/opengym/examples/opengym/<br>./test.py --start=0<br></code></pre></td></tr></table></figure><p>就能看到一个简单的运行结果:</p><p><img src="/img/ns3gym-1.png"><br><img src="/img/ns3gym-2.png"></p><p>大功告成！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>Linux</tag>
+      
+      <tag>NS3</tag>
+      
+      <tag>ns3gym</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>年年岁岁花相似</title>
+    <link href="/2025/02/11/%E5%B9%B4%E5%B9%B4%E5%B2%81%E5%B2%81%E8%8A%B1%E7%9B%B8%E4%BC%BC/"/>
+    <url>/2025/02/11/%E5%B9%B4%E5%B9%B4%E5%B2%81%E5%B2%81%E8%8A%B1%E7%9B%B8%E4%BC%BC/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>岁月不居，时节如流<br>乙巳年的春节就这样波澜不惊地过去了</p><p>小时候总是盼望着过年<br>那时觉得每一个年都好长啊<br>从年前就要开始准备几个大笼屉的蒸菜<br>到了二十九和除夕去外公外婆家和爷爷奶奶家轮流团年<br>然后从初一开始踏青、祭祖<br>接下来就是诸位亲戚朋友轮流请客<br>我们一班小孩随着大人的麻将桌辗转在各个农家乐里</p><p>年岁越长<br>越觉得和家人相聚的时光太匆匆<br>明明每天也没有做什么<br>转眼间这个年就算过完了<br>大家又陆陆续续飞回了天南海北的巢穴</p><hr><p>细细想来<br>今年我是1月20号离开的学校<br>在家里准备了一周的会议才算正式开始放假<br>然后就是紧锣密鼓地置办年货、走亲访友、蹭饭吃席</p><br><p>到了团年夜<br>依然收到了鼓鼓的红包<br>尽管已经二十好几<br>但是因为还在读书，也没有结婚成家<br>还是被大家当作孩子看待<br>甚至连已经结婚的哥哥姐姐都要给我发红包<br>说起来还是有些惭愧<br>以后工作挣钱了再给他们安排上红包吧哈哈哈</p><br><p>团年夜是必不可少的限时八卦环节<br>酝酿了一年的趣闻或者家里即将面临的大事<br>都在这一晚开始霸占整个春节档</p><br><p>今年外公外婆家的议题是哥哥的婚事<br>我不想因为多嘴给哥哥找麻烦<br>也感觉自己还是不太适合听这些<br>免得惹火上身，到时候大家掉转矛头开始催我找对象<br>毕竟我外婆已经在列祖列宗面前为我和妹妹许下了愿望<br>希望我们找个“好朋友”<br>老人家还怪虔诚的<br>每位祖宗面前都重复一遍这个心愿<br>我只能说这种事情还是看缘分吧 </p><br><p>今年爷爷奶奶家的议题比较零散<br>因为人太多了<br>只能大人们拼了两张长桌<br>小孩们单独一桌<br>姐姐和弟弟们都开始哐哐炫酒了<br>我因为要给我爸当代驾依然滴酒未沾<br>说实话确实不太喜欢喝酒<br>更喜欢喝旺仔牛奶这种甜甜的东西哈哈哈<br>今年难得小孩们都到齐了<br>和大家放了特别多的烟花<br>看着火树银花霎时间升腾、飞扬、爆炸、散落<br>彷佛过去这一年所有的烦恼和痛苦都随着烟尘消散了</p><p><img src="/img/fireworks.jpg"></p><hr><p>过完除夕<br>时间便如同开了倍速</p><br><p>初一和家人去了附近的山上看雪<br>我第一次看到雪上面结了一层冰壳<br>走在上面咔哧咔哧<br>这样的“汪汪碎冰冰”真的太治愈了<br>雪真的很伟大<br>就算我的脚底沾上了泥土<br>在雪里蹭蹭就干净了<br>尽管这样做会有些负罪感<br>总觉得玷污了雪的清白<br>但在冬日暖阳下<br>不一会儿<br>这些雪就化为水，潺潺地回归大地了<br>质本洁来还洁去</p><p><img src="/img/snow.jpg"></p><br><p>初二在奶奶家见到了超级多的亲戚<br>被几个弟弟在王者峡谷里带飞<br>连上了5颗星<br>不得不说我对游戏真的很难上瘾<br>玩着玩着就觉得无聊至极<br>不过这也算是春节的另一种总结方式吧</p><br><p>初三吃了顿火锅就出发去赴妈妈朋友的约了<br>初四终于见到了几个难得见到的姐姐<br>趁着大人们打麻将<br>我们在20分钟里极限开车赶上了哪吒闹海的现场<br>现在电影院的设备是真香啊<br>我们坐在最后一排享受到的影音效果也相当震撼<br>当然了，正是因为最后一排刚好还剩下4个连着的座位<br>我们才会选择极限赶场<br>这也是上天的好生之德啊<br>冥冥之中想让我们在春节档吃点好的哈哈哈哈</p><hr><p>从初五开始<br>家人们就开始散去了<br>这样盘算下来<br>过年的时间确实很短<br>但正是因为相聚短暂才更显珍贵</p><br><p>后面的几日<br>我陪妈妈看完了小巷人家<br>这部剧真的很会拍<br>每一个家庭都在时代的浪潮中起起伏伏<br>但是每个人都在沉浮中努力地活出自我<br>后来我还陪妈妈还去二刷了哪吒的闹海现场<br>又为中国电影票房冠军做出了不大不小的贡献哈哈哈<br>还陪嘴硬不去电影院的爸爸重新看了哪吒的出生记录<br>相较而言，第二部在画面上确实精进了太多<br>这都是牛马们熬脱的头发啊</p><br><p>每次和家人一起看看电视聊聊天地<br>总觉得内心有种奇妙的静谧<br>也许<br>这就是避风港带给我的安全感吧</p><p><img src="/img/teapot.jpg"></p><hr><p>年年岁岁花相似<br>岁岁年年人不同</p><br><p>正是因为众生皆苦<br>所以才要在春节时团聚<br>回望一下大家日益模糊的面目<br>一起消化掉未尽的情绪和难挨的时光<br>然后整理好各自的行囊<br>重新奔赴刀光剑影的战场</p><p><img src="/img/moon.jpg"></p><p><strong>乙巳年的春节过去了</strong><br><strong>我很怀念它</strong></p><hr><p>终于赶在回学校的第一个凌晨写完了这篇春节小结<br>希望大家新的一年巳巳如意、平安喜乐<br>也祝愿我们来年的相聚更精彩</p><p><img src="/img/mua.jpg"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Happy Everyday</title>
+    <link href="/2025/01/12/Happy%20Everyday/"/>
+    <url>/2025/01/12/Happy%20Everyday/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p>生命真的是一件很神奇的事情</p><p>不知不觉又走到了新的一岁</p><p>回想过去这一年</p><p>我曾经努力过记录下每天的足迹</p><p>最后还是败给了冗杂的事务</p><p>现在只能靠翻阅手机里的相片大致回顾一下</p><hr><p><strong>1月</strong></p><p>和朋友溜去了厦门旅行</p><p>大海是足以抚慰一切坏情绪的良药</p><p>我曾在海滩上写下要发SCI的愿望</p><p>到今日也还没能实现   </p><br><p><strong>2月</strong></p><p>回家过年</p><p>和家人一起玩上了马里奥派对</p><p>我真的是不折不扣的游戏黑洞</p><p>我还记得有一个煎牛肉的游戏</p><p>笑死根本翻不动牛肉</p><p>非常怀念这种简单、纯粹的快乐</p><p>家人闲坐，灯火可亲          </p><br><p><strong>3月</strong></p><p>回学校当牛马了</p><p>一边上课一边写论文</p><p>因为实验进展慢</p><p>导致我对论文也有严重的拖延心理</p><p>不得不说</p><p>越到后面越是发现</p><p>写论文真是太不容易了</p><p>其中苦痛难以言表</p><br><p><strong>4月、5月、6月</strong></p><p>好像不太记得干什么了</p><p>如果没有特别的印象 </p><p>说明我在潜心科研吧</p><p>这几个月把实验的大头完成了</p><p>研究生的第一个学年就这样落下帷幕</p><br><p><strong>7月</strong></p><p>和家人去了妈妈一直想去的西双版纳</p><p>第一天就把手机屏幕摔坏了</p><p>然后遇到了一对特别热情的夫妇</p><p>老爸的社牛让我大为震撼</p><p>也许出门在外是需要学会拥抱一些不期而遇的经历</p><br><p><strong>8月、9月</strong></p><p>又回学校继续当牛马了</p><p>这次把实验的另一个重要部分全部完成了</p><p>不得不说</p><p>只要下定决心去干</p><p>就算无人开路无人指导</p><p>也能头破血流地开辟一条道路</p><br><p><strong>10月</strong></p><p>开始反反复复地修改论文了</p><p>光是调整结构就来来回回了好几次</p><p>只能说写论文这种事情</p><p>只能意会不能言传吧</p><p>这个月的月末参加了华为杯数模大赛</p><p>连续好几天高强度持续作战</p><p>最后一天熬了个通宵把比赛论文改完了</p><p>本来想造一些开创性的算法</p><p>最后还是马马虎虎地勉强完成就上交了</p><p>不知道是因为我们方向没走对，好像没有get到出题人想要创新的那个点</p><p>冥冥之中像是被限制住了思路</p><p>别无他法</p><p>只能不断地堆砌模型和算法</p><p>经历过一次就会对这个比赛彻底祛魅</p><br><p><strong>11月</strong></p><p>依然是在反复修改论文</p><p>这个月也在继续新的任务</p><p>给我们老师当课程助教</p><p>说实话</p><p>我真的挺享受学习这个过程的</p><p>因为有一种要给别人传递知识的责任感</p><p>所以排除万难也要把上课的内容提前理解透彻</p><p>不能说我非常非常懂这门课了</p><p>但至少能在给同学们答疑的时候</p><p>有理有据地给他们讲清楚</p><p>我更加明白了</p><p>我的人生</p><p>很大一部分的内驱力来自于</p><p>责任感</p><p>所以承担一些公共角色大有裨益</p><p>虽然我一度很排斥当老师</p><p>因为老师就像麦田里的守望者</p><p>眼巴巴地盼着一茬又一茬的麦子成熟</p><p>然后只能目送他们远去</p><p>这对于我极其有限的情感和精力来说</p><p>都是一种莫大的消耗</p><p>不过，将来的事</p><p>我也说不准</p><p>哪一股洪流会把我卷上岸</p><p>尚未可知</p><p>这个月底</p><p>和我的朋友们一起参加了IEEE极限编程大赛</p><p>真的是极限的24h</p><p>身心都受到了极大的折磨</p><p>我非常不擅于纠错这种细节性工作</p><p>尤其是纠正自己的错</p><p>更何况还不知道到底错在哪里</p><p>一整个在迷茫里彳亍</p><p>最后的排名一直还没有出来</p><p>希望能遂了我朋友的愿望</p><p>给这个小病号些许安慰吧</p><br><p><strong>12月</strong></p><p>又双叒叕在改论文</p><p>我从小就是一个写了作文 不喜欢回头看的人 更不喜欢对我写过的东西二次利用</p><p>但读了这一年的研究生</p><p>对于做科研这件事</p><p>如果能有现成的东西让我二次甚至无数次利用</p><p>那我简直感恩戴德</p><p>谁都想做一些开创性的工作</p><p>但是时间、精力和资源都是极其有限的</p><p>所以只能是博士生去开创方向、狠狠搞原创</p><p>硕士生在这些工作的基础上狠狠搞项目开发</p><p>这样才能实现学术和工程两手抓</p><p>我是一个不喜欢炒冷饭也不喜欢吃冷饭的人</p><p>尽管搞创新非常非常地艰难</p><p>全网可能都找不到有用的资源</p><p>也不知道坚持走这条路到底能不能看到希望的曙光</p><p>但我相信</p><p><strong>疼痛有益</strong></p><p><strong>生命自有蓬勃之路</strong></p><hr><p>这篇文章写于2025年的开头</p><p>2024年过去了，我很怀念它</p><p>祝有缘看到的人</p><p><strong>新年快乐，万事胜意~</strong></p><p>也祝我自己</p><p><strong>23岁生日快乐~</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Yesterday Once More</title>
+    <link href="/2024/12/07/yesterday/"/>
+    <url>/2024/12/07/yesterday/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer">今天开始写开题报告了，找模板找了很久，最后发现还得靠本科的开题报告<p>巧合的是</p><p>两年前的今天</p><p>我也在写开题报告</p><!-- ![y1](y1.png) --><!-- ![y2](y2.png) --><!--  --><!--  --><p><img src="/img/y1.png"><br><img src="/img/y2.png"></p><p><strong>时间的参照到底是什么呢？</strong></p><p>两年前的我在准备保研</p><p>在未知的迷茫中度日</p><p>两年后的我准备转博</p><p>一以贯之的努力，不得懈怠的人生</p><p><strong>彷佛昨日重现</strong></p><hr><p>昨天惊闻琼瑶辞世的消息</p><p>【翩然】这个词用得真的很妙</p><p>轻盈的、自由的、从容的、优雅的</p><p>最重要的是</p><p>这是琼瑶自己决定的方式</p><p>这种生死观我真的很敬佩</p><p>我看到过很多老人到了生命的最后关头</p><p>意识混沌，身体残破，奄奄一息</p><p>完全没有生活质量和人格尊严可言</p><p>虽然儿女总想着尽孝，用尽一切医疗手段挽留生命</p><p>但老人如果真的太痛苦了</p><p>这对他们来说只是一种自私的折磨</p><p>人到了一定的年纪</p><p>就这样主动或被动地失去了生命的自主权</p><p>某种程度上也是一种不可调和的可悲吧</p><hr><p><strong>我们终其一生</strong><br><strong>就是为了摆脱他人的期待</strong><br><strong>成为真正的自己</strong><br><strong>祝我们永远自由</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《好东西》观后感</title>
+    <link href="/2024/11/26/%E3%80%8A%E5%A5%BD%E4%B8%9C%E8%A5%BF%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/"/>
+    <url>/2024/11/26/%E3%80%8A%E5%A5%BD%E4%B8%9C%E8%A5%BF%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><p><strong>我正直勇敢有阅读量，我有什么好怕的！</strong></p><p>两个小时过得不知不觉，其实也没有非常闭环的故事结构，每次转场就是王铁梅行色匆匆地跑上咯吱咯吱的木楼梯，就像是妈妈们平凡的一天</p><p>但就是这些琐碎的故事 构成了我们灵巧奇妙的一生</p><p>特别特别喜欢小叶给小孩听铁梅每天工作、家务的声音<br><strong>那些庞大的宇宙都诞生在母亲的手下</strong></p><p>我也特别喜欢小叶对于创作者和观众的解读<br>观众可以享受已有的艺术成果，自然是快乐的<br><strong>创作者因为创作而痛苦，所以快乐显得弥足珍贵</strong><br>突然就觉得写论文有了无穷的动力。。。</p><p>我觉得这部电影和《出走的决心》也有异曲同工之处<br>我也一度担忧过苏敏阿姨出走后的日子该如何度过<br>出走又能延续多久呢</p><p>但当我在电影院看到这些女性电影人的告白时<br>突然就释怀了<br>我们没有办法解决每个人面前具象的苦难<br>我们歌颂的是<strong>出走</strong>本身<br>是出走的时候那份坚定不移的勇气</p><p><strong>我想</strong><br><strong>让我们快乐的就是好东西</strong><br><strong>关于出走之后的生活</strong><br><strong>关于明天这份快乐能持续多久</strong><br><strong>关于我到底会有多快乐</strong><br><strong>都不值得我们担忧</strong><br><strong>这一生太长了</strong><br><strong>我们还有无穷无尽的时间去尝试去幻想</strong></p><p><strong>或者说</strong><br><strong>有了这份勇气</strong><br><strong>每天都是新生</strong><br><strong>我们依然可以幻想</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>电影</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>牛马日记（第12周）</title>
+    <link href="/2024/11/25/%E5%B7%A5%E4%BD%9C%E5%91%A8%E8%AE%B0/"/>
+    <url>/2024/11/25/%E5%B7%A5%E4%BD%9C%E5%91%A8%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="周一-2024-11-18-天气阴"><a href="#周一-2024-11-18-天气阴" class="headerlink" title="周一 2024.11.18 天气阴"></a>周一 2024.11.18 天气阴</h2><p>1.跟老师讨论了论文，又要大改，我觉得现在的问题在于我找不到一个完全符合老师要求又能兼容我的算法的论文模版，每个人的写作逻辑都不一样，totally 碎了</p><p>2.之前一直没时间研究的Hypatia+Cesium已经配置好了，果然祛魅最好的办法就是行动，原来还以为Hypatia可以实现动态路由的实时呈现，但是发现它还是只能按照快照路由来展现，路由也不好改动，之后有需要再来用吧</p><p>3.开始做了一件很久以前就想要做的事情：搭建属于自己的博客，没有想到这么简单，只用一个Hexo框架+模版+Github仓库就可以了，花了两个小时就有了雏形，以后终于有地方记录每天的工作和生活了，怎么不算是一种赛博自传呢</p><p><strong>希望我们都可以重拾信心！生命自有蓬勃之路！</strong></p><h2 id="周二-2024-11-19-天气阴"><a href="#周二-2024-11-19-天气阴" class="headerlink" title="周二 2024.11.19 天气阴"></a>周二 2024.11.19 天气阴</h2><p>1.元气满满的一天从当助教开始，我苯人就是这样一种责任心大于自驱力的神奇动物，感谢老师让我来当助教，感觉当老师也挺快乐的，当然最重要的是会有神圣的使命感和成就感</p><p>2.今天把博客的主题重新修改了一下，从原来的yilia-plus换成了fluid，换上了我超爱的背景图，所有背景图都截取自约翰·威尔逊的《十万个怎么做》系列纪录片，真的很喜欢这种很会捕捉生活中的奇奇怪怪的神人，简直世另我</p><h2 id="周三-2024-11-20-天气晴"><a href="#周三-2024-11-20-天气晴" class="headerlink" title="周三 2024.11.20 天气晴"></a>周三 2024.11.20 天气晴</h2><p>难得的好天气~</p><p>意外是根本醒不来，我怀疑牛奶对我有非常强的催眠作用，每次喝了牛奶就会困得很快睡得很沉，不知道是因为小时候总是在睡觉之前和热牛奶养成的条件反射还是我真的有点对牛奶过敏，太好笑了。。。</p><p>今天把intro的2&#x2F;3发配了。。。每改一个word都是对自我的打碎重组。。。痛并快乐着</p><p>明天继续改related work+problem formulation！精神状态不正常才是常态</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>牛马日记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>The game is on</title>
+    <link href="/2024/11/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2024/11/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>生命自有蓬勃之路</p></blockquote><p>终于有了自己的博客！<br>新的开始，要更加勇敢坚定！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>汪汪汪</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Moments</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>卫星仿真可视化工具Cesium安装</title>
+    <link href="/2024/11/12/Cesium%E5%AE%89%E8%A3%85/"/>
+    <url>/2024/11/12/Cesium%E5%AE%89%E8%A3%85/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h5 id="安装Nodejs："><a href="#安装Nodejs：" class="headerlink" title="安装Nodejs："></a>安装Nodejs：</h5><p>这个网上教程很多，就是先下载安装包，再配置环境变量就行<br>安装好以后看一下版本</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh"><span class="hljs-keyword">node</span> <span class="hljs-title">-V</span><br>npm -V<br></code></pre></td></tr></table></figure><p><img src="/img/Cesium/1.png"> </p><h5 id="安装Cesium："><a href="#安装Cesium：" class="headerlink" title="安装Cesium："></a>安装Cesium：</h5><p>这一步很简单，就是去官网上下载库<a href="https://cesium.com/downloads/">Downloads – Cesium</a></p><h5 id="补充安装依赖："><a href="#补充安装依赖：" class="headerlink" title="补充安装依赖："></a>补充安装依赖：</h5><p>还需要用npm安装一些依赖</p><p>①npm安装慢换源，注意淘宝的源已经换了，原来的用不了<br> <a href="https://blog.csdn.net/qq_44741577/article/details/136813007">npm包下载慢的三种解决方案（附：yarn和pnpm设置镜像源）_npm下载慢-CSDN博客</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 查看当前下载地址<br>npm config get registry<br>// 设置淘宝镜像的地址<br>npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com/<br></code></pre></td></tr></table></figure><p>②取消捐献资金提示：直接运行”npm install”会出现一些提示，查了一下是提示fund，可以添加指令”–no-fund”取消提示</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install request --no-fund<br>npm install yargs --no-fund<br></code></pre></td></tr></table></figure><h5 id="运行："><a href="#运行：" class="headerlink" title="运行："></a>运行：</h5><p>安装成功后在cesium的目录下运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">node server.js<br></code></pre></td></tr></table></figure><p>可以看到终端显示<br><img src="/img/Cesium/2.png"></p><p>打开该链接可以看到<br><img src="/img/Cesium/3.png"> </p><p>比如说点击“Hello World”可以看到最简单的示例：</p><p><img src="/img/Cesium/4.png"> </p><p><strong>PS.同样的流程在ubuntu系统下到了打开浏览器这一步就出问题了，虽然验证了浏览器是支持WebGL的，但是依然在报错，最后还是回归了windows，也不是什么大问题</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Satellite</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>卫星仿真工具Hypatia安装</title>
+    <link href="/2024/11/11/Hypatia%E5%AE%89%E8%A3%85/"/>
+    <url>/2024/11/11/Hypatia%E5%AE%89%E8%A3%85/</url>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h5 id="参考教程："><a href="#参考教程：" class="headerlink" title="参考教程："></a>参考教程：</h5><p><a href="https://www.betaflare.com/biancheng/1725504870a1006389.html?btwaf=69732842">Hypatia安装终极记录（巨详细）-软件玩家 - 软件改变生活！</a></p><p><a href="https://blog.csdn.net/JackZhaojt/article/details/128678247">Hypatia安装终极记录（巨详细）-CSDN博客</a></p><h5 id="BUG："><a href="#BUG：" class="headerlink" title="BUG："></a>BUG：</h5><p>使用git命令自动拉取的都是最新的版本，所以怎么搞都没有办法匹配，只能把原来这个版本全部下载解压到basic-sim才能解决</p><p><a href="https://github.com/snkas/basic-sim/tree/3b32597c183e1039be7f0bede17d36d354696776">https://github.com/snkas/basic-sim/tree/3b32597c183e1039be7f0bede17d36d354696776</a></p><p>我真的。。。眼泪掉下来</p><p><img src="/img/Hypatia/1.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Satellite</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>

@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/head.jpg">
+  <link rel="icon" href="/img/head.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Zoe Jiang">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Agent is coming!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ns3gym中的multi-agent官方示例">
+<meta property="og:url" content="http://example.com/2025/09/30/ns3gym%E4%B8%AD%E7%9A%84multi-agent/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Agent is coming!">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-09-30T06:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-30T06:05:12.947Z">
+<meta property="article:author" content="Zoe Jiang">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="NS3">
+<meta property="article:tag" content="ns3gym">
+<meta property="article:tag" content="multi-agent">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>ns3gym中的multi-agent官方示例 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <!-- <strong>ZoeJiang&#39;s Wonderful World</strong> -->
+      <strong class="navbar-title">ZoeJiang&#39;s Wonderful World</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="ns3gym中的multi-agent官方示例"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-09-30 14:00" pubdate>
+          2025年9月30日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">ns3gym中的multi-agent官方示例</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <meta name="referrer" content="no-referrer">
+
+<h4 id="一、运行"><a href="#一、运行" class="headerlink" title="一、运行"></a>一、运行</h4><p>把contrib&#x2F;opengym&#x2F;examples文件夹下的multi-agent文件夹复制到scratch目录下<br>不复制也可以，但是输入路径比较麻烦<br>所以我都是统一把需要运行的脚本复制到scratch下</p>
+<p>直接运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 终端一</span><br><span class="hljs-built_in">sudo</span> ./waf --run multi-agent<br><br><span class="hljs-comment"># 终端二</span><br><span class="hljs-built_in">cd</span> scratch/multi-agent<br>PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python ./agent1.py --start=0<br><br><span class="hljs-comment"># 终端三</span><br><span class="hljs-built_in">cd</span> scratch/multi-agent<br>PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python ./agent2.py --start=0<br></code></pre></td></tr></table></figure>
+
+<p>这里会报错：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">In file included from ../scratch/multi-agent/mygym.cc:21:<br>../scratch/multi-agent/mygym.h:35:26: error: ‘Time’ has not been declared<br>   35 |   MyGymEnv (uint32_t <span class="hljs-built_in">id</span>, Time stepTime);<br>      |                          ^~~~<br>../scratch/multi-agent/mygym.h:51:3: error: ‘Time’ does not name a <span class="hljs-built_in">type</span>; did you mean ‘<span class="hljs-keyword">time</span>’?<br>   51 |   Time m_interval;<br>      |   ^~~~<br>      |   <span class="hljs-keyword">time</span><br>../scratch/multi-agent/mygym.cc: In constructor ‘ns3::MyGymEnv::MyGymEnv()’:<br>../scratch/multi-agent/mygym.cc:39:3: error: ‘m_interval’ was not declared <span class="hljs-keyword">in</span> this scope; did you mean ‘internal’?<br>   39 |   m_interval = Seconds(0.1);<br>      |   ^~~~~~~~~~<br>      |   internal<br>     <br></code></pre></td></tr></table></figure>
+
+<p>经过一番查询，是mygym.h里面少了头文件，补充上就可以正常运行了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#include &quot;ns3/core-module.h&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>运行结果可以在每个终端看到不同的内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># sim.cc的运行终端，即环境：</span><br>AgendId: 1 MyGetActionSpace:  DictSpace: <br>---box: BoxSpace Low: 0 High: 10 Shape: (5,) Dtype: uint32_t<br>---discrete: DiscreteSpace N: 5<br><br>Simulation process <span class="hljs-built_in">id</span>: 3244537 (parent (waf shell) <span class="hljs-built_in">id</span>: 3244274)<br>Waiting <span class="hljs-keyword">for</span> Python process to connect on port: tcp://localhost:5555<br>Please start proper Python Gym Agent<br>AgendId: 1 MyGetObservation: Tuple([8, 6, 5, 4, 4], 8)<br>---[8, 6, 5, 4, 4]<br>---8<br>AgendId: 1 MyGetGameOver: 0<br>AgendId: 1 MyGetExtraInfo: testInfo|123<br>AgendId: 1 MyExecuteActions: Dict(box=[0, 2, 4, 0, 3], discrete=4)<br>---[0, 2, 4, 0, 3]<br>---4<br>AgendId: 2 MyGetObservationSpace:  DictSpace: <br>---box: BoxSpace Low: 0 High: 10 Shape: (5,) Dtype: uint32_t<br>---discrete: DiscreteSpace N: 5<br><br>AgendId: 2 MyGetActionSpace:  DictSpace: <br>---box: BoxSpace Low: 0 High: 10 Shape: (5,) Dtype: uint32_t<br>---discrete: DiscreteSpace N: 5<br><br><span class="hljs-comment"># agent1</span><br>Step:  0<br>---obs:  ([8, 6, 5, 4, 4], 8)<br>---action:  OrderedDict([(<span class="hljs-string">&#x27;box&#x27;</span>, array([0, 2, 4, 0, 3], dtype=uint64)), (<span class="hljs-string">&#x27;discrete&#x27;</span>, 4)])<br><br><span class="hljs-comment"># agent2</span><br>Step:  0<br>---obs:  ([9, 5, 4, 0, 4], 10)<br>---action:  OrderedDict([(<span class="hljs-string">&#x27;box&#x27;</span>, array([3, 7, 1, 9, 4], dtype=uint64)), (<span class="hljs-string">&#x27;discrete&#x27;</span>, 4)])<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="二、multi-agent的交互逻辑"><a href="#二、multi-agent的交互逻辑" class="headerlink" title="二、multi-agent的交互逻辑"></a>二、multi-agent的交互逻辑</h4><p>官方给的示例非常简单，不涉及神经网络的训练<br>所以很方便观察多个agent与环境之间的交互</p>
+<h5 id="sim-cc"><a href="#sim-cc" class="headerlink" title="sim.cc"></a>sim.cc</h5><p>agents是共享一个环境，所以只需要进行一次环境的初始化，然后分别对agents的接口进行初始化，不同的agent的接口号不一样：  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// OpenGym Env for agent 1</span><br><span class="hljs-type">uint32_t</span> agentId = <span class="hljs-number">1</span>;<br>openGymPort = <span class="hljs-number">5555</span>;<br>Ptr&lt;OpenGymInterface&gt; openGymInterface1 = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymInterface&gt; (openGymPort);<br>Ptr&lt;MyGymEnv&gt; myGymEnv1 = <span class="hljs-built_in">CreateObject</span>&lt;MyGymEnv&gt; (agentId, <span class="hljs-built_in">Seconds</span>(envStepTime));<br>myGymEnv1-&gt;<span class="hljs-built_in">SetOpenGymInterface</span>(openGymInterface1);<br><br><span class="hljs-comment">// OpenGym Env for agent 2</span><br>agentId = <span class="hljs-number">2</span>;<br>openGymPort = <span class="hljs-number">5556</span>;<br>Ptr&lt;OpenGymInterface&gt; openGymInterface2 = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymInterface&gt; (openGymPort);<br>Ptr&lt;MyGymEnv&gt; myGymEnv2 = <span class="hljs-built_in">CreateObject</span>&lt;MyGymEnv&gt; (agentId, <span class="hljs-built_in">Seconds</span>(envStepTime));<br>myGymEnv2-&gt;<span class="hljs-built_in">SetOpenGymInterface</span>(openGymInterface2);<br></code></pre></td></tr></table></figure>
+
+<h5 id="mygym-cc"><a href="#mygym-cc" class="headerlink" title="mygym.cc"></a>mygym.cc</h5><p>这里针对不同agent用m_agentId进行了区分，相关代码直接搜索这个关键词就可以看到与其他单智能体示例不同的部分：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 环境接口初始化</span><br>MyGymEnv::<span class="hljs-built_in">MyGymEnv</span> (<span class="hljs-type">uint32_t</span> id, Time stepTime)<br>&#123;<br>  <span class="hljs-built_in">NS_LOG_FUNCTION</span> (<span class="hljs-keyword">this</span>);<br>  m_agentId = id;<br>  m_interval = stepTime;<br><br>  Simulator::<span class="hljs-built_in">Schedule</span> (<span class="hljs-built_in">Seconds</span>(<span class="hljs-number">0.0</span>), &amp;MyGymEnv::ScheduleNextStateRead, <span class="hljs-keyword">this</span>);<br>&#125;<br><br><span class="hljs-comment">// 定义状态空间、动作空间、结束条件</span><br><span class="hljs-comment">// 没有什么改变，这里省略</span><br><br><span class="hljs-comment">//获取状态。状态由一个数组和一个数字组成，都是随机生成的</span><br><span class="hljs-function">Ptr&lt;OpenGymDataContainer&gt;</span><br><span class="hljs-function"><span class="hljs-title">MyGymEnv::GetObservation</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  <span class="hljs-type">uint32_t</span> nodeNum = <span class="hljs-number">5</span>;<br>  <span class="hljs-type">uint32_t</span> low = <span class="hljs-number">0.0</span>;<br>  <span class="hljs-type">uint32_t</span> high = <span class="hljs-number">10.0</span>;<br>  Ptr&lt;UniformRandomVariable&gt; rngInt = <span class="hljs-built_in">CreateObject</span>&lt;UniformRandomVariable&gt; ();<br><br>  std::vector&lt;<span class="hljs-type">uint32_t</span>&gt; shape = &#123;nodeNum,&#125;;<br>  Ptr&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt; box = CreateObject&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt;(shape);<br><br>  <span class="hljs-comment">// generate random data</span><br>  <span class="hljs-keyword">for</span> (<span class="hljs-type">uint32_t</span> i = <span class="hljs-number">0</span>; i&lt;nodeNum; i++)&#123;<br>    <span class="hljs-type">uint32_t</span> value = rngInt-&gt;<span class="hljs-built_in">GetInteger</span>(low, high);<br>    box-&gt;<span class="hljs-built_in">AddValue</span>(value);<br>  &#125;<br><br>  Ptr&lt;OpenGymDiscreteContainer&gt; discrete = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymDiscreteContainer&gt;(nodeNum);<br>  <span class="hljs-type">uint32_t</span> value = rngInt-&gt;<span class="hljs-built_in">GetInteger</span>(low, high);<br>  discrete-&gt;<span class="hljs-built_in">SetValue</span>(value);<br><br>  Ptr&lt;OpenGymTupleContainer&gt; data = <span class="hljs-built_in">CreateObject</span>&lt;OpenGymTupleContainer&gt; ();<br>  data-&gt;<span class="hljs-built_in">Add</span>(box);<br>  data-&gt;<span class="hljs-built_in">Add</span>(discrete);<br><br>  <span class="hljs-comment">// Print data from tuple</span><br>  Ptr&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt; mbox = DynamicCast&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt;(data-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-number">0</span>));<br>  Ptr&lt;OpenGymDiscreteContainer&gt; mdiscrete = <span class="hljs-built_in">DynamicCast</span>&lt;OpenGymDiscreteContainer&gt;(data-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-number">1</span>));<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;AgendId: &quot;</span>&lt;&lt; m_agentId &lt;&lt; <span class="hljs-string">&quot; MyGetObservation: &quot;</span> &lt;&lt; data);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; mbox);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; mdiscrete);<br><br>  <span class="hljs-keyword">return</span> data;<br>&#125;<br><br><span class="hljs-comment">//执行动作，这里的动作已经由agent产生了，所以这里只是起到一个解析的作用</span><br><span class="hljs-comment">//假设动作的类型是不一样的，全部包裹在OpenGymDataContainer里面，要解析成原来的box、discrete形式</span><br><span class="hljs-function"><span class="hljs-type">bool</span></span><br><span class="hljs-function"><span class="hljs-title">MyGymEnv::ExecuteActions</span><span class="hljs-params">(Ptr&lt;OpenGymDataContainer&gt; action)</span></span><br><span class="hljs-function"></span>&#123;<br>  Ptr&lt;OpenGymDictContainer&gt; dict = <span class="hljs-built_in">DynamicCast</span>&lt;OpenGymDictContainer&gt;(action);<br>  Ptr&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt; box = DynamicCast&lt;OpenGymBoxContainer&lt;<span class="hljs-type">uint32_t</span>&gt; &gt;(dict-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-string">&quot;box&quot;</span>));<br>  Ptr&lt;OpenGymDiscreteContainer&gt; discrete = <span class="hljs-built_in">DynamicCast</span>&lt;OpenGymDiscreteContainer&gt;(dict-&gt;<span class="hljs-built_in">Get</span>(<span class="hljs-string">&quot;discrete&quot;</span>));<br><br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;AgendId: &quot;</span>&lt;&lt; m_agentId &lt;&lt; <span class="hljs-string">&quot; MyExecuteActions: &quot;</span> &lt;&lt; action);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; box);<br>  <span class="hljs-built_in">NS_LOG_UNCOND</span> (<span class="hljs-string">&quot;---&quot;</span> &lt;&lt; discrete);<br>  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="mygym-h"><a href="#mygym-h" class="headerlink" title="mygym.h"></a>mygym.h</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 跟随mygym.cc改变，主要是增加了agent的id</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">MyGymEnv</span> (<span class="hljs-type">uint32_t</span> id, Time stepTime);<br><br><span class="hljs-keyword">private</span>:<br>  <span class="hljs-type">uint32_t</span> m_agentId;<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="agent1-py-agent2-py"><a href="#agent1-py-agent2-py" class="headerlink" title="agent1.py\agent2.py"></a>agent1.py\agent2.py</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">try</span>:<br>    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>        obs = env.reset()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Step: &quot;</span>, stepIdx)<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---obs: &quot;</span>, obs)<br><br>        <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>            stepIdx += <span class="hljs-number">1</span><br>            <span class="hljs-comment"># 这里的动作生成很简单，只是在给定的action_space里面随机采样</span><br>            action = env.action_space.sample()<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---action: &quot;</span>, action)<br><br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Step: &quot;</span>, stepIdx)<br>            obs, reward, done, info = env.step(action)<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;---obs, reward, done, info: &quot;</span>, obs, reward, done, info)<br>			<br>			<br>            <span class="hljs-comment"># 设置了一个Input，需要在相应的终端上输入回车键才继续</span><br>            <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;press enter....&quot;</span>)<br><br>            <span class="hljs-keyword">if</span> done:<br>                <span class="hljs-keyword">break</span><br><br>        currIt += <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> currIt == iterationNum:<br>            <span class="hljs-keyword">break</span><br>     <br></code></pre></td></tr></table></figure>
+
+<h4 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h4><p>在这个示例里面，两个智能体之间没有交互，而且它们与环境的交互始终具有顺序依赖性</p>
+<p>比如说agent1交互以后，提示必须输入回车键，才能让agent2与环境进行交互</p>
+<p>如果注释掉input(“press enter….”)这一行，它们与环境的交互就是同时进行的，只是在终端打印出来的信息还是agent1在前</p>
+<p>但是实际的多智能体要复杂很多，尤其是共享环境这一块，状态、动作、奖励都会相互影响</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Ubuntu/" class="print-no-link">#Ubuntu</a>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+        <a href="/tags/NS3/" class="print-no-link">#NS3</a>
+      
+        <a href="/tags/ns3gym/" class="print-no-link">#ns3gym</a>
+      
+        <a href="/tags/multi-agent/" class="print-no-link">#multi-agent</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>ns3gym中的multi-agent官方示例</div>
+      <div>http://example.com/2025/09/30/ns3gym中的multi-agent/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Zoe Jiang</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年9月30日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/10/08/%E4%BA%8E%E6%97%A0%E5%A3%B0%E5%A4%84/" title="于无声处">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">于无声处</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/08/17/%E4%B8%8A%E6%B5%B7%E9%A3%8E%E5%8D%8E/" title="上海风华">
+                        <span class="hidden-mobile">上海风华</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('/js/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appid":"CDSOj7LzHeZi1izZyaT8HKRU-gzGzoHsz","appkey":"CDJNIcrirycCihsGKlbF8cg0","placeholder":"就说你想说的~","path":"window.location.pathname","avatar":"robohash","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":true,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":true,"appId":"CDSOj7LzHeZi1izZyaT8HKRU-gzGzoHsz","appKey":"CDJNIcrirycCihsGKlbF8cg0"},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  <div>
+    <span id="timeDate">正在载入天数...</span>
+    <span id="times">载入时分秒...</span>
+    <script>
+    var now = new Date();
+    function createtime(){
+        var grt= new Date("11/18/2024 20:58:14");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if(String(mnum).length ==1 ){
+                  mnum = "0" + mnum;
+        }
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if(String(snum).length ==1 ){
+                  snum = "0" + snum;
+        }
+        document.getElementById("timeDate").innerHTML = "🚀已持续航行&nbsp"+dnum+"&nbsp天";  
+        document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒🌏";
+    }
+    setInterval("createtime()",250);
+    </script>
+  </div>
+  
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/fishes.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
