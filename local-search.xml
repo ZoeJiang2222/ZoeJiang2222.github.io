@@ -56,6 +56,33 @@
   
   
   <entry>
+    <title>Overleaf写作攻略-LaTex字体嵌入</title>
+    <link href="/2025/11/15/latex%E5%AD%97%E4%BD%93%E5%B5%8C%E5%85%A5/"/>
+    <url>/2025/11/15/latex%E5%AD%97%E4%BD%93%E5%B5%8C%E5%85%A5/</url>
+    
+    <content type="html"><![CDATA[<p>有时候投稿到IEEE系统的论文会提示字体未嵌入<br>一般来说跟文字没有关系 都是visio导出的图有问题</p><p>使用Adobe Acrobat打开图片：<br>点击“文件-属性”<br>可以看到字体是未嵌入的<br>记住这里的字体</p><p>接下来点击“文件-打印”:<br>选择打印类型为 “Adobe PDF”<br>点击“属性-Adobe PDF设置-默认设置-字体”</p><p>在新弹出的窗口里：<br>把文件里没有嵌入的字体选中<br>一般是Times NewRoman相关的那几个<br>增加到“总是嵌入”<br>一路点击“确认”</p><p>返回到“打印”窗口：<br>点击“打印”</p><p>这个时候再打开新PDF的“文件-属性”：<br>可以看到字体后面有一个“（已嵌入子集）”</p><p>Success！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Acedemic</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Overleaf</tag>
+      
+      <tag>LaTex</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Resfeber &amp; Sillage</title>
     <link href="/2025/10/26/Resfeber&amp;Sillage/"/>
     <url>/2025/10/26/Resfeber&amp;Sillage/</url>
